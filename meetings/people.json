@@ -1,0 +1,132 @@
+{
+  "people": [
+    {
+      "person_id": "P-1001",
+      "name": "Maya Singh",
+      "title": "Staff Backend Engineer, Payments",
+      "bio": "Owns checkout reliability and payment orchestration services. Former incident commander for high-traffic commerce events.",
+      "team": "Payments",
+      "timezone": "America/New_York"
+    },
+    {
+      "person_id": "P-1002",
+      "name": "Tom Bryce",
+      "title": "Senior Site Reliability Engineer",
+      "bio": "Leads production response rotations for core APIs and drives latency budget reviews across shared infrastructure.",
+      "team": "SRE",
+      "timezone": "Europe/London"
+    },
+    {
+      "person_id": "P-1003",
+      "name": "Priya Shah",
+      "title": "Principal Engineer, Data Platform",
+      "bio": "Designs ingestion and worker scheduling systems for batch processing. Focused on safe concurrency rollouts.",
+      "team": "Data Platform",
+      "timezone": "Asia/Kolkata"
+    },
+    {
+      "person_id": "P-1004",
+      "name": "Yuki Tanaka",
+      "title": "Security Engineering Manager",
+      "bio": "Coordinates security incident handling and hardening work with platform and application teams.",
+      "team": "Security",
+      "timezone": "Asia/Tokyo"
+    },
+    {
+      "person_id": "P-1005",
+      "name": "Renee Alvarez",
+      "title": "Director of Product, Commerce",
+      "bio": "Sets roadmap priorities for checkout and account flows, balancing customer impact with delivery risk.",
+      "team": "Product",
+      "timezone": "America/Los_Angeles"
+    },
+    {
+      "person_id": "P-1006",
+      "name": "Omar Haddad",
+      "title": "Customer Success Manager, Enterprise",
+      "bio": "Manages strategic customer escalations and translates operational risk into customer-facing action plans.",
+      "team": "Customer Success",
+      "timezone": "Europe/Berlin"
+    },
+    {
+      "person_id": "P-1007",
+      "name": "Helena Cho",
+      "title": "Senior Legal Counsel, Commercial",
+      "bio": "Reviews vendor risk terms and negotiates data processing obligations with procurement and security partners.",
+      "team": "Legal",
+      "timezone": "America/Chicago"
+    },
+    {
+      "person_id": "P-1008",
+      "name": "Liam Okafor",
+      "title": "Engineering Manager, Identity",
+      "bio": "Owns authentication platform delivery and supports reliability improvements for login and session services.",
+      "team": "Identity",
+      "timezone": "Europe/Dublin"
+    },
+    {
+      "person_id": "P-1009",
+      "name": "Nadia Petrova",
+      "title": "Principal Product Manager, Platform Reliability",
+      "bio": "Drives reliability roadmap planning and coordinates quarterly risk reduction commitments across platform teams.",
+      "team": "Product",
+      "timezone": "Europe/Sofia"
+    },
+    {
+      "person_id": "P-1010",
+      "name": "Jonas Weber",
+      "title": "Senior Database Reliability Engineer",
+      "bio": "Specializes in connection pooling, failover strategy, and query path performance tuning for stateful services.",
+      "team": "DBRE",
+      "timezone": "Europe/Berlin"
+    },
+    {
+      "person_id": "P-1011",
+      "name": "Iris Mensah",
+      "title": "Engineering Manager, Mobile Experience",
+      "bio": "Leads iOS and Android upload pipelines with a focus on end-to-end media performance and observability.",
+      "team": "Mobile",
+      "timezone": "Africa/Accra"
+    },
+    {
+      "person_id": "P-1012",
+      "name": "Caleb Morgan",
+      "title": "Senior Staff Frontend Engineer",
+      "bio": "Owns checkout web UX architecture and partners with backend teams on latency-sensitive customer flows.",
+      "team": "Frontend",
+      "timezone": "America/Denver"
+    },
+    {
+      "person_id": "P-1013",
+      "name": "Sofia Bianchi",
+      "title": "Compliance Program Manager",
+      "bio": "Maintains compliance controls and tracks contract obligations related to audit rights, residency, and incident notices.",
+      "team": "Compliance",
+      "timezone": "Europe/Rome"
+    },
+    {
+      "person_id": "P-1014",
+      "name": "Arjun Mehta",
+      "title": "Staff DevOps Engineer",
+      "bio": "Runs deployment automation and progressive delivery controls for shared services and tenant configuration systems.",
+      "team": "DevOps",
+      "timezone": "Asia/Singapore"
+    },
+    {
+      "person_id": "P-1015",
+      "name": "Beatrice Ndlovu",
+      "title": "Senior Incident Commander",
+      "bio": "Facilitates cross-functional incident command and post-incident follow-through for high-severity customer events.",
+      "team": "Operations",
+      "timezone": "Africa/Johannesburg"
+    },
+    {
+      "person_id": "P-1016",
+      "name": "Ethan Park",
+      "title": "Director of Engineering, Core Services",
+      "bio": "Owns delivery and reliability outcomes for auth, signing, and tenant configuration services.",
+      "team": "Core Services",
+      "timezone": "America/Los_Angeles"
+    }
+  ]
+}

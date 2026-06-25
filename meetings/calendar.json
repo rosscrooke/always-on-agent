@@ -1,0 +1,429 @@
+{
+  "meetings": [
+    {
+      "meeting_id": "M-3001",
+      "start_time": "2026-07-06T09:00:00-04:00",
+      "end_time": "2026-07-06T09:30:00-04:00",
+      "title": "Incident triage: payment checkout error-rate surge",
+      "purpose": "Incident response",
+      "participants": ["P-1015", "P-1001", "P-1002", "P-1016"],
+      "organizer": "P-1015",
+      "meeting_link": "https://meet.synthetic.example/ops/M-3001",
+      "related_context": {
+        "issues": ["PROD-4521", "PROD-4487"],
+        "deploys": ["payment-service:v4.8.2"]
+      }
+    },
+    {
+      "meeting_id": "M-3002",
+      "start_time": "2026-07-06T10:00:00-04:00",
+      "end_time": "2026-07-06T10:45:00-04:00",
+      "title": "Customer escalation prep: Acme leadership status briefing",
+      "purpose": "Customer escalation",
+      "participants": ["P-1006", "P-1005", "P-1001", "P-1015"],
+      "organizer": "P-1006",
+      "location": "War Room B",
+      "related_context": {
+        "issues": ["PROD-4487"],
+        "contracts": ["acme-data-platform.md"]
+      }
+    },
+    {
+      "meeting_id": "M-3003",
+      "start_time": "2026-07-06T11:30:00-04:00",
+      "end_time": "2026-07-06T12:15:00-04:00",
+      "title": "Root cause deep dive: PaymentService null handling regression",
+      "purpose": "Root cause analysis",
+      "participants": ["P-1001", "P-1002", "P-1010", "P-1012"],
+      "organizer": "P-1001",
+      "meeting_link": "https://meet.synthetic.example/eng/M-3003",
+      "related_context": {
+        "issues": ["PROD-4521"],
+        "deploys": ["payment-service:v4.8.2"]
+      }
+    },
+    {
+      "meeting_id": "M-3004",
+      "start_time": "2026-07-06T14:00:00-04:00",
+      "end_time": "2026-07-06T14:30:00-04:00",
+      "title": "Release gating decision: auth-service timeout mitigation patch",
+      "purpose": "Release planning",
+      "participants": ["P-1008", "P-1002", "P-1010", "P-1016"],
+      "organizer": "P-1008",
+      "meeting_link": "https://meet.synthetic.example/auth/M-3004",
+      "related_context": {
+        "issues": ["PROD-4498"],
+        "deploys": ["auth-service:v6.0.0"]
+      }
+    },
+    {
+      "meeting_id": "M-3005",
+      "start_time": "2026-07-06T15:30:00-04:00",
+      "end_time": "2026-07-06T16:00:00-04:00",
+      "title": "Cross-team handoff: mobile image upload latency investigation",
+      "purpose": "Cross-team dependency alignment",
+      "participants": ["P-1011", "P-1002", "P-1014", "P-1005"],
+      "organizer": "P-1011",
+      "location": "Zoom Room 3",
+      "related_context": {
+        "issues": ["PROD-4519"]
+      }
+    },
+    {
+      "meeting_id": "M-3006",
+      "start_time": "2026-07-07T09:15:00-04:00",
+      "end_time": "2026-07-07T10:00:00-04:00",
+      "title": "Contract risk review: Sirius storage liability ceiling impact",
+      "purpose": "Contract/compliance review",
+      "participants": ["P-1007", "P-1013", "P-1004", "P-1005"],
+      "organizer": "P-1007",
+      "location": "Legal Pod 2",
+      "related_context": {
+        "contracts": ["sirius-storage.md"]
+      }
+    },
+    {
+      "meeting_id": "M-3007",
+      "start_time": "2026-07-07T10:30:00-04:00",
+      "end_time": "2026-07-07T11:00:00-04:00",
+      "title": "Incident command sync: auth login 502 recurrence",
+      "purpose": "Incident response",
+      "participants": ["P-1015", "P-1008", "P-1002", "P-1010"],
+      "organizer": "P-1015",
+      "meeting_link": "https://meet.synthetic.example/ops/M-3007",
+      "related_context": {
+        "issues": ["PROD-4498"]
+      }
+    },
+    {
+      "meeting_id": "M-3008",
+      "start_time": "2026-07-07T12:00:00-04:00",
+      "end_time": "2026-07-07T12:30:00-04:00",
+      "title": "Customer assurance draft: checkout stabilization commitments",
+      "purpose": "Customer escalation",
+      "participants": ["P-1006", "P-1005", "P-1016", "P-1012"],
+      "organizer": "P-1006",
+      "meeting_link": "https://meet.synthetic.example/cx/M-3008",
+      "related_context": {
+        "issues": ["PROD-4487", "PROD-4521"]
+      }
+    },
+    {
+      "meeting_id": "M-3009",
+      "start_time": "2026-07-07T13:30:00-04:00",
+      "end_time": "2026-07-07T14:15:00-04:00",
+      "title": "Architecture review: worker pool concurrency and back-pressure",
+      "purpose": "Release planning",
+      "participants": ["P-1003", "P-1014", "P-1009", "P-1016"],
+      "organizer": "P-1003",
+      "meeting_link": "https://meet.synthetic.example/platform/M-3009",
+      "related_context": {
+        "issues": ["PROD-4506"]
+      }
+    },
+    {
+      "meeting_id": "M-3010",
+      "start_time": "2026-07-07T15:00:00-04:00",
+      "end_time": "2026-07-07T15:45:00-04:00",
+      "title": "Subprocessor notice readiness: Globex contractual controls",
+      "purpose": "Contract/compliance review",
+      "participants": ["P-1007", "P-1013", "P-1004", "P-1009"],
+      "organizer": "P-1013",
+      "location": "Conference 5A",
+      "related_context": {
+        "contracts": ["globex-messaging.md"]
+      }
+    },
+    {
+      "meeting_id": "M-3011",
+      "start_time": "2026-07-08T08:45:00-04:00",
+      "end_time": "2026-07-08T09:15:00-04:00",
+      "title": "SRE handover: payment-service rollback decision checkpoint",
+      "purpose": "Cross-team dependency alignment",
+      "participants": ["P-1002", "P-1014", "P-1015"],
+      "organizer": "P-1002",
+      "meeting_link": "https://meet.synthetic.example/sre/M-3011",
+      "related_context": {
+        "deploys": ["payment-service:v4.8.2"]
+      }
+    },
+    {
+      "meeting_id": "M-3012",
+      "start_time": "2026-07-08T09:30:00-04:00",
+      "end_time": "2026-07-08T10:00:00-04:00",
+      "title": "Incident triage: upload API p95 latency breach",
+      "purpose": "Incident response",
+      "participants": ["P-1015", "P-1011", "P-1002", "P-1014"],
+      "organizer": "P-1015",
+      "meeting_link": "https://meet.synthetic.example/ops/M-3012",
+      "related_context": {
+        "issues": ["PROD-4519"]
+      }
+    },
+    {
+      "meeting_id": "M-3013",
+      "start_time": "2026-07-08T10:30:00-04:00",
+      "end_time": "2026-07-08T11:15:00-04:00",
+      "title": "Root cause review: auth connection pool saturation windows",
+      "purpose": "Root cause analysis",
+      "participants": ["P-1008", "P-1010", "P-1002", "P-1016"],
+      "organizer": "P-1010",
+      "meeting_link": "https://meet.synthetic.example/dbr/M-3013",
+      "related_context": {
+        "issues": ["PROD-4498"]
+      }
+    },
+    {
+      "meeting_id": "M-3014",
+      "start_time": "2026-07-08T12:00:00-04:00",
+      "end_time": "2026-07-08T12:45:00-04:00",
+      "title": "Go-live criteria: worker pool parallel batch enablement",
+      "purpose": "Release planning",
+      "participants": ["P-1003", "P-1009", "P-1016", "P-1014"],
+      "organizer": "P-1009",
+      "meeting_link": "https://meet.synthetic.example/release/M-3014",
+      "related_context": {
+        "issues": ["PROD-4506"]
+      }
+    },
+    {
+      "meeting_id": "M-3015",
+      "start_time": "2026-07-08T14:00:00-04:00",
+      "end_time": "2026-07-08T14:30:00-04:00",
+      "title": "Contract alignment: Acme data residency exception response",
+      "purpose": "Contract/compliance review",
+      "participants": ["P-1007", "P-1013", "P-1006", "P-1004"],
+      "organizer": "P-1013",
+      "location": "Compliance Room 1",
+      "related_context": {
+        "contracts": ["acme-data-platform.md"]
+      }
+    },
+    {
+      "meeting_id": "M-3016",
+      "start_time": "2026-07-08T15:00:00-04:00",
+      "end_time": "2026-07-08T15:30:00-04:00",
+      "title": "Customer briefing prep: auth reliability remediation timeline",
+      "purpose": "Customer escalation",
+      "participants": ["P-1006", "P-1008", "P-1016", "P-1005"],
+      "organizer": "P-1006",
+      "meeting_link": "https://meet.synthetic.example/cx/M-3016",
+      "related_context": {
+        "issues": ["PROD-4498"]
+      }
+    },
+    {
+      "meeting_id": "M-3017",
+      "start_time": "2026-07-09T09:00:00-04:00",
+      "end_time": "2026-07-09T09:45:00-04:00",
+      "title": "Dependency map review: checkout flow upstream service risks",
+      "purpose": "Cross-team dependency alignment",
+      "participants": ["P-1012", "P-1001", "P-1008", "P-1014"],
+      "organizer": "P-1012",
+      "meeting_link": "https://meet.synthetic.example/frontend/M-3017",
+      "related_context": {
+        "issues": ["PROD-4521", "PROD-4487"]
+      }
+    },
+    {
+      "meeting_id": "M-3018",
+      "start_time": "2026-07-09T10:00:00-04:00",
+      "end_time": "2026-07-09T10:30:00-04:00",
+      "title": "Incident response: tenant-config flag drift impacting checkout",
+      "purpose": "Incident response",
+      "participants": ["P-1015", "P-1014", "P-1001", "P-1016"],
+      "organizer": "P-1014",
+      "meeting_link": "https://meet.synthetic.example/ops/M-3018",
+      "related_context": {
+        "deploys": ["tenant-config-service:v3.2.1"],
+        "issues": ["PROD-4487"]
+      }
+    },
+    {
+      "meeting_id": "M-3019",
+      "start_time": "2026-07-09T11:30:00-04:00",
+      "end_time": "2026-07-09T12:15:00-04:00",
+      "title": "Root cause analysis: mobile upload path serialization bottleneck",
+      "purpose": "Root cause analysis",
+      "participants": ["P-1011", "P-1002", "P-1003", "P-1014"],
+      "organizer": "P-1011",
+      "meeting_link": "https://meet.synthetic.example/mobile/M-3019",
+      "related_context": {
+        "issues": ["PROD-4519"]
+      }
+    },
+    {
+      "meeting_id": "M-3020",
+      "start_time": "2026-07-09T13:00:00-04:00",
+      "end_time": "2026-07-09T13:45:00-04:00",
+      "title": "Release plan: phased rollout for auth pool sizing change",
+      "purpose": "Release planning",
+      "participants": ["P-1008", "P-1010", "P-1014", "P-1009"],
+      "organizer": "P-1008",
+      "meeting_link": "https://meet.synthetic.example/release/M-3020",
+      "related_context": {
+        "issues": ["PROD-4498"],
+        "deploys": ["auth-service:v6.0.0"]
+      }
+    },
+    {
+      "meeting_id": "M-3021",
+      "start_time": "2026-07-09T14:30:00-04:00",
+      "end_time": "2026-07-09T15:15:00-04:00",
+      "title": "Compliance checkpoint: security incident notice timing by vendor",
+      "purpose": "Contract/compliance review",
+      "participants": ["P-1013", "P-1004", "P-1007", "P-1009"],
+      "organizer": "P-1013",
+      "location": "Conference 7C",
+      "related_context": {
+        "contracts": ["globex-messaging.md", "acme-data-platform.md", "sirius-storage.md"]
+      }
+    },
+    {
+      "meeting_id": "M-3022",
+      "start_time": "2026-07-10T08:30:00-04:00",
+      "end_time": "2026-07-10T09:15:00-04:00",
+      "title": "Executive incident update: checkout recovery confidence",
+      "purpose": "Customer escalation",
+      "participants": ["P-1006", "P-1005", "P-1016", "P-1015"],
+      "organizer": "P-1005",
+      "meeting_link": "https://meet.synthetic.example/exec/M-3022",
+      "related_context": {
+        "issues": ["PROD-4487", "PROD-4521"]
+      }
+    },
+    {
+      "meeting_id": "M-3023",
+      "start_time": "2026-07-10T09:30:00-04:00",
+      "end_time": "2026-07-10T10:00:00-04:00",
+      "title": "Cross-team sync: observability gaps on login request path",
+      "purpose": "Cross-team dependency alignment",
+      "participants": ["P-1002", "P-1008", "P-1012", "P-1010"],
+      "organizer": "P-1002",
+      "meeting_link": "https://meet.synthetic.example/obs/M-3023",
+      "related_context": {
+        "issues": ["PROD-4498"]
+      }
+    },
+    {
+      "meeting_id": "M-3024",
+      "start_time": "2026-07-10T10:30:00-04:00",
+      "end_time": "2026-07-10T11:00:00-04:00",
+      "title": "Incident response drill: payment failover routing simulation",
+      "purpose": "Incident response",
+      "participants": ["P-1015", "P-1001", "P-1014", "P-1010"],
+      "organizer": "P-1015",
+      "meeting_link": "https://meet.synthetic.example/drill/M-3024",
+      "related_context": {
+        "deploys": ["payment-service:v4.8.2"]
+      }
+    },
+    {
+      "meeting_id": "M-3025",
+      "start_time": "2026-07-10T12:00:00-04:00",
+      "end_time": "2026-07-10T12:30:00-04:00",
+      "title": "Root cause readout: signed URL TTL and upload retries",
+      "purpose": "Root cause analysis",
+      "participants": ["P-1004", "P-1011", "P-1002", "P-1014"],
+      "organizer": "P-1004",
+      "meeting_link": "https://meet.synthetic.example/security/M-3025",
+      "related_context": {
+        "issues": ["PROD-4519"],
+        "deploys": ["signing-service:v2.1.4"]
+      }
+    },
+    {
+      "meeting_id": "M-3026",
+      "start_time": "2026-07-10T13:30:00-04:00",
+      "end_time": "2026-07-10T14:15:00-04:00",
+      "title": "Release readiness: parallel batch processing canary criteria",
+      "purpose": "Release planning",
+      "participants": ["P-1003", "P-1009", "P-1014", "P-1016"],
+      "organizer": "P-1009",
+      "meeting_link": "https://meet.synthetic.example/release/M-3026",
+      "related_context": {
+        "issues": ["PROD-4506"]
+      }
+    },
+    {
+      "meeting_id": "M-3027",
+      "start_time": "2026-07-13T09:00:00-04:00",
+      "end_time": "2026-07-13T09:30:00-04:00",
+      "title": "Compliance review: annual audit notice timeline planning",
+      "purpose": "Contract/compliance review",
+      "participants": ["P-1013", "P-1007", "P-1004", "P-1009"],
+      "organizer": "P-1007",
+      "location": "Legal Pod 1",
+      "related_context": {
+        "contracts": ["acme-data-platform.md", "sirius-storage.md"]
+      }
+    },
+    {
+      "meeting_id": "M-3028",
+      "start_time": "2026-07-13T10:00:00-04:00",
+      "end_time": "2026-07-13T10:45:00-04:00",
+      "title": "Customer escalation follow-up: mobile upload SLA recovery plan",
+      "purpose": "Customer escalation",
+      "participants": ["P-1006", "P-1011", "P-1005", "P-1016"],
+      "organizer": "P-1006",
+      "meeting_link": "https://meet.synthetic.example/cx/M-3028",
+      "related_context": {
+        "issues": ["PROD-4519"]
+      }
+    },
+    {
+      "meeting_id": "M-3029",
+      "start_time": "2026-07-13T11:30:00-04:00",
+      "end_time": "2026-07-13T12:00:00-04:00",
+      "title": "Dependency alignment: frontend retry UX for degraded checkout",
+      "purpose": "Cross-team dependency alignment",
+      "participants": ["P-1012", "P-1001", "P-1005", "P-1009"],
+      "organizer": "P-1012",
+      "meeting_link": "https://meet.synthetic.example/frontend/M-3029",
+      "related_context": {
+        "issues": ["PROD-4521", "PROD-4487"]
+      }
+    },
+    {
+      "meeting_id": "M-3030",
+      "start_time": "2026-07-13T13:00:00-04:00",
+      "end_time": "2026-07-13T13:30:00-04:00",
+      "title": "Incident triage: checkout retry storm detection threshold",
+      "purpose": "Incident response",
+      "participants": ["P-1015", "P-1002", "P-1001", "P-1010"],
+      "organizer": "P-1002",
+      "meeting_link": "https://meet.synthetic.example/ops/M-3030",
+      "related_context": {
+        "issues": ["PROD-4521"]
+      }
+    },
+    {
+      "meeting_id": "M-3031",
+      "start_time": "2026-07-13T14:30:00-04:00",
+      "end_time": "2026-07-13T15:15:00-04:00",
+      "title": "Root cause readout: tenant config rollout sequencing gap",
+      "purpose": "Root cause analysis",
+      "participants": ["P-1014", "P-1001", "P-1016", "P-1005"],
+      "organizer": "P-1014",
+      "meeting_link": "https://meet.synthetic.example/devops/M-3031",
+      "related_context": {
+        "deploys": ["tenant-config-service:v3.2.1"],
+        "issues": ["PROD-4487"]
+      }
+    },
+    {
+      "meeting_id": "M-3032",
+      "start_time": "2026-07-13T16:00:00-04:00",
+      "end_time": "2026-07-13T16:45:00-04:00",
+      "title": "Release plan sign-off: checkout resilience patch bundle",
+      "purpose": "Release planning",
+      "participants": ["P-1005", "P-1016", "P-1001", "P-1002", "P-1009"],
+      "organizer": "P-1005",
+      "meeting_link": "https://meet.synthetic.example/release/M-3032",
+      "related_context": {
+        "issues": ["PROD-4521", "PROD-4487"],
+        "deploys": ["payment-service:v4.8.2"]
+      }
+    }
+  ]
+}

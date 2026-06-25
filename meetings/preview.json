@@ -1,0 +1,204 @@
+{
+  "people": [
+    {
+      "person_id": "P-1001",
+      "name": "Maya Singh",
+      "title": "Staff Backend Engineer, Payments",
+      "bio": "Owns checkout reliability and payment orchestration services. Former incident commander for high-traffic commerce events.",
+      "team": "Payments",
+      "timezone": "America/New_York"
+    },
+    {
+      "person_id": "P-1002",
+      "name": "Tom Bryce",
+      "title": "Senior Site Reliability Engineer",
+      "bio": "Leads production response rotations for core APIs and drives latency budget reviews across shared infrastructure.",
+      "team": "SRE",
+      "timezone": "Europe/London"
+    },
+    {
+      "person_id": "P-1003",
+      "name": "Priya Shah",
+      "title": "Principal Engineer, Data Platform",
+      "bio": "Designs ingestion and worker scheduling systems for batch processing. Focused on safe concurrency rollouts.",
+      "team": "Data Platform",
+      "timezone": "Asia/Kolkata"
+    },
+    {
+      "person_id": "P-1004",
+      "name": "Yuki Tanaka",
+      "title": "Security Engineering Manager",
+      "bio": "Coordinates security incident handling and hardening work with platform and application teams.",
+      "team": "Security",
+      "timezone": "Asia/Tokyo"
+    },
+    {
+      "person_id": "P-1005",
+      "name": "Renee Alvarez",
+      "title": "Director of Product, Commerce",
+      "bio": "Sets roadmap priorities for checkout and account flows, balancing customer impact with delivery risk.",
+      "team": "Product",
+      "timezone": "America/Los_Angeles"
+    },
+    {
+      "person_id": "P-1006",
+      "name": "Omar Haddad",
+      "title": "Customer Success Manager, Enterprise",
+      "bio": "Manages strategic customer escalations and translates operational risk into customer-facing action plans.",
+      "team": "Customer Success",
+      "timezone": "Europe/Berlin"
+    },
+    {
+      "person_id": "P-1007",
+      "name": "Helena Cho",
+      "title": "Senior Legal Counsel, Commercial",
+      "bio": "Reviews vendor risk terms and negotiates data processing obligations with procurement and security partners.",
+      "team": "Legal",
+      "timezone": "America/Chicago"
+    },
+    {
+      "person_id": "P-1008",
+      "name": "Liam Okafor",
+      "title": "Engineering Manager, Identity",
+      "bio": "Owns authentication platform delivery and supports reliability improvements for login and session services.",
+      "team": "Identity",
+      "timezone": "Europe/Dublin"
+    }
+  ],
+  "meetings": [
+    {
+      "meeting_id": "M-2001",
+      "start_time": "2026-06-29T09:00:00-04:00",
+      "end_time": "2026-06-29T09:30:00-04:00",
+      "title": "Incident triage: checkout latency spike in payment-service",
+      "purpose": "Incident response",
+      "participants": ["P-1001", "P-1002", "P-1005"],
+      "organizer": "P-1002",
+      "meeting_link": "https://meet.synthetic.example/ops/M-2001",
+      "related_context": {
+        "issues": ["PROD-4521", "PROD-4487"],
+        "deploys": ["payment-service:v4.8.2"]
+      }
+    },
+    {
+      "meeting_id": "M-2002",
+      "start_time": "2026-06-29T11:00:00-04:00",
+      "end_time": "2026-06-29T11:45:00-04:00",
+      "title": "Customer escalation prep: Acme checkout outage executive update",
+      "purpose": "Customer escalation",
+      "participants": ["P-1001", "P-1005", "P-1006"],
+      "organizer": "P-1006",
+      "location": "War Room B",
+      "related_context": {
+        "issues": ["PROD-4487"],
+        "contracts": ["acme-data-platform.md"]
+      }
+    },
+    {
+      "meeting_id": "M-2003",
+      "start_time": "2026-06-29T14:30:00-04:00",
+      "end_time": "2026-06-29T15:00:00-04:00",
+      "title": "Root cause review: NullPointerException in PaymentService charge path",
+      "purpose": "Root cause analysis",
+      "participants": ["P-1001", "P-1002", "P-1005"],
+      "organizer": "P-1001",
+      "meeting_link": "https://meet.synthetic.example/eng/M-2003",
+      "related_context": {
+        "issues": ["PROD-4521"],
+        "deploys": ["payment-service:v4.8.2"]
+      }
+    },
+    {
+      "meeting_id": "M-2004",
+      "start_time": "2026-06-30T09:15:00-04:00",
+      "end_time": "2026-06-30T10:00:00-04:00",
+      "title": "Reliability plan: auth-service 502 window mitigation",
+      "purpose": "Release planning",
+      "participants": ["P-1002", "P-1008", "P-1005"],
+      "organizer": "P-1008",
+      "meeting_link": "https://meet.synthetic.example/auth/M-2004",
+      "related_context": {
+        "issues": ["PROD-4498"],
+        "deploys": ["auth-service:v6.0.0"]
+      }
+    },
+    {
+      "meeting_id": "M-2005",
+      "start_time": "2026-06-30T12:00:00-04:00",
+      "end_time": "2026-06-30T12:30:00-04:00",
+      "title": "Dependency alignment: upload latency handoff with CDN and API owners",
+      "purpose": "Cross-team dependency alignment",
+      "participants": ["P-1002", "P-1005", "P-1006"],
+      "organizer": "P-1002",
+      "location": "Zoom Room 4",
+      "related_context": {
+        "issues": ["PROD-4519"]
+      }
+    },
+    {
+      "meeting_id": "M-2006",
+      "start_time": "2026-07-01T08:30:00-04:00",
+      "end_time": "2026-07-01T09:15:00-04:00",
+      "title": "Design review: worker pool max_concurrency rollout safeguards",
+      "purpose": "Release planning",
+      "participants": ["P-1003", "P-1002", "P-1005"],
+      "organizer": "P-1003",
+      "meeting_link": "https://meet.synthetic.example/platform/M-2006",
+      "related_context": {
+        "issues": ["PROD-4506"]
+      }
+    },
+    {
+      "meeting_id": "M-2007",
+      "start_time": "2026-07-01T13:00:00-04:00",
+      "end_time": "2026-07-01T14:00:00-04:00",
+      "title": "Compliance review: subprocessor notice obligations for messaging vendor",
+      "purpose": "Contract/compliance review",
+      "participants": ["P-1004", "P-1007", "P-1005"],
+      "organizer": "P-1007",
+      "location": "Conference 5A",
+      "related_context": {
+        "contracts": ["globex-messaging.md"]
+      }
+    },
+    {
+      "meeting_id": "M-2008",
+      "start_time": "2026-07-02T09:45:00-04:00",
+      "end_time": "2026-07-02T10:15:00-04:00",
+      "title": "Security hardening sync: signed URL TTL change verification",
+      "purpose": "Cross-team dependency alignment",
+      "participants": ["P-1004", "P-1002", "P-1008"],
+      "organizer": "P-1004",
+      "meeting_link": "https://meet.synthetic.example/security/M-2008",
+      "related_context": {
+        "deploys": ["signing-service:v2.1.4"]
+      }
+    },
+    {
+      "meeting_id": "M-2009",
+      "start_time": "2026-07-02T11:30:00-04:00",
+      "end_time": "2026-07-02T12:00:00-04:00",
+      "title": "Post-incident customer narrative: checkout resilience commitments",
+      "purpose": "Customer escalation",
+      "participants": ["P-1006", "P-1005", "P-1001"],
+      "organizer": "P-1006",
+      "meeting_link": "https://meet.synthetic.example/cx/M-2009",
+      "related_context": {
+        "issues": ["PROD-4487", "PROD-4521"]
+      }
+    },
+    {
+      "meeting_id": "M-2010",
+      "start_time": "2026-07-03T10:00:00-04:00",
+      "end_time": "2026-07-03T10:45:00-04:00",
+      "title": "Contract risk assessment: termination and audit clauses for storage partner",
+      "purpose": "Contract/compliance review",
+      "participants": ["P-1007", "P-1004", "P-1005"],
+      "organizer": "P-1007",
+      "location": "Legal Pod 2",
+      "related_context": {
+        "contracts": ["sirius-storage.md"]
+      }
+    }
+  ]
+}
