@@ -1,0 +1,22 @@
+{
+  "id": "CAMP-1004",
+  "title": "Amex Platinum sponsorship ending in 36h with $18K unspent",
+  "status": "open",
+  "severity": null,
+  "labels": ["budget-risk", "advertiser-relationship"],
+  "ad_server": "GAM",
+  "ad_unit": "ife-home-takeover",
+  "line_item": "LI-5504",
+  "advertiser": "American Express",
+  "detected_at": "2026-07-30T14:20:00Z",
+  "metrics": {
+    "budget_usd": 50000,
+    "spent_usd": 31800,
+    "unspent_usd": 18200,
+    "delivered_pct": 0.64,
+    "hours_remaining": 36,
+    "line_item_priority": 8
+  },
+  "body": "The Amex Platinum home-screen takeover sponsorship (LI-5504) ends in 36 hours with $18,200 of a $50,000 budget unspent (64% delivered). If it ends underspent we owe a partial refund or make-good and put the renewal at risk. Inventory is available in the ad unit, but the line item's priority (8, standard) is too low to capture enough of it in the remaining window.",
+  "comments": []
+}

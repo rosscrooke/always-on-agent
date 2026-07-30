@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ad-Ops Copilot — Control Room</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+  :root{
+    --void:#0B0E14; --panel:#12161F; --panel-2:#161B26; --rule:#232838;
+    --ink:#E4E7EC; --ink-dim:#6B7280; --ink-dimmer:#454C5C;
+    --live:#3DDC97; --alert:#F5A623; --action:#4F8DFD; --danger:#F5566B;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;height:100%;background:var(--void);color:var(--ink);
+    font-family:'IBM Plex Mono',monospace;}
+  .app{display:grid;grid-template-rows:auto auto 1fr auto;height:100vh;max-width:1320px;margin:0 auto;}
+
+  /* Top bar */
+  .topbar{display:flex;align-items:center;justify-content:space-between;padding:16px 26px;border-bottom:1px solid var(--rule);}
+  .brand{display:flex;align-items:center;gap:12px;}
+  .brand h1{font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:700;margin:0;}
+  .brand .tag{font-size:11px;color:var(--ink-dim);letter-spacing:0.06em;text-transform:uppercase;}
+  .heartbeat{display:flex;align-items:center;gap:18px;flex-wrap:wrap;}
+  .hb-item{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--ink-dim);}
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--live);animation:pulse 1.8s infinite;}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(61,220,151,.55);}70%{box-shadow:0 0 0 8px rgba(61,220,151,0);}100%{box-shadow:0 0 0 0 rgba(61,220,151,0);}}
+  @media (prefers-reduced-motion:reduce){.dot{animation:none;}}
+  .lastcheck-n{color:var(--ink);font-weight:600;}
+  .speed-toggle{display:flex;border:1px solid var(--rule);border-radius:6px;overflow:hidden;}
+  .speed-toggle button{background:var(--panel);color:var(--ink-dim);border:none;font-family:'IBM Plex Mono',monospace;font-size:11px;padding:6px 12px;cursor:pointer;}
+  .speed-toggle button.active{background:var(--action);color:#08101F;font-weight:600;}
+
+  /* Guardrail strip */
+  .guardrails{display:flex;align-items:center;gap:22px;padding:10px 26px;background:var(--panel-2);border-bottom:1px solid var(--rule);font-size:11px;color:var(--ink-dim);flex-wrap:wrap;}
+  .g{display:flex;align-items:center;gap:8px;}
+  .g-bar{width:90px;height:5px;background:var(--rule);border-radius:3px;overflow:hidden;}
+  .g-bar-fill{height:100%;background:var(--live);border-radius:3px;transition:width .6s ease;}
+  .g-label{color:var(--ink-dimmer);}
+  .g-val{color:var(--ink);font-weight:600;}
+  .g-val.accent{color:var(--live);}
+
+  /* Main grid */
+  .main{display:grid;grid-template-columns:1fr 360px;overflow:hidden;}
+  .feed-wrap{border-right:1px solid var(--rule);display:flex;flex-direction:column;overflow:hidden;}
+  .feed-head{padding:14px 24px 10px;font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:600;color:var(--ink-dim);text-transform:uppercase;letter-spacing:0.08em;display:flex;justify-content:space-between;}
+  .feed{flex:1;overflow-y:auto;padding:4px 24px 24px;position:relative;}
+  .feed::before{content:"";position:absolute;left:37px;top:0;bottom:0;width:1px;background:var(--rule);}
+  .entry{position:relative;padding-left:36px;padding-bottom:18px;opacity:0;animation:slideIn .4s ease forwards;}
+  @keyframes slideIn{from{opacity:0;transform:translateY(-6px);}to{opacity:1;transform:translateY(0);}}
+  .entry .node{position:absolute;left:0;top:2px;width:15px;height:15px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;background:var(--void);border:2px solid var(--rule);}
+  .entry.observe .node{border-color:var(--live);color:var(--live);}
+  .entry.decide .node{border-color:var(--alert);color:var(--alert);}
+  .entry.act .node{border-color:var(--action);color:var(--action);}
+  .entry .ts{font-size:10px;color:var(--ink-dimmer);margin-bottom:3px;}
+  .entry .phase{font-size:10px;text-transform:uppercase;letter-spacing:0.08em;font-weight:600;margin-right:8px;}
+  .entry.observe .phase{color:var(--live);}
+  .entry.decide .phase{color:var(--alert);}
+  .entry.act .phase{color:var(--action);}
+  .entry .msg{font-size:13px;color:var(--ink);line-height:1.55;}
+  .entry .msg b{color:#fff;}
+  .entry .evidence{margin-top:6px;font-size:11px;color:var(--ink-dim);border-left:2px solid var(--rule);padding-left:8px;}
+
+  /* Right column */
+  .right{display:flex;flex-direction:column;overflow-y:auto;}
+  .rhead{padding:14px 20px 8px;font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:600;color:var(--ink-dim);text-transform:uppercase;letter-spacing:0.08em;}
+  .featured{margin:0 20px 14px;background:var(--panel);border:1px solid var(--rule);border-radius:10px;padding:14px 16px;}
+  .featured .ftop{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;}
+  .featured .fname{font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:600;}
+  .featured .fval{font-size:20px;font-weight:700;font-family:'Space Grotesk',sans-serif;}
+  .card{margin:0 20px 12px;background:var(--panel);border:1px solid var(--rule);border-radius:10px;padding:12px 14px;}
+  .card .name{font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:600;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center;gap:8px;}
+  .li{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--ink-dim);}
+  .status-chip{font-size:9px;padding:2px 8px;border-radius:20px;text-transform:uppercase;letter-spacing:0.05em;font-weight:600;white-space:nowrap;}
+  .status-chip.ok{background:rgba(61,220,151,0.12);color:var(--live);}
+  .status-chip.fixed{background:rgba(79,141,253,0.14);color:var(--action);}
+  .status-chip.watch{background:rgba(245,166,35,0.14);color:var(--alert);}
+  .status-chip.crit{background:rgba(245,86,107,0.14);color:var(--danger);}
+  .card .row{display:flex;justify-content:space-between;align-items:center;font-size:11px;color:var(--ink-dim);margin-top:6px;}
+  .card .row .m{color:var(--ink);font-weight:600;font-family:'Space Grotesk',sans-serif;}
+  svg.spark{width:100%;height:34px;display:block;}
+  svg.bigspark{width:100%;height:70px;display:block;}
+
+  /* Bottom bar */
+  .bottombar{display:flex;align-items:center;justify-content:space-between;padding:13px 26px;border-top:1px solid var(--rule);background:var(--panel-2);gap:16px;flex-wrap:wrap;}
+  .inject-btn{background:var(--danger);color:#1a0508;border:none;border-radius:8px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:13px;padding:11px 20px;cursor:pointer;display:flex;align-items:center;gap:8px;}
+  .inject-btn:hover{filter:brightness(1.08);}
+  .inject-btn:disabled{opacity:.35;cursor:not-allowed;}
+  .hint{font-size:11px;color:var(--ink-dimmer);max-width:52ch;}
+  ::-webkit-scrollbar{width:8px;} ::-webkit-scrollbar-thumb{background:var(--rule);border-radius:4px;}
+</style>
+</head>
+<body>
+<div class="app">
+
+  <div class="topbar">
+    <div class="brand">
+      <h1>Ad-Ops Copilot</h1><span class="tag">Always-On Agent · GAM + SpringServe</span>
+    </div>
+    <div class="heartbeat">
+      <div class="hb-item"><span class="dot"></span> AGENT LOOP RUNNING</div>
+      <div class="hb-item">Last scan <span class="lastcheck-n" id="lastcheck">0s</span> ago</div>
+      <div class="speed-toggle">
+        <button class="active" id="speed1x">1×</button>
+        <button id="speed100x">100× (demo)</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="guardrails">
+    <div class="g"><span class="g-label">Daily make-good exposure</span>
+      <div class="g-bar"><div class="g-bar-fill" id="spendbar" style="width:22%"></div></div>
+      <span class="g-val" id="spendval">$2,200 / $10,000</span></div>
+    <div class="g"><span class="g-label">Auto-approve</span><span class="g-val">reversible ≤ $500/hr impact</span></div>
+    <div class="g"><span class="g-label">Human review</span><span class="g-val">priority / floor / creative changes</span></div>
+    <div class="g"><span class="g-label">Cost / scan</span><span class="g-val accent" id="cogs">$0.007 · 21× cheaper</span></div>
+  </div>
+
+  <div class="main">
+    <div class="feed-wrap">
+      <div class="feed-head"><span>Agent Activity — Observe · Decide · Act</span><span id="scancount" style="color:var(--ink-dimmer)">scan #0</span></div>
+      <div class="feed" id="feed"></div>
+    </div>
+
+    <div class="right">
+      <div class="rhead">Live GAM Trends</div>
+      <div class="featured">
+        <div class="ftop"><span class="fname">LI-5501 · Fill rate</span><span class="fval" id="f-val" style="color:var(--live)">93%</span></div>
+        <svg class="bigspark" id="f-chart" viewBox="0 0 320 70" preserveAspectRatio="none"></svg>
+      </div>
+
+      <div class="rhead">Campaign Health</div>
+      <div id="cards"></div>
+    </div>
+  </div>
+
+  <div class="bottombar">
+    <span class="hint">Inject a live event to watch the always-on agent detect it, diagnose the cause from the GAM change log, and act — in real time.</span>
+    <button class="inject-btn" id="injectBtn">⚡ Inject Event: fill drop on LI-5501</button>
+  </div>
+</div>
+
+<script>
+// ---- Campaign state (demo). Live version pulls this from the agent service via the adapter. ----
+const START = [
+  {id:"CAMP-1001", li:"LI-5501", adv:"Delta SkyMiles", plat:"GAM",        metric:"fill",  val:93, unit:"%", chip:"ok",   chiptxt:"Nominal", series:seed(93,3)},
+  {id:"CAMP-1002", li:"LI-5502", adv:"Nike",           plat:"GAM",        metric:"pace",  val:72, unit:"%", chip:"watch",chiptxt:"Underpacing", series:[100,98,95,90,86,82,78,74,72]},
+  {id:"CAMP-1003", li:"LI-5503", adv:"Coors Light",    plat:"SpringServe",metric:"fill",  val:0,  unit:"%", chip:"crit", chiptxt:"Creative down", series:[88,88,87,88,40,0,0,0,0]},
+  {id:"CAMP-1004", li:"LI-5504", adv:"Amex Platinum",  plat:"GAM",        metric:"spend", val:64, unit:"%", chip:"watch",chiptxt:"Underspend", series:[10,20,30,40,48,55,60,63,64]},
+];
+let S = JSON.parse(JSON.stringify(START));
+function seed(base,jit){return Array.from({length:9},()=>base + (Math.round((Math.sin(Math.random()*6)*jit))));}
+
+const feed=document.getElementById('feed'), lastcheckEl=document.getElementById('lastcheck'),
+  injectBtn=document.getElementById('injectBtn'), scancountEl=document.getElementById('scancount'),
+  spendbar=document.getElementById('spendbar'), spendval=document.getElementById('spendval');
+let seconds=0, scan=0, exposure=2200, speedMult=1, injected=false;
+
+function sparkPath(series,w,h){
+  const min=Math.min(...series),max=Math.max(...series),rng=(max-min)||1;
+  return series.map((v,i)=>{const x=(i/(series.length-1))*w, y=h-3-((v-min)/rng)*(h-6);
+    return (i?'L':'M')+x.toFixed(1)+' '+y.toFixed(1);}).join(' ');
+}
+function color(c){return c==='crit'?'var(--danger)':c==='watch'?'var(--alert)':c==='fixed'?'var(--action)':'var(--live)';}
+
+function renderFeatured(){
+  const c=S.find(x=>x.id==='CAMP-1001'); const w=320,h=70;
+  const d=sparkPath(c.series,w,h);
+  const min=Math.min(...c.series),max=Math.max(...c.series),rng=(max-min)||1;
+  const ey=h-3-((c.series[c.series.length-1]-min)/rng)*(h-6), ex=w;
+  const col=color(c.chip);
+  document.getElementById('f-chart').innerHTML=
+    `<defs><linearGradient id="fg" x1="0" y1="0" x2="0" y2="1">
+       <stop offset="0" stop-color="${col}" stop-opacity="0.25"/><stop offset="1" stop-color="${col}" stop-opacity="0"/></linearGradient></defs>
+     <path d="${d} L ${w} ${h} L 0 ${h} Z" fill="url(#fg)" stroke="none"/>
+     <path d="${d}" fill="none" stroke="${col}" stroke-width="2"/>
+     <circle cx="${ex}" cy="${ey.toFixed(1)}" r="3.5" fill="${col}"/>`;
+  const fv=document.getElementById('f-val'); fv.textContent=c.val+'%'; fv.style.color=col;
+}
+function renderCards(){
+  document.getElementById('cards').innerHTML=S.map(c=>{
+    const unit=c.metric==='spend'?'% spent':c.metric==='pace'?'% pace':'% fill';
+    return `<div class="card">
+      <div class="name"><span>${c.adv} <span class="li">${c.li} · ${c.plat}</span></span>
+        <span class="status-chip ${c.chip}" id="chip-${c.id}">${c.chiptxt}</span></div>
+      <svg class="spark" viewBox="0 0 300 34" preserveAspectRatio="none">
+        <path d="${sparkPath(c.series,300,34)}" fill="none" stroke="${color(c.chip)}" stroke-width="2"/></svg>
+      <div class="row"><span>${unit}</span><span class="m" id="m-${c.id}" style="color:${color(c.chip)}">${c.val}%</span></div>
+    </div>`;}).join('');
+}
+function render(){renderFeatured();renderCards();}
+
+function addEntry(phase,msg,evidence){
+  const el=document.createElement('div'); el.className='entry '+phase;
+  const icon=phase==='observe'?'◉':phase==='decide'?'◆':'▶';
+  const label=phase==='observe'?'Observe':phase==='decide'?'Decide':'Act';
+  const ts=new Date().toTimeString().slice(0,8);
+  el.innerHTML=`<div class="node">${icon}</div><div class="ts">${ts}</div>
+    <div class="msg"><span class="phase">${label}</span>${msg}${evidence?`<div class="evidence">${evidence}</div>`:''}</div>`;
+  feed.appendChild(el); feed.scrollTop=feed.scrollHeight;
+}
+
+function routineTick(){
+  seconds=0; scan++; scancountEl.textContent='scan #'+scan;
+  exposure+=Math.floor(Math.random()*30)+5;
+  spendval.textContent=`$${exposure.toLocaleString()} / $10,000`;
+  spendbar.style.width=Math.min(100,exposure/10000*100).toFixed(0)+'%';
+  // gentle jitter on the healthy fill line so the trend looks live
+  if(!injected){const c=S.find(x=>x.id==='CAMP-1001');
+    c.series=[...c.series.slice(1), 92+Math.round(Math.sin(scan)*2)]; c.val=c.series[c.series.length-1]; render();}
+  addEntry('observe',`Polled <b>4</b> campaigns via GAM + SpringServe — all within normal range.`);
+}
+
+setInterval(()=>{seconds++;lastcheckEl.textContent=seconds+'s';},1000);
+let routine=setInterval(routineTick,8000);
+render();
+addEntry('observe',`Agent loop started. Monitoring <b>4</b> campaigns across GAM + SpringServe.`);
+
+document.getElementById('speed1x').onclick=()=>setSpeed(1);
+document.getElementById('speed100x').onclick=()=>setSpeed(100);
+function setSpeed(m){speedMult=m;document.getElementById('speed1x').classList.toggle('active',m===1);
+  document.getElementById('speed100x').classList.toggle('active',m===100);
+  clearInterval(routine);routine=setInterval(routineTick,m===1?8000:2500);}
+
+// ---- Scripted inject: uses the REAL recommendation the agent produced for CAMP-1001 ----
+injectBtn.onclick=()=>{
+  injectBtn.disabled=true; injected=true;
+  injectBtn.textContent='⚡ Event injected — watch the feed →';
+  const c=S.find(x=>x.id==='CAMP-1001');
+
+  setTimeout(()=>{ c.series=[93,92,94,93,92,90,72,58,48]; c.val=48; c.chip='crit'; c.chiptxt='Fill drop'; render();
+    addEntry('observe',`<b>LI-5501</b> (Delta SkyMiles) fill rate fell <b>93% → 48%</b> (−45%) over the last 10 min. ~13,600 impressions/hr going unfilled.`); },700);
+
+  setTimeout(()=>{ addEntry('decide',
+    `Correlated with the GAM change log. Root cause: geo-targeting on LI-5501 narrowed to US-only, cutting eligible audience ~55%. Runbook <b>low-fill-rate</b> applies. Proposed: restore targeting to last-known-good (US, EU, APAC).`,
+    `Evidence: CHG-202 @ 13:40Z on LI-5501 (drop 10 min later). Secondary: CHG-201 floor $12→$22 @ 13:48Z may compound. Est. $250/hr at-risk — reversible, under auto-approve cap.`);
+    const chip=document.getElementById('chip-CAMP-1001'); chip.textContent='Deciding'; chip.className='status-chip watch'; },2400);
+
+  setTimeout(()=>{ addEntry('act',
+    `Restored LI-5501 targeting to last-known-good via GAM API. Slack <b>#adops</b> notified. Reversible change logged for audit.`);
+    const chip=document.getElementById('chip-CAMP-1001'); chip.textContent='Fixed'; chip.className='status-chip fixed'; },4400);
+
+  setTimeout(()=>{ c.series=[48,58,72,84,90,92,93,93,93]; c.val=93; c.chip='ok'; c.chiptxt='Recovered'; render();
+    addEntry('observe',`Re-checked <b>LI-5501</b> — fill recovering toward 93% baseline. Unfilled impressions clearing.`); },6200);
+
+  setTimeout(()=>{ injectBtn.disabled=false; injected=false;
+    injectBtn.textContent='⚡ Inject Event: fill drop on LI-5501'; },8200);
+};
+</script>
+</body>
+</html>

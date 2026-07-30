@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# Secrets / local config — NEVER commit
+.env
+.env.*
+*.pem
+
+# Playwright / test artifacts
+.playwright-mcp/

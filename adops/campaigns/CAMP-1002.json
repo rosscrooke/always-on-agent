@@ -1,0 +1,22 @@
+{
+  "id": "CAMP-1002",
+  "title": "Nike Summer Brand campaign underpacing — projected to miss delivery",
+  "status": "open",
+  "severity": null,
+  "labels": ["pacing", "delivery-risk"],
+  "ad_server": "GAM",
+  "ad_unit": "ife-premium-video",
+  "line_item": "LI-5502",
+  "advertiser": "Nike",
+  "detected_at": "2026-07-30T14:20:00Z",
+  "metrics": {
+    "goal_impressions": 2000000,
+    "delivered_impressions": 640000,
+    "days_elapsed": 6,
+    "days_total": 10,
+    "projected_delivery_pct": 0.72,
+    "guarantee_type": "guaranteed"
+  },
+  "body": "Nike Summer Brand campaign (LI-5502, guaranteed 2,000,000 impressions over 10 days) is pacing at a projected 72% delivery with 4 days remaining. At the current rate it will under-deliver by roughly 560,000 impressions, which would breach the delivery guarantee and trigger make-good obligations. The line item shares the ife-premium-video ad unit with other campaigns.",
+  "comments": []
+}

@@ -1,0 +1,22 @@
+{
+  "id": "CAMP-1001",
+  "title": "Fill rate dropped 45% on Premium Video line item (LI-5501)",
+  "status": "open",
+  "severity": null,
+  "labels": ["fill-drop", "revenue-impact"],
+  "ad_server": "GAM",
+  "ad_unit": "ife-premium-video",
+  "line_item": "LI-5501",
+  "advertiser": "Delta SkyMiles Co-Brand Card",
+  "detected_at": "2026-07-30T14:20:00Z",
+  "metrics": {
+    "fill_rate_now": 0.48,
+    "fill_rate_baseline": 0.93,
+    "impressions_last_hour": 12400,
+    "impressions_expected_hour": 26000,
+    "unfilled_last_hour": 13600,
+    "ecpm_usd": 18.5
+  },
+  "body": "Fill rate on the Premium Video line item (LI-5501), running on the seat-back in-flight entertainment screens, dropped from ~93% to 48% starting around 13:50 UTC. Roughly 13,600 expected impressions per hour are going unfilled, leaving ad slots blank. No creative errors are reported and demand partners are healthy elsewhere, so this looks like an eligibility/targeting change rather than a demand outage.",
+  "comments": []
+}

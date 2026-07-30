@@ -1,0 +1,49 @@
+{
+  "changes": [
+    {
+      "id": "CHG-201",
+      "type": "floor_price_change",
+      "ad_unit": "ife-premium-video",
+      "changed_at": "2026-07-30T13:48:00Z",
+      "changed_by": "revenue-ops@adops.example",
+      "summary": "Raised eCPM floor on ife-premium-video from $12 to $22",
+      "details": "Fewer demand partners clear the higher floor, so a share of impressions now go unfilled on line items in this ad unit.",
+      "reversible": true,
+      "last_known_good": "floor=$12"
+    },
+    {
+      "id": "CHG-202",
+      "type": "targeting_change",
+      "line_item": "LI-5501",
+      "changed_at": "2026-07-30T13:40:00Z",
+      "changed_by": "maria.lopez@adops.example",
+      "summary": "Narrowed geo-targeting on LI-5501 to US-only (removed EU/APAC)",
+      "details": "Eligible audience for LI-5501 reduced by roughly 55%.",
+      "reversible": true,
+      "last_known_good": "geo=US,EU,APAC"
+    },
+    {
+      "id": "CHG-203",
+      "type": "priority_change",
+      "line_item": "LI-6602",
+      "changed_at": "2026-07-30T09:10:00Z",
+      "changed_by": "ci-bot@adops.example",
+      "summary": "Raised competing sponsorship LI-6602 to priority 4 (sponsorship)",
+      "details": "LI-6602 now outranks standard line items (including Nike LI-5502) in the shared ife-premium-video ad unit, starving their delivery.",
+      "reversible": true,
+      "last_known_good": "priority=8"
+    },
+    {
+      "id": "CHG-204",
+      "type": "creative_upload",
+      "line_item": "LI-5503",
+      "creative": "CR-8890",
+      "changed_at": "2026-07-29T16:00:00Z",
+      "changed_by": "trafficking@adops.example",
+      "summary": "Uploaded new creative CR-8890 (Coors Light 15s) to LI-5503",
+      "details": "Replaced prior approved creative CR-8871. New creative has no responsibility messaging or age-gating metadata.",
+      "reversible": true,
+      "last_known_good": "creative=CR-8871"
+    }
+  ]
+}

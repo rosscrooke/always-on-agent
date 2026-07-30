@@ -1,0 +1,20 @@
+{
+  "id": "CAMP-1003",
+  "title": "Creative disapproved — Coors Light 15s video (CR-8890)",
+  "status": "open",
+  "severity": null,
+  "labels": ["creative-rejected", "policy"],
+  "ad_server": "SpringServe",
+  "ad_unit": "ife-standard-video",
+  "line_item": "LI-5503",
+  "advertiser": "Coors Light",
+  "creative": "CR-8890",
+  "detected_at": "2026-07-30T14:20:00Z",
+  "metrics": {
+    "fill_rate_now": 0.0,
+    "fill_rate_baseline": 0.88,
+    "impressions_last_hour": 0
+  },
+  "body": "SpringServe flagged creative CR-8890 (Coors Light, 15-second video) as disapproved, so line item LI-5503 is now serving no creative and its slots are unfilled. The creative was uploaded yesterday. Need to determine the policy reason, whether it can be fixed (e.g. add required responsibility messaging / age gating), or whether an alternate creative should run to protect the slot.",
+  "comments": []
+}
