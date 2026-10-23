@@ -1,0 +1,24 @@
+{
+  "id": "PROD-4521",
+  "is_incident": true,
+  "severity": "P0",
+  "labels": ["incident", "payments", "deploy-regression", "customer-impact"],
+  "root_cause": "Deploy regression: payment-service v4.8.2 ('Add guest checkout support') shipped 14 minutes before the alert and touched PaymentService.java. The stack trace hits PaymentService.java:142, the runbook's known NPE where customer.savedPaymentMethod is null for customers on the new guest checkout flow.",
+  "evidence": [
+    "deploys/recent.json: payment-service v4.8.2 deployed_at 2026-05-19T14:04:11Z, summary 'Add guest checkout support', files_changed includes PaymentService.java",
+    "issues/PROD-4521.json: opened_at 2026-05-19T14:18:23Z (14 min after deploy); body 'p99 latency on /checkout has jumped from 800ms to 8.2s over the last 14 minutes'",
+    "issues/PROD-4521.json: body stack trace 'at com.bts.payments.PaymentService.processCharge(PaymentService.java:142)'",
+    "runbooks/payment-service-degraded.md: First checks #1 'Check deploys/recent.json for any deploy to payment-service in the last 60 minutes. The single most common cause is a deploy regression.'",
+    "runbooks/payment-service-degraded.md: First checks #4 'If the stack trace shows PaymentService.java:142, this is the unfixed bug where customer.savedPaymentMethod is null for customers in the new \"guest checkout\" flow.'",
+    "issues/PROD-4521.json: body 'Affected: ~2,400 active checkouts. Region: us-east-1, eu-west-2' (broad, multi-region impact)",
+    "runbooks/payment-service-degraded.md: Severity guide 'All customers affected → P0, page #payments-oncall immediately'",
+    "deploys/recent.json: payment-service rollback_available true, last_known_good v4.8.1"
+  ],
+  "runbook": "runbooks/payment-service-degraded.md",
+  "related_deploy": { "service": "payment-service", "version": "v4.8.2", "rollback_to": "v4.8.1" },
+  "linked_issues": ["PROD-4487"],
+  "recommended_action": "Needs human approval: (1) Page #payments-oncall now. (2) Roll back payment-service to v4.8.1 (rollback_available: true). That's the fastest mitigation. (3) Then hotfix forward: add a null check at PaymentService.java:142 that falls back to the request's paymentMethodToken, per the runbook. (4) Leave Stripe and connection-pool checks (runbook #2, #3) as secondary. The NPE stack trace plus the deploy timing already explain the symptoms. (5) Tell the PROD-4487 owners: same root cause.",
+  "page": "#payments-oncall",
+  "confidence": "high",
+  "needs_human": false
+}

@@ -1,0 +1,24 @@
+{
+  "id": "PROD-4519",
+  "is_incident": true,
+  "severity": "P2",
+  "labels": ["incident", "uploads", "mobile", "needs-investigation"],
+  "root_cause": "Leading suspect: the signed-URL TTL bug from the CDN runbook. signing-service v2.1.4 ('Reduce URL TTL for security review', config/prod.yaml) matches the runbook's 'our problem' cause, and the symptoms fit (latency tripled with no backend errors and normal-looking CDN traffic). But the timing is ambiguous. The issue says uploads 'started intermittently 2 days ago', about 2026-05-16, which is before that deploy on 2026-05-17, and the runbook's '6 hours of a deploy' window can't be confirmed. The intermittent phase may be a different cause (regional ISP routing or CDN config drift), possibly made worse by the TTL change. The runbook's first check, latency by region, decides which.",
+  "evidence": [
+    "issues/PROD-4519.json: body 'Customers reporting 30-60s upload times… Started intermittently 2 days ago, now consistent. iOS and Android both affected.'",
+    "issues/PROD-4519.json: opened_at 2026-05-18T09:42:11Z ('2 days ago' ≈ 2026-05-16)",
+    "issues/PROD-4519.json: body 'CDN dashboard shows normal traffic patterns. Backend logs show no errors but latency on POST /uploads/images has tripled.'",
+    "runbooks/cdn-upload-latency.md: Symptoms 'image uploads taking 30+ seconds', 'Backend logs show no errors, just elevated latency', 'CDN dashboard appears normal'",
+    "runbooks/cdn-upload-latency.md: Our problem fix 'If the issue started within 6 hours of a deploy to signing-service, suspect the signed-URL TTL bug… set URL_TTL_SECONDS… to 3600 (was reduced to 300 in PR #4189)'",
+    "deploys/recent.json: signing-service v2.1.4 deployed_at 2026-05-17T11:22:00Z, summary 'Reduce URL TTL for security review', files_changed config/prod.yaml, last_known_good v2.1.3",
+    "Timing conflict: symptom start (~2026-05-16) is before the signing-service deploy (2026-05-17T11:22Z), so the deploy can't be confirmed as the cause",
+    "Severity reasoning (not from policy): cdn-upload-latency.md has no severity guide. P2 because a core mobile feature is badly degraded for all users on both platforms, but uploads still complete with no data loss."
+  ],
+  "runbook": "runbooks/cdn-upload-latency.md",
+  "related_deploy": { "service": "signing-service", "version": "v2.1.4", "rollback_to": "v2.1.3" },
+  "linked_issues": [],
+  "recommended_action": "Needs human approval: (1) Run the runbook's first check: compare upload latency by region (CDN dashboard → 'Uploads → POST' panel). (2) If only one region is slow, file it with the CDN vendor. (3) If all regions are slow, it's our problem: set URL_TTL_SECONDS in signing-service/config/prod.yaml back to 3600, or roll back signing-service to v2.1.3 (rollback_available: true). Coordinate with security first, since the TTL cut came from a security review. (4) Find out what happened around 2026-05-16, before the deploy, to explain the earlier intermittent phase.",
+  "page": null,
+  "confidence": "low",
+  "needs_human": true
+}

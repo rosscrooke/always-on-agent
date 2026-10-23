@@ -1,0 +1,23 @@
+{
+  "id": "PROD-4498",
+  "is_incident": true,
+  "severity": "P2",
+  "labels": ["incident", "auth", "intermittent"],
+  "root_cause": "Probable connection pool exhaustion on the auth-service → users-db link, the runbook's '95% of the time' cause. Every reported symptom matches: 502 bursts of 25–35s on POST /auth/login, no related deploys, no pod restarts, and upstream timeouts at the load balancer. Not deploy-related: auth-service v6.0.0 (Redis session storage) was deployed 2026-05-14, two days after this issue was opened (2026-05-12), so it can't have caused it.",
+  "evidence": [
+    "issues/PROD-4498.json: body '3 separate 502 windows in the last 24 hours on POST /auth/login. Each lasted 25-35 seconds'",
+    "issues/PROD-4498.json: body 'No deploys in the relevant time windows. Auth service pods show no restarts. Load balancer logs show upstream timeouts.'",
+    "runbooks/auth-502-windows.md: Symptoms 'Bursts of HTTP 502 on POST /auth/login lasting 20-60 seconds', 'No related deploys', 'Upstream timeouts in load balancer logs'",
+    "runbooks/auth-502-windows.md: Root cause 'Connection pool exhaustion on the auth-service → users-db link'",
+    "issues/PROD-4498.json: opened_at 2026-05-12T22:14:55Z",
+    "deploys/recent.json: auth-service v6.0.0 deployed_at 2026-05-14T08:15:42Z (after the issue was opened, so ruled out; rollback_available false)",
+    "Severity reasoning (not from policy): auth-502-windows.md has no severity guide. P2 because logins fail for every user, but only in short windows that recover on their own, with no outage between them."
+  ],
+  "runbook": "runbooks/auth-502-windows.md",
+  "related_deploy": null,
+  "linked_issues": [],
+  "recommended_action": "Needs human approval: (1) Confirm: on an auth-service pod, check `curl localhost:9090/metrics | grep db_pool` during a 502 window. db_pool_idle == 0 confirms pool exhaustion. (2) Short-term fix: raise DB_POOL_SIZE in auth-service/config/prod.yaml from 30 to 60 and redeploy. (3) Long-term: switch password hashing to argon2id (tracked in PROD-4221). Don't scale up auth-service pods (more pods drain the same DB pool faster) and don't increase the load-balancer timeout (it hides the symptom), per the runbook.",
+  "page": "auth-service on-call (business hours; no immediate page)",
+  "confidence": "medium",
+  "needs_human": false
+}

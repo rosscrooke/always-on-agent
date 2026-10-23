@@ -1,0 +1,19 @@
+{
+  "id": "PROD-4506",
+  "is_incident": false,
+  "severity": null,
+  "labels": ["enhancement"],
+  "root_cause": "Not an incident. This is a feature request to add a max_concurrency setting (default 1) and a back-pressure signal to WorkerPool so the new ingestion pipeline can run up to 8 batches at once. Nothing is broken, so no runbook or deploy applies.",
+  "evidence": [
+    "issues/PROD-4506.json: title 'Add support for parallel batch jobs in worker pool'",
+    "issues/PROD-4506.json: body 'Proposing we extend WorkerPool with a max_concurrency setting, default 1, and update the dispatcher to honour it.'",
+    "issues/PROD-4506.json: reporter priya.shah@bts-synthetic.example (an engineer, not monitoring or customer support); no error, latency or customer impact described"
+  ],
+  "runbook": null,
+  "related_deploy": null,
+  "linked_issues": [],
+  "recommended_action": "Label 'enhancement' and send to the engineering backlog / triage for prioritisation. No severity and no page.",
+  "page": null,
+  "confidence": "high",
+  "needs_human": false
+}

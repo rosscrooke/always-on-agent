@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "triage_record.json",
+  "title": "TriageRecord",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id", "is_incident", "severity", "root_cause", "evidence", "runbook",
+    "related_deploy", "linked_issues", "recommended_action", "page",
+    "confidence", "needs_human"
+  ],
+  "properties": {
+    "id": { "type": "string", "pattern": "^PROD-[0-9]+$" },
+    "is_incident": { "type": "boolean" },
+    "severity": { "enum": ["P0", "P1", "P2", "P3", null] },
+    "labels": { "type": "array", "items": { "type": "string" } },
+    "root_cause": { "type": "string", "minLength": 1 },
+    "evidence": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 1 },
+      "description": "Each entry cites a file and field/line, e.g. \"deploys/recent.json: payment-service v4.8.2 deployed_at 14:04:11Z\""
+    },
+    "runbook": { "type": ["string", "null"], "pattern": "^runbooks/.+\\.md$" },
+    "related_deploy": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "required": ["service", "version", "rollback_to"],
+      "properties": {
+        "service": { "type": "string" },
+        "version": { "type": "string" },
+        "rollback_to": { "type": ["string", "null"] }
+      }
+    },
+    "linked_issues": { "type": "array", "items": { "type": "string", "pattern": "^PROD-[0-9]+$" } },
+    "recommended_action": { "type": "string", "minLength": 1 },
+    "page": { "type": ["string", "null"] },
+    "confidence": { "enum": ["high", "medium", "low"] },
+    "needs_human": { "type": "boolean" }
+  }
+}

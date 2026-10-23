@@ -1,0 +1,24 @@
+{
+  "id": "PROD-4487",
+  "is_incident": true,
+  "severity": "P1",
+  "labels": ["incident", "payments", "customer-impact", "tenant-specific", "feature-flag"],
+  "root_cause": "A feature flag exposed the same guest-checkout NPE as PROD-4521. tenant-config-service v3.2.1 enabled the 'guest-checkout' flag for cohort B (Acme Corp included) at 07:12, 13 minutes before Acme's checkout failures began at 07:25. That puts Acme's users on the guest checkout path, which hits the known null customer.savedPaymentMethod bug at PaymentService.java:142. Ruled out: frontend v12.4.1 at 06:50 is close in time but only changed pricing-page copy (src/pages/pricing.tsx), which has nothing to do with the payment confirmation step and wouldn't be tenant-specific.",
+  "evidence": [
+    "deploys/recent.json: tenant-config-service v3.2.1 deployed_at 2026-05-20T07:12:08Z, summary \"Enable feature flag 'guest-checkout' for cohort B (Acme Corp included)\", files_changed feature-flags/cohort-b.yaml",
+    "issues/PROD-4487.json: body 'none of their users can complete checkout as of 07:25 UTC' (13 min after the flag change)",
+    "issues/PROD-4487.json: body 'spinner that never resolves on the payment confirmation step'; 'Other customers do not appear affected — this looks tenant-specific'",
+    "runbooks/payment-service-degraded.md: First checks #4, the PaymentService.java:142 NPE affects 'customers in the new \"guest checkout\" flow'",
+    "out/triage/PROD-4521.json: same line-142 guest-checkout NPE root cause",
+    "deploys/recent.json: frontend v12.4.1 deployed_at 2026-05-20T06:50:33Z, summary 'Minor: copy update on pricing page', files_changed src/pages/pricing.tsx (ruled out: unrelated to checkout, not tenant-scoped)",
+    "runbooks/payment-service-degraded.md: Severity guide 'One tenant affected → P1, page CSM and on-call'",
+    "deploys/recent.json: tenant-config-service rollback_available true, last_known_good v3.2.0"
+  ],
+  "runbook": "runbooks/payment-service-degraded.md",
+  "related_deploy": { "service": "tenant-config-service", "version": "v3.2.1", "rollback_to": "v3.2.0" },
+  "linked_issues": ["PROD-4521"],
+  "recommended_action": "Needs human approval: (1) Page the CSM and on-call (P1, one tenant). (2) Fastest mitigation: disable the 'guest-checkout' flag for cohort B, or roll back tenant-config-service to v3.2.0 (rollback_available: true). That takes Acme off the broken path without waiting for the payment-service fix. (3) The permanent fix is the PROD-4521 line-142 null check. Keep the flag off until it ships. (4) Status line for the CSM before the CTO call: 'We've identified the cause: a feature rollout at 07:12 UTC put your tenant on a new checkout path with a known defect. We're reverting that rollout for your tenant now and will confirm when checkout is restored.'",
+  "page": "CSM + on-call",
+  "confidence": "high",
+  "needs_human": false
+}

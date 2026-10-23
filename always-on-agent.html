@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Always-On Ops Agent — Exercise Details &amp; Implementation Approach</title>
+<style>
+  :root { --ink:#1f2328; --muted:#59636e; --line:#d1d9e0; --bg:#f6f8fa; --accent:#0969da; --warn:#9a6700; --warnbg:#fff8c5; --bad:#cf222e; --good:#1a7f37; }
+  body { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--ink); line-height: 1.55;
+         max-width: 980px; margin: 40px auto; padding: 0 24px; }
+  h1 { font-size: 28px; margin-bottom: 4px; }
+  h2 { font-size: 20px; margin-top: 36px; border-bottom: 1px solid var(--line); padding-bottom: 6px; }
+  h3 { font-size: 16px; margin: 22px 0 6px; }
+  .sub { color: var(--muted); margin-top: 0; }
+  table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 14px; }
+  th, td { border: 1px solid var(--line); padding: 7px 9px; text-align: left; vertical-align: top; }
+  th { background: var(--bg); }
+  code { background: var(--bg); border: 1px solid var(--line); border-radius: 4px; padding: 1px 5px; font-size: 12.5px; }
+  pre { background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: 10px 14px; overflow-x: auto; font-size: 12.5px; }
+  .callout { border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 6px; padding: 10px 14px; margin: 12px 0; }
+  .warn { border-left-color: var(--warn); background: var(--warnbg); }
+  .step { border: 1px solid var(--line); border-radius: 8px; padding: 4px 16px 10px; margin: 14px 0; }
+  .num { display:inline-block; min-width:26px; height:26px; line-height:26px; text-align:center; border-radius:50%;
+         background: var(--accent); color:#fff; font-weight:600; font-size:13px; margin-right:8px; }
+  .v { color: var(--bad); font-weight: 600; }
+  .ok { color: var(--good); font-weight: 600; }
+  .j { color: var(--warn); font-weight: 600; }
+  .pill { display:inline-block; font-size:12px; font-weight:600; padding:1px 8px; border-radius:10px; }
+  .p0 { background:#ffebe9; color:#82071e; } .p1 { background:#fff1e5; color:#953800; } .p2 { background:var(--warnbg); color:var(--warn); } .p4 { background:#eaeef2; color:var(--muted); }
+  footer { margin-top: 48px; color: var(--muted); font-size: 13px; }
+  html { scroll-behavior: smooth; }
+  h1[id], h2[id], h3[id] { scroll-margin-top: 16px; }
+  nav.sidebar { position: fixed; top: 0; left: 0; bottom: 0; width: 250px; overflow-y: auto;
+                background: var(--bg); border-right: 1px solid var(--line); padding: 20px 14px 40px;
+                font-size: 13.5px; box-sizing: border-box; }
+  nav.sidebar .nav-title { font-weight: 700; font-size: 14px; margin: 0 0 12px; }
+  nav.sidebar .nav-title a { color: var(--ink); text-decoration: none; }
+  nav.sidebar .group { color: var(--muted); font-size: 11px; font-weight: 700; text-transform: uppercase;
+                       letter-spacing: .06em; margin: 16px 0 4px; }
+  nav.sidebar ul { list-style: none; margin: 0; padding: 0; }
+  nav.sidebar li a { display: block; padding: 4px 8px; border-radius: 6px; color: var(--ink); text-decoration: none;
+                     line-height: 1.35; border-left: 3px solid transparent; }
+  nav.sidebar li a:hover { background: #eaeef2; }
+  nav.sidebar li a.active { background: #ddf4ff; border-left-color: var(--accent); color: #0550ae; font-weight: 600; }
+  nav.sidebar li.sub a { padding-left: 20px; font-size: 12.5px; color: var(--muted); }
+  @media (min-width: 1280px) { body { margin-left: max(274px, calc((100vw - 980px) / 2)); } }
+  @media (max-width: 1279px) { nav.sidebar { display: none; } }
+</style>
+</head>
+<body>
+<nav class="sidebar" aria-label="Sections">
+  <div class="nav-title"><a href="#top">Always-On Ops Agent</a></div>
+  <div class="group">The exercise</div>
+  <ul>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#repo">What's in the repo</a></li>
+    <li><a href="#jobs">The agent's jobs</a></li>
+  </ul>
+  <div class="group">Expected answers</div>
+  <ul>
+    <li><a href="#triage">Incident triage</a></li>
+    <li class="sub"><a href="#links">Links and traps</a></li>
+    <li><a href="#compliance">Compliance drift</a></li>
+    <li class="sub"><a href="#compliance-notes">Judgement calls</a></li>
+  </ul>
+  <div class="group">Approach</div>
+  <ul>
+    <li><a href="#options">Two ways to build it</a></li>
+    <li><a href="#design">Agent design</a></li>
+    <li class="sub"><a href="#tools">Tools and outputs</a></li>
+    <li class="sub"><a href="#guardrails">Guardrails</a></li>
+    <li><a href="#evals">Evaluating it</a></li>
+    <li><a href="#cost">Cost and latency levers</a></li>
+    <li><a href="#plan">Build plan</a></li>
+    <li><a href="#demo">Demo script</a></li>
+  </ul>
+  <div class="group">Team split (3 devs)</div>
+  <ul>
+    <li><a href="#team">Overview and contracts</a></li>
+    <li class="sub"><a href="#dev1">Dev 1: incidents</a></li>
+    <li class="sub"><a href="#dev2">Dev 2: compliance</a></li>
+    <li class="sub"><a href="#dev3">Dev 3: platform + eval</a></li>
+    <li class="sub"><a href="#team-timeline">Integration and timeline</a></li>
+  </ul>
+  <div class="group">Practicalities</div>
+  <ul>
+    <li><a href="#constraints">Gateway constraints</a></li>
+    <li><a href="#risks">Risks and open questions</a></li>
+  </ul>
+</nav>
+
+<h1 id="top">Always-On Ops Agent: Exercise Details &amp; Implementation Approach</h1>
+<p class="sub">Partner Basecamp hackathon · data: <code>day2/03_hackathon/always-on-agent</code> (fork of
+<code>rosscrooke/always-on-agent</code>) · written 2026-10-23</p>
+
+<h2 id="summary">Summary</h2>
+<div class="callout">
+  <strong>The exercise:</strong> build an <strong>always-on agent</strong> (a Claude "routine" that runs on a schedule or
+  trigger) and point it at a synthetic enterprise repo. On each run it should:
+  <ol style="margin:6px 0">
+    <li><strong>Triage open production incidents.</strong> Set severity, find the root cause, link the matching runbook,
+      and propose the fix.</li>
+    <li><strong>Correlate incidents with recent deploys.</strong></li>
+    <li><strong>Scan vendor contracts for compliance drift</strong> against a written policy, and open an issue for each
+      violation.</li>
+  </ol>
+  All the data is fictional.
+</div>
+<div class="callout warn">
+  <strong>What's from the repo and what's inferred.</strong>
+  <ul style="margin:4px 0">
+    <li><strong>From the repo:</strong> the data files, the jobs described in its README, and the compliance policy's
+      wording. The README names <strong>"Card C — Compliance Drift"</strong> and tells you to "point your routine at
+      this repo via the Routines UI".</li>
+    <li><strong>Not in the repo:</strong> the hackathon brief itself (<code>partner-basecamp-hackathon/01-always-on-ops-agent</code>),
+      including the full set of cards and the Routines setup.</li>
+    <li><strong>Inferred:</strong> the triage and deploy-correlation jobs (presumably the other cards), and everything
+      under "Expected answers". Those answers are my reading of the data. Check them against the official brief.</li>
+  </ul>
+</div>
+
+<h2 id="repo">What's in the repo</h2>
+<table>
+  <tr><th>Path</th><th>Contents</th><th>Used by</th></tr>
+  <tr><td><code>issues/*.json</code></td><td>5 open incidents (<code>id</code>, <code>title</code>, <code>status</code>,
+      <code>severity: null</code>, <code>labels</code>, <code>assignee: null</code>, <code>opened_at</code>,
+      <code>reporter</code>, <code>body</code>, <code>comments: []</code>)</td><td>Triage</td></tr>
+  <tr><td><code>runbooks/*.md</code></td><td>3 playbooks: login 502 windows, CDN upload latency, payment service degraded.
+      Each has symptoms, root cause, checks, fixes and "don'ts". The payment runbook has a <strong>severity guide</strong>.</td><td>Triage</td></tr>
+  <tr><td><code>deploys/recent.json</code></td><td>5 deploys (<code>service</code>, <code>version</code>,
+      <code>deployed_at</code>, <code>summary</code>, <code>files_changed</code>, <code>rollback_available</code>,
+      <code>last_known_good</code>)</td><td>Deploy correlation</td></tr>
+  <tr><td><code>contracts/*.md</code></td><td>3 vendor agreements (Acme Data Platform, Globex Messaging, Sirius Storage),
+      each with the same 8 sections</td><td>Compliance</td></tr>
+  <tr><td><code>compliance-policy.md</code></td><td>7 rules, each with an explicit "violation" definition: data residency,
+      audit rights, termination, liability cap, subprocessors, breach notification, governing law</td><td>Compliance</td></tr>
+</table>
+<p>There are no scripts or executables. The agent's "world" is just files.</p>
+
+<h2 id="jobs">The agent's jobs</h2>
+<table>
+  <tr><th>Job</th><th>Input</th><th>What a good run produces</th></tr>
+  <tr><td><strong>A. Incident triage</strong> <em>(inferred card)</em></td><td><code>issues/</code> + <code>runbooks/</code></td>
+      <td>Per issue: severity, labels, the likely root cause with evidence, the matching runbook, the proposed next step,
+        who to page. Feature requests are recognised and <em>not</em> treated as incidents.</td></tr>
+  <tr><td><strong>B. Deploy correlation</strong> <em>(inferred card)</em></td><td><code>issues/</code> + <code>deploys/recent.json</code></td>
+      <td>Each incident linked to the deploy (if any) that preceded it. Rollback recommended when available. Red-herring
+        deploys ruled out.</td></tr>
+  <tr><td><strong>C. Compliance drift</strong> <em>(named in the repo)</em></td><td><code>contracts/</code> + <code>compliance-policy.md</code></td>
+      <td>Per contract and rule: compliant or violation, quoting the clause. One issue opened per violation, and a
+        per-vendor summary.</td></tr>
+  <tr><td><strong>Always-on behaviour</strong></td><td>Repeated runs</td>
+      <td>Process only new or changed items, never post duplicate comments or issues, and leave an audit trail.</td></tr>
+</table>
+
+<h2 id="triage">Expected answers: incident triage + deploy correlation</h2>
+<p>Derived from the issues, runbooks and deploy log. Use them as the <strong>gold set for an eval</strong>.</p>
+<table>
+  <tr><th style="width:9%">Issue</th><th style="width:16%">What it is</th><th style="width:9%">Severity</th><th>Root cause and evidence</th><th style="width:24%">Recommended action</th></tr>
+  <tr><td><strong>PROD-4521</strong><br>NPE at checkout</td><td>p99 /checkout 800 ms → 8.2 s, errors +340%, ~2,400 checkouts, 2 regions</td>
+      <td><span class="pill p0">P0</span></td>
+      <td><strong>Deploy regression.</strong> <code>payment-service v4.8.2</code> ("Add guest checkout support", touched
+        <code>PaymentService.java</code>) went out at <strong>14:04</strong>, about 14 minutes before the alert at 14:18. The
+        stack trace is <code>PaymentService.java:142</code>, which is the payment runbook's <strong>known NPE bug</strong>:
+        <code>customer.savedPaymentMethod</code> is null in the guest checkout flow. Many customers in two regions are
+        affected, so it's P0 under the runbook's severity guide.</td>
+      <td>Page <code>#payments-oncall</code>. <strong>Roll back to v4.8.1</strong> (rollback is available), or hotfix with a
+        null check at line 142 that falls back to <code>paymentMethodToken</code>. Runbook:
+        <code>payment-service-degraded.md</code>.</td></tr>
+  <tr><td><strong>PROD-4487</strong><br>Acme can't check out</td><td>Tenant-specific: Acme Corp (2,400 seats) since 07:25 UTC, with the CTO call in 25 min</td>
+      <td><span class="pill p1">P1</span></td>
+      <td><strong>A feature flag exposed the same bug.</strong> <code>tenant-config-service v3.2.1</code> at
+        <strong>07:12</strong> enabled the <code>guest-checkout</code> flag for cohort B, which <strong>includes Acme
+        Corp</strong>. That puts Acme on the guest checkout path that hits the line-142 NPE (see PROD-4521). The
+        <code>frontend v12.4.1</code> deploy at 06:50 (pricing-page copy) is a <strong>red herring</strong>. One tenant
+        is affected, so it's P1 under the runbook.</td>
+      <td>Page the CSM and on-call. <strong>Disable the flag for cohort B, or roll back tenant-config to v3.2.0</strong>.
+        Link to PROD-4521, since it's the same root cause. Give the CSM a status line before the CTO call.</td></tr>
+  <tr><td><strong>PROD-4498</strong><br>Login 502 windows</td><td>3 × 25–35 s 502s on <code>POST /auth/login</code>, no deploys, upstream timeouts</td>
+      <td><span class="pill p2">P2</span> <em>(judgement)</em></td>
+      <td><strong>Connection pool exhaustion</strong> on <code>auth-service</code> → <code>users-db</code>, the runbook's
+        "95% of the time" cause. It matches every symptom. The <code>auth-service v6.0.0</code> Redis deploy (05-14) came
+        <strong>after</strong> the issue was opened (05-12), so it isn't the cause, and it has <strong>no rollback</strong>
+        anyway.</td>
+      <td>Confirm with <code>db_pool_idle == 0</code> during a window, then raise <code>DB_POOL_SIZE</code> from 30 to 60.
+        Long term: argon2id (PROD-4221). <strong>Don't</strong> scale pods or raise the load-balancer timeout.</td></tr>
+  <tr><td><strong>PROD-4519</strong><br>Slow image uploads</td><td>30–60 s uploads, iOS and Android, "started intermittently 2 days ago, now consistent"</td>
+      <td><span class="pill p2">P2</span> <em>(judgement)</em></td>
+      <td><strong>Leading suspect: the signed-URL TTL change.</strong> <code>signing-service v2.1.4</code> on 05-17
+        ("Reduce URL TTL for security review", <code>config/prod.yaml</code>) is the runbook's "our problem" cause. But the
+        timeline is ambiguous: the issue says it started about 05-16, before that deploy. So the runbook's <strong>first
+        check (latency by region)</strong> has to come first.</td>
+      <td>Check the upload latency by region. If every region is slow, set <code>URL_TTL_SECONDS</code> back to 3600 or
+        roll back to v2.1.3, <strong>coordinating with security</strong> since the TTL cut was a security-review change. If
+        only one region is slow, file it with the CDN vendor.</td></tr>
+  <tr><td><strong>PROD-4506</strong><br>Parallel batch jobs</td><td>A request for a <code>max_concurrency</code> setting on the worker pool</td>
+      <td><span class="pill p4">Not an incident</span></td>
+      <td>A <strong>feature request</strong>, not a production incident. No runbook or deploy applies.</td>
+      <td>Label it <code>enhancement</code>, send it to the backlog or engineering triage, and <strong>don't page anyone</strong>.</td></tr>
+</table>
+
+<h3 id="links">Links and traps a strong agent should catch</h3>
+<ul>
+  <li><strong>One bug, two incidents.</strong> PROD-4521 (all guest-checkout traffic after the payment deploy) and PROD-4487
+    (Acme after the cohort-B flag) share the line-142 root cause. The agent should link them, and the fix for one informs
+    the other.</li>
+  <li><strong>Red-herring deploys.</strong> The <code>frontend</code> pricing-copy deploy shortly before PROD-4487, and the
+    <code>auth-service</code> Redis deploy near PROD-4498, are both close in time and both wrong.</li>
+  <li><strong>Ambiguous timing.</strong> On PROD-4519 the symptom starts before the deploy. A good agent states that
+    uncertainty and follows the runbook's first check instead of blaming the deploy outright.</li>
+  <li><strong>"Don't" lists.</strong> The auth runbook says don't scale pods and don't raise the load-balancer timeout. A
+    recommendation that does either should count as a failure.</li>
+  <li><strong>Not everything is an incident.</strong> PROD-4506 shouldn't get a severity or a page.</li>
+  <li><strong>Severity needs a reason.</strong> Only the payment runbook defines severities. For the others, the agent
+    should state its reasoning rather than invent policy.</li>
+</ul>
+
+<h2 id="compliance">Expected answers: compliance drift (Card C)</h2>
+<p>Each contract checked against the 7 rules in <code>compliance-policy.md</code>, using the policy's own "violation"
+definitions.</p>
+<table>
+  <tr><th>Rule</th><th>Acme Data Platform</th><th>Globex Messaging</th><th>Sirius Storage</th></tr>
+  <tr><td>Data residency (EU data stays in the EU)</td>
+      <td class="v">VIOLATION: may process in US/Singapore; "reasonable efforts", no guarantee (§2)</td>
+      <td class="ok">OK: EEA only (§2)</td>
+      <td class="v">VIOLATION: Malaysia/Singapore, relocation at its discretion (§2)</td></tr>
+  <tr><td>Audit rights (≥ 30 days' notice; violation if &gt; 90)</td>
+      <td class="j">GAP: 60 days' notice. Not the policy's listed violation (&gt; 90), but short of the 30-day requirement (§3)</td>
+      <td class="ok">OK: 30 days (§3)</td>
+      <td class="v">VIOLATION: 180 days, once every 2 years (§3)</td></tr>
+  <tr><td>Termination for convenience (≤ 90 days)</td>
+      <td class="ok">OK: 90 days (§4). <em>Note: 120-day non-renewal notice; not covered by the policy.</em></td>
+      <td class="ok">OK: 60 days (§4)</td>
+      <td class="v">VIOLATION: not permitted in the 5-year initial term (§4)</td></tr>
+  <tr><td>Liability cap (≥ 12 months' fees; must cover breach)</td>
+      <td class="ok">OK: 12 months; uncapped for a breach caused by gross negligence (§5)</td>
+      <td class="ok">OK: 12 months; uncapped for breach (§5)</td>
+      <td class="v">VIOLATION: 3 months, and the cap also limits breach claims (§5)</td></tr>
+  <tr><td>Subprocessors (≥ 30 days' prior notice)</td>
+      <td class="v">VIOLATION: list updated within 30 days <em>after</em> a change; no prior notice (§6)</td>
+      <td class="ok">OK: 30 days' prior notice, plus a right to object (§6)</td>
+      <td class="v">VIOLATION: no notice or consent at all (§6)</td></tr>
+  <tr><td>Breach notification (≤ 72 h)</td>
+      <td class="v">VIOLATION: 96 hours (§7)</td>
+      <td class="ok">OK: 24 hours (§7)</td>
+      <td class="v">VIOLATION: "in due course", no window (§7)</td></tr>
+  <tr><td>Governing law (mature data-protection jurisdiction)</td>
+      <td class="j">JUDGEMENT: California (CCPA). Probably acceptable as "similar"; confirm with legal (§8)</td>
+      <td class="ok">OK: England and Wales (§8)</td>
+      <td class="j">LIKELY VIOLATION: Malaysia (PDPA exists, but not on the policy's list); confirm with legal (§8)</td></tr>
+  <tr><th>Summary</th><th>3 violations + 1 gap + 1 judgement call</th><th>0 violations (the compliant control case)</th><th>6 violations + 1 likely</th></tr>
+</table>
+
+<h3 id="compliance-notes">Judgement calls the agent must handle honestly</h3>
+<ul>
+  <li><strong>Acme's audit clause (60 days):</strong> it falls between "must be ≥ 30 days" and "violation if &gt; 90". The
+    agent should flag it as a gap for review, not a hard violation, and say why.</li>
+  <li><strong>"Cap excludes data breach":</strong> Acme and Globex carve breach <em>out of</em> the cap, so they're
+    <em>uncapped</em> for breach, which favours us. Sirius applies its cap <em>to</em> breach claims, at only 3 months.
+    The agent should read what each clause actually does, not just match the word "breach".</li>
+  <li><strong>Governing law isn't a closed list</strong> ("…or similar"). California and Malaysia need a stated rationale
+    and should go to a human, not be answered with false certainty.</li>
+  <li><strong>Globex is the control case.</strong> An agent that flags violations on Globex is producing false positives,
+    which is just as important to measure as missed violations.</li>
+</ul>
+
+<h2 id="options">Two ways to build it</h2>
+<table>
+  <tr><th></th><th><strong>Option A: Claude routine (no code)</strong></th><th><strong>Option B: Python agent on the Messages API</strong></th></tr>
+  <tr><td>What it is</td>
+      <td>As the repo's README intends: a Claude routine pointed at the GitHub repo through the Routines UI, with
+        instructions and a schedule or trigger</td>
+      <td>Our own agent loop with tools, built on the Day 1–2 patterns (agentic loop, structured outputs, evals), run on a
+        schedule</td></tr>
+  <tr><td>Strengths</td><td>Quickest to demo, truly "always on", and it reads and writes the repo directly</td>
+      <td>Full control. Measurable with our own eval harness, and tunable for cost and latency like the Margin Call.</td></tr>
+  <tr><td>Weaknesses</td><td>Harder to evaluate quantitatively, with less control over cost and output format</td>
+      <td>More to build. It also runs through the company gateway and its limits (see <a href="#constraints">constraints</a>).</td></tr>
+  <tr><td>Recommendation</td><td colspan="2"><strong>Do both, in that order.</strong> Option A is the live demo the brief asks
+      for. Option B (or the same prompt run through our harness) is the <strong>evidence</strong>: a scored eval against
+      the expected answers above. If time is short, do Option A and score its output by hand against those tables.</td></tr>
+</table>
+<p><em>The Routines setup (UI, schedule, permissions) comes from the hackathon brief, which isn't in this repo. Check the
+brief for the exact configuration.</em></p>
+
+<h2 id="design">Agent design</h2>
+<p><strong>One run of the agent:</strong></p>
+<pre>  1. LOAD STATE       which issues/contracts were already processed (content hash per file)
+  2. TRIAGE           for each new/changed issue:
+                        classify (incident vs. request) → match runbook → correlate deploys (time window + service + files)
+                        → severity (runbook guide, else stated reasoning) → recommended action (respect "Don't" lists)
+  3. LINK             group incidents sharing a root cause (e.g. PROD-4521 ↔ PROD-4487)
+  4. COMPLIANCE       for each new/changed contract × 7 policy rules → compliant / violation / needs-review, with quote
+  5. WRITE BACK       one comment/label update per issue; one new issue per violation (idempotent)
+  6. REPORT           run summary: what changed, what was paged/recommended, what needs a human</pre>
+<p><strong>Prompt structure:</strong> a stable system prompt (the role, the output rules, and the full
+<code>compliance-policy.md</code> and runbooks as a <em>frozen prefix</em> for caching), then the changing content (one
+issue or one contract) in the user turn.</p>
+
+<h3 id="tools">Tools and output schemas</h3>
+<table>
+  <tr><th>Tool (Option B)</th><th>Purpose</th></tr>
+  <tr><td><code>list_files(dir)</code> / <code>read_file(path)</code></td><td>Read issues, runbooks, deploys, contracts and the policy</td></tr>
+  <tr><td><code>find_deploys(service?, since, until)</code></td><td>Search the deploy log in a time window, so the model doesn't scan raw JSON</td></tr>
+  <tr><td><code>update_issue(id, severity, labels, comment)</code></td><td>Write the triage back: a PR that edits the JSON, or a GitHub issue comment</td></tr>
+  <tr><td><code>open_issue(title, body, labels)</code></td><td>One compliance-violation issue per contract × rule</td></tr>
+  <tr><td><code>escalate(who, reason)</code></td><td><strong>Recommend</strong> a page. It records the recommendation, but a human sends it.</td></tr>
+</table>
+<p><strong>Triage record (structured output):</strong></p>
+<pre>{ "id": "PROD-4521", "is_incident": true, "severity": "P0",
+  "root_cause": "Deploy regression: payment-service v4.8.2 guest-checkout NPE at PaymentService.java:142",
+  "evidence": ["deploy 14:04 → alert 14:18", "stack trace line 142", "runbook: known NPE bug"],
+  "runbook": "runbooks/payment-service-degraded.md",
+  "related_deploy": {"service": "payment-service", "version": "v4.8.2", "rollback_to": "v4.8.1"},
+  "linked_issues": ["PROD-4487"], "recommended_action": "...", "page": "#payments-oncall",
+  "confidence": "high", "needs_human": false }</pre>
+<p><strong>Compliance finding:</strong> <code>{contract, rule, status: compliant|violation|needs_review, clause_ref: "§7",
+quote, reason}</code></p>
+
+<h3 id="guardrails">Guardrails</h3>
+<ul>
+  <li><strong>Recommend, don't act.</strong> The runbooks contain operational commands (ssh, config changes, redeploys,
+    rollbacks). The agent proposes them in comments and <strong>never runs them</strong>. Rollbacks and pages need human
+    approval.</li>
+  <li><strong>Idempotent writes.</strong> Track processed items by content hash, so a re-run doesn't repost comments or
+    open duplicate compliance issues.</li>
+  <li><strong>Cite everything.</strong> Every claim points to a file and line, section or field (deploy time, stack trace,
+    contract §). If there's no citation, it's marked "needs human".</li>
+  <li><strong>Honest uncertainty.</strong> Ambiguous cases (PROD-4519's timing, Acme's 60-day audit clause, governing law)
+    are flagged <code>needs_review</code> with reasons.</li>
+  <li><strong>The fork is public.</strong> Anything the routine commits or comments on <code>vijayignatius/always-on-agent</code>
+    is public. The data is synthetic, but don't add real names, tokens or internal URLs.</li>
+</ul>
+
+<h2 id="evals">Evaluating it (Day 2 eval patterns)</h2>
+<p>The expected-answer tables above are the gold set: 5 issues and 21 contract × rule checks.</p>
+<table>
+  <tr><th>Grader</th><th>Type</th><th>Checks</th></tr>
+  <tr><td>Severity correct</td><td>Deterministic</td><td>P0 / P1 for 4521 / 4487. 4498 and 4519 within the agreed band. 4506 has no severity.</td></tr>
+  <tr><td>Deploy correlation correct</td><td>Deterministic</td><td>The right <code>service</code> and <code>version</code> for 4521, 4487 and 4519. None for 4498 and 4506. Red herrings not chosen.</td></tr>
+  <tr><td>Runbook matched</td><td>Deterministic</td><td>The correct runbook path for 4521, 4487, 4498 and 4519</td></tr>
+  <tr><td>Linked incidents</td><td>Deterministic</td><td>4521 ↔ 4487 linked</td></tr>
+  <tr><td>No forbidden actions</td><td>Deterministic + LLM judge</td><td>Never recommends scaling auth pods or raising the load-balancer timeout. Doesn't page for 4506.</td></tr>
+  <tr><td>Compliance precision / recall</td><td>Deterministic</td><td>Violation set per contract against the gold table. <strong>Globex must be 0 violations.</strong></td></tr>
+  <tr><td>Judgement handled</td><td>LLM judge</td><td>Acme's audit and governing law, and Sirius's governing law, marked for review <em>with</em> a reason</td></tr>
+  <tr><td>Idempotency</td><td>Deterministic</td><td>A second run on unchanged files writes nothing new</td></tr>
+</table>
+<p>Run it 3–5 times and report pass rates, since the Day 2 lesson was to read the rate, not a single run. Pace the runs
+to stay under the gateway rate limit.</p>
+
+<h2 id="cost">Cost and latency levers (from the inference lab)</h2>
+<ul>
+  <li><strong>Route by job.</strong> Haiku for "incident or request?" and the per-rule compliance checks; Sonnet for root
+    cause and deploy correlation.</li>
+  <li><strong>Cache the frozen prefix.</strong> The policy and runbooks are identical on every call. Measure the cache hit
+    rate, which is intermittent on the gateway.</li>
+  <li><strong>One schema call per item</strong> instead of free-form reasoning followed by JSON, with
+    <code>max_tokens</code> sized to the record and <code>effort: "low"</code> on Sonnet.</li>
+  <li><strong>Only process what changed.</strong> The biggest lever for an always-on agent is not re-analysing unchanged
+    files on every run.</li>
+</ul>
+
+<h2 id="plan">Build plan</h2>
+<div class="step"><h3><span class="num">1</span>Set up (≈ 15 min)</h3>
+  <p>Fork ✅ (<code>vijayignatius/always-on-agent</code>, public). Clone ✅. Read the official hackathon brief for the
+  cards and the Routines setup, and reconcile it with this page.</p></div>
+<div class="step"><h3><span class="num">2</span>Write the gold set (≈ 15 min)</h3>
+  <p>Turn the two expected-answer tables into <code>gold.json</code> (issues and contract × rule). Agree as a team on the
+  judgement calls.</p></div>
+<div class="step"><h3><span class="num">3</span>Build Option A, the routine (≈ 45 min)</h3>
+  <p>Write the routine instructions: the jobs, output format, guardrails and idempotency rule. Point it at the fork and
+  run it once. Save its output.</p></div>
+<div class="step"><h3><span class="num">4</span>Score it (≈ 30 min)</h3>
+  <p>Grade the routine's output against <code>gold.json</code>, by hand or with the graders above. Note the failures.</p></div>
+<div class="step"><h3><span class="num">5</span>Iterate (≈ 45 min)</h3>
+  <p>Fix the instructions based on the failures, re-run and re-score, recording each iteration with numbers as in the Day 2
+  write-ups. Optionally run Option B through the harness for repeatable scores and cost per run.</p></div>
+<div class="step"><h3><span class="num">6</span>Show always-on behaviour (≈ 20 min)</h3>
+  <p>Add a new incident (e.g. a P0 with a matching deploy) and change one contract clause, then show the next run picks
+  up <em>only</em> those changes and writes no duplicates.</p></div>
+<p><strong>With three developers,</strong> steps 3–6 run in parallel. See <a href="#team">Team split</a>.</p>
+
+<h2 id="team">Team split: 3 developers</h2>
+<p>The work splits cleanly along the agent's jobs. Two developers each own one <strong>agent capability</strong>, and the
+third owns the <strong>platform</strong> they both plug into: the always-on loop, state, write-back, eval and demo. Everyone
+works on their own branch of the fork and merges to <code>main</code> through a PR.</p>
+
+<table>
+  <tr><th style="width:14%">Developer</th><th style="width:22%">Owns</th><th>Builds</th><th style="width:22%">Hands off</th><th style="width:12%">Branch</th></tr>
+  <tr><td><a href="#dev1"><strong>Dev 1</strong></a><br>Incident agent</td><td>Jobs A + B: incident triage and deploy correlation</td>
+      <td>The triage prompt; the <code>TriageRecord</code> schema; deploy-correlation rules; tests against the 5 issues</td>
+      <td><code>out/triage/*.json</code> (one record per issue) to Dev 3</td><td><code>feature/triage</code></td></tr>
+  <tr><td><a href="#dev2"><strong>Dev 2</strong></a><br>Compliance agent</td><td>Job C: compliance drift ("Card C")</td>
+      <td>The compliance prompt; the <code>ComplianceFinding</code> schema; per-rule checks; tests against the 3 contracts</td>
+      <td><code>out/compliance/*.json</code> (one finding per contract × rule) to Dev 3</td><td><code>feature/compliance</code></td></tr>
+  <tr><td><a href="#dev3"><strong>Dev 3</strong></a><br>Platform + eval</td><td>The always-on loop, write-back, eval and demo</td>
+      <td>The routine setup; <code>state.json</code> idempotency; write-back (the issue updates and violation issues);
+        <code>gold.json</code> and graders; the run report and demo</td>
+      <td>The scorecard and run report back to Devs 1 and 2 after every run</td><td><code>feature/platform</code></td></tr>
+</table>
+
+<div class="callout">
+  <strong>Agree this together first (≈ 15 min, all three).</strong> These are the contracts between the three workstreams.
+  <ol style="margin:6px 0 0">
+    <li><strong>The output schemas</strong>, <code>TriageRecord</code> and <code>ComplianceFinding</code> (see
+      <a href="#tools">Tools and outputs</a>). Dev 1 and Dev 2 produce them, and Dev 3 consumes them.</li>
+    <li><strong>The output location</strong>, <code>out/triage/&lt;issue-id&gt;.json</code> and
+      <code>out/compliance/&lt;vendor&gt;__&lt;rule&gt;.json</code>, so each developer can work and test alone.</li>
+    <li><strong>The write-back format</strong>: a PR that edits the issue JSON, or GitHub issues on the fork. Dev 3 decides
+      and builds it.</li>
+    <li><strong>The gold answers</strong> for the judgement calls: the severity bands for PROD-4498/4519, Acme's audit
+      clause and governing law. Dev 3 writes them into <code>gold.json</code>.</li>
+  </ol>
+</div>
+
+<h3 id="dev1">Dev 1: incident triage + deploy correlation (Jobs A and B)</h3>
+<table>
+  <tr><th>Task</th><th>Done when</th></tr>
+  <tr><td>1. Write the triage agent prompt (below) in <code>prompts/triage.md</code></td><td>Reviewed by the team</td></tr>
+  <tr><td>2. Add the <code>TriageRecord</code> JSON schema in <code>schemas/triage_record.json</code></td><td>Matches the agreed contract</td></tr>
+  <tr><td>3. Run it on all 5 issues and write <code>out/triage/*.json</code></td><td>5 valid records</td></tr>
+  <tr><td>4. Check against the <a href="#triage">expected triage answers</a> and iterate</td>
+      <td>4521 = P0 + v4.8.2; 4487 = P1 + the cohort-B flag, linked to 4521; 4506 not an incident; no forbidden actions</td></tr>
+  <tr><td>5. Add a new incident, <code>PROD-4530.json</code>, for the always-on demo, with a matching deploy</td><td>Handed to Dev 3</td></tr>
+</table>
+<p><strong>Build prompt (paste into Claude Code from the repo root):</strong></p>
+<pre>I'm building the incident-triage part of an always-on ops agent in this repo. Read issues/*.json,
+runbooks/*.md and deploys/recent.json first.
+
+1. Create prompts/triage.md containing the triage agent prompt I'll paste below.
+2. Create schemas/triage_record.json — a JSON Schema with: id, is_incident (bool), severity
+   ("P0"|"P1"|"P2"|"P3"|null), root_cause, evidence (array of strings, each citing a file and field/line),
+   runbook (path or null), related_deploy ({service, version, rollback_to} or null), linked_issues (array),
+   recommended_action, page (string or null), confidence ("high"|"medium"|"low"), needs_human (bool).
+3. Apply the prompt to each issue file and write one record per issue to out/triage/&lt;id&gt;.json.
+   Validate each against the schema.
+4. Print a table: id, is_incident, severity, related_deploy.version, runbook, needs_human.
+
+Do NOT run any command from the runbooks (ssh, curl, config edits, redeploys). This is analysis only.</pre>
+<p><strong>Agent prompt (<code>prompts/triage.md</code>), which the routine runs:</strong></p>
+<pre>You are the on-call triage agent for the BTS platform (all data is synthetic). On each run, triage every
+open issue in issues/ that has no record in out/triage/ or whose content has changed.
+
+For each issue:
+1. Decide is_incident. Feature requests and enhancements are NOT incidents: no severity, no page,
+   label "enhancement", route to the backlog.
+2. Match a runbook in runbooks/ by symptoms. Quote the runbook section you relied on.
+3. Correlate with deploys/recent.json: a deploy is a suspect only if it happened BEFORE the symptom
+   started, within a plausible window, AND its service or changed files relate to the symptom. Explicitly
+   rule out nearby deploys that don't fit (say why). Feature-flag deploys count — check which tenants they
+   affect. If timing is ambiguous, say so and follow the runbook's "first check" instead of blaming a deploy.
+4. Severity: use the runbook's severity guide when one exists (e.g. all customers → P0, one tenant → P1).
+   Otherwise choose and state your reasoning; never invent policy.
+5. Link issues that share a root cause (linked_issues) and say what the shared cause is.
+6. recommended_action: concrete next steps from the runbook. Prefer rollback when rollback_available is
+   true. Respect every "Don't" in the runbook. Never execute anything — recommend only; paging and
+   rollbacks need a human.
+7. Every claim in root_cause must be backed by an entry in evidence that cites a file and field/line
+   (e.g. "deploys/recent.json: payment-service v4.8.2 deployed_at 14:04:11Z"). If you can't cite it,
+   set needs_human=true and lower confidence.
+
+Output exactly one JSON object per issue matching schemas/triage_record.json, nothing else.</pre>
+
+<h3 id="dev2">Dev 2: compliance drift (Job C, "Card C")</h3>
+<table>
+  <tr><th>Task</th><th>Done when</th></tr>
+  <tr><td>1. Write the compliance agent prompt (below) in <code>prompts/compliance.md</code></td><td>Reviewed by the team</td></tr>
+  <tr><td>2. Add the <code>ComplianceFinding</code> schema in <code>schemas/compliance_finding.json</code></td><td>Matches the agreed contract</td></tr>
+  <tr><td>3. Run it on 3 contracts × 7 rules and write <code>out/compliance/*.json</code></td><td>21 valid findings</td></tr>
+  <tr><td>4. Check against the <a href="#compliance">expected compliance answers</a> and iterate</td>
+      <td>Sirius 6 violations (+1 needs review); Acme 3 violations + audit gap + governing law needs review;
+        <strong>Globex 0 violations</strong></td></tr>
+  <tr><td>5. Write the violation issue body template (title, quoted clause, policy rule, suggested fix)</td><td>Handed to Dev 3 for write-back</td></tr>
+  <tr><td>6. Change one contract clause for the always-on demo (e.g. Globex breach notice 24 h → 96 h)</td><td>Handed to Dev 3</td></tr>
+</table>
+<p><strong>Build prompt (paste into Claude Code from the repo root):</strong></p>
+<pre>I'm building the compliance-drift part of an always-on ops agent in this repo. Read compliance-policy.md
+and contracts/*.md first.
+
+1. Create prompts/compliance.md containing the compliance agent prompt I'll paste below.
+2. Create schemas/compliance_finding.json — a JSON Schema with: contract (filename), vendor, rule (one of
+   data_residency, audit_rights, termination, liability_cap, subprocessors, breach_notification,
+   governing_law), status ("compliant"|"violation"|"needs_review"), clause_ref (e.g. "§7"), quote (exact
+   contract text), policy_quote (exact policy text), reason, suggested_fix (string or null).
+3. For each contract × each of the 7 rules, apply the prompt and write out/compliance/&lt;vendor&gt;__&lt;rule&gt;.json.
+   Validate each against the schema.
+4. Print a matrix: rows = rules, columns = vendors, cells = status.
+5. Create templates/violation_issue.md: title "[Compliance] &lt;Vendor&gt; — &lt;rule&gt; violation", body with the
+   quoted clause, the policy rule, the reason and the suggested fix.</pre>
+<p><strong>Agent prompt (<code>prompts/compliance.md</code>), which the routine runs:</strong></p>
+<pre>You are the vendor-contract compliance agent. Check each contract in contracts/ against EVERY rule in
+compliance-policy.md and return one finding per contract × rule (7 per contract).
+
+For each rule:
+1. Find the clause that governs it. Quote it exactly with its section number. If the contract is silent,
+   say so — silence is a violation only where the policy says so (e.g. data residency).
+2. Apply the policy's own "Violation:" definition literally, then its requirement:
+   - status "violation"   → the clause meets a listed violation condition.
+   - status "compliant"   → the clause meets the requirement.
+   - status "needs_review" → it is neither (e.g. it misses the requirement but isn't a listed violation,
+     or the policy says "or similar" and the jurisdiction isn't named). Explain why a human must decide.
+3. Read what a clause actually does, not keywords. A liability cap that does NOT apply to data breach
+   (breach is uncapped) favours us; a cap that DOES limit breach claims below 12 months' fees is a violation.
+4. Note relevant terms the policy doesn't cover (e.g. long auto-renewal notice) in reason, but don't
+   mark them as violations.
+5. Be precise about numbers: compare notice periods, windows and caps exactly against the thresholds.
+
+Output exactly one JSON object per finding matching schemas/compliance_finding.json, nothing else.
+A contract with no violations is a valid, expected result — do not manufacture findings.</pre>
+
+<h3 id="dev3">Dev 3: always-on platform, write-back, eval and demo</h3>
+<table>
+  <tr><th>Task</th><th>Done when</th></tr>
+  <tr><td>1. Write <code>eval/gold.json</code> from the two expected-answer tables (after the team agrees the judgement calls)</td><td>5 issues + 21 findings</td></tr>
+  <tr><td>2. Write <code>eval/grade.py</code>, which scores <code>out/</code> against <code>gold.json</code></td>
+      <td>Prints severity, deploy, runbook and link accuracy, compliance precision/recall, the Globex false positives and the forbidden-action checks</td></tr>
+  <tr><td>3. Write <code>state.json</code> idempotency: a content hash per input file, so only new or changed files are processed</td><td>A second run on unchanged files writes nothing</td></tr>
+  <tr><td>4. Build the write-back in the agreed format: issue severity, labels and comment, and one GitHub issue (or PR) per violation, with no duplicates</td><td>Re-runs don't repost</td></tr>
+  <tr><td>5. Set up the routine (the orchestrator prompt below) on a schedule or trigger, pointed at the fork</td><td>One end-to-end run produces <code>out/</code> + write-back + report</td></tr>
+  <tr><td>6. Write the run report (<code>out/run-report.md</code>) and the demo: the scorecard, cost per run, and the always-on step with Dev 1's and Dev 2's demo changes</td><td>3-minute demo rehearsed</td></tr>
+</table>
+<p><strong>Build prompt (paste into Claude Code from the repo root):</strong></p>
+<pre>I'm building the platform for an always-on ops agent in this repo. Two teammates produce
+out/triage/&lt;id&gt;.json (schemas/triage_record.json) and out/compliance/&lt;vendor&gt;__&lt;rule&gt;.json
+(schemas/compliance_finding.json). Build the rest:
+
+1. eval/gold.json — expected answers. Issues: PROD-4521 P0, deploy payment-service v4.8.2, runbook
+   payment-service-degraded.md, linked PROD-4487; PROD-4487 P1, deploy tenant-config-service v3.2.1,
+   same runbook, linked PROD-4521; PROD-4498 P2, no deploy, runbook auth-502-windows.md; PROD-4519 P2,
+   suspect signing-service v2.1.4 (needs_human allowed), runbook cdn-upload-latency.md; PROD-4506
+   is_incident=false. Compliance: Globex all compliant; Acme violations = data_residency, subprocessors,
+   breach_notification, needs_review = audit_rights, governing_law; Sirius violations = data_residency,
+   audit_rights, termination, liability_cap, subprocessors, breach_notification, needs_review or
+   violation = governing_law.
+2. eval/grade.py — load out/ and gold.json; print per-check pass/fail and totals: severity accuracy,
+   deploy accuracy, runbook accuracy, link found, compliance precision/recall per vendor, Globex false
+   positives (must be 0), forbidden actions (recommend scaling auth pods / raising LB timeout / paging for
+   PROD-4506 = fail).
+3. state.py — compute a sha256 per file in issues/ and contracts/; compare with state.json; return
+   the list of new/changed files; update state.json after a successful run.
+4. writeback.py — for each new triage record, update the issue (severity, labels, append one comment
+   with root cause, evidence, runbook, action); for each violation finding, open one issue using
+   templates/violation_issue.md unless an issue with the same title already exists. Support --dry-run.
+5. Write out/run-report.md: what changed this run, what was recommended/paged, what needs a human,
+   and the grade.py totals.
+
+Never execute runbook commands. Default writeback.py to --dry-run until the team agrees.</pre>
+<p><strong>Orchestrator prompt (the routine's top-level instructions):</strong></p>
+<pre>You are the Always-On Ops Agent for this repository. Each run:
+
+1. Read state.json. Work only on files in issues/ and contracts/ that are new or changed since the last
+   run. If nothing changed, write a one-line "no changes" entry to out/run-report.md and stop.
+2. For each new/changed issue, follow prompts/triage.md and write out/triage/&lt;id&gt;.json.
+3. For each new/changed contract, follow prompts/compliance.md and write out/compliance/*.json.
+4. Write back: update each triaged issue once (severity, labels, one comment); open one compliance issue
+   per violation using templates/violation_issue.md. Never create duplicates — check before writing.
+5. Recommend, never act: do not run commands, deploy, roll back or page. Put pages/rollbacks under
+   "Needs human approval" in the report.
+6. Update state.json and write out/run-report.md: changes processed, recommendations, items needing a
+   human, and anything you were unsure about.
+
+This repository is public: do not write secrets, real names or internal URLs.</pre>
+
+<h3 id="team-timeline">Integration and timeline</h3>
+<table>
+  <tr><th>Time</th><th>Dev 1 (incidents)</th><th>Dev 2 (compliance)</th><th>Dev 3 (platform)</th></tr>
+  <tr><td>0:00–0:15</td><td colspan="3"><strong>All three:</strong> agree the schemas, output paths, write-back format and judgement-call answers</td></tr>
+  <tr><td>0:15–1:00</td><td>Triage prompt + schema; first <code>out/triage/</code></td><td>Compliance prompt + schema; first <code>out/compliance/</code></td><td><code>gold.json</code> + <code>grade.py</code>; <code>state.py</code></td></tr>
+  <tr><td>1:00–1:15</td><td colspan="3"><strong>Checkpoint 1:</strong> Dev 3 grades both outputs and shares the scorecard</td></tr>
+  <tr><td>1:15–2:00</td><td>Iterate on triage failures</td><td>Iterate on compliance failures + issue template</td><td><code>writeback.py</code> (dry-run) + routine/orchestrator</td></tr>
+  <tr><td>2:00–2:15</td><td colspan="3"><strong>Checkpoint 2:</strong> merge all branches to <code>main</code>; one end-to-end run; grade again</td></tr>
+  <tr><td>2:15–2:45</td><td>Add <code>PROD-4530</code> demo incident</td><td>Change one contract clause for the demo</td><td>Always-on re-run (only the changes) + run report + demo rehearsal</td></tr>
+</table>
+<ul>
+  <li><strong>Branches:</strong> <code>feature/triage</code>, <code>feature/compliance</code> and <code>feature/platform</code>
+    on the fork, merged through a PR into the fork's <code>main</code>. The <code>gh</code> default repo is already set to
+    the fork, so PRs don't go to <code>rosscrooke</code>.</li>
+  <li><strong>Avoiding conflicts:</strong> each developer writes only their own folders (Dev 1: <code>prompts/triage.md</code>,
+    <code>schemas/triage_record.json</code>, <code>out/triage/</code>; Dev 2: the compliance equivalents plus
+    <code>templates/</code>; Dev 3: <code>eval/</code>, <code>state*</code>, <code>writeback.py</code>, the report). Shared
+    data files (<code>issues/</code>, <code>contracts/</code>) change only for the demo step, by their owner.</li>
+  <li><strong>If someone finishes early:</strong> Dev 1 or Dev 2 can take Option B, running their prompt through the
+    Messages API with the gateway client, 3 runs, to give Dev 3 pass rates and cost per run.</li>
+</ul>
+
+<h2 id="demo">Demo script (≈ 3 minutes)</h2>
+<ol>
+  <li><strong>The problem:</strong> 5 untriaged incidents, an angry enterprise customer with a CTO call in 25 minutes, and
+    3 vendor contracts nobody has checked.</li>
+  <li><strong>The agent runs:</strong> PROD-4521 rated P0 with a rollback recommendation; PROD-4487 linked to the same bug
+    through the cohort-B flag, with a CSM status line ready for the call; the feature request correctly <em>not</em> paged.</li>
+  <li><strong>Compliance:</strong> Sirius has 6 violations, Acme 3 plus a gap, and Globex is clean (no false positives),
+    each with a quoted clause.</li>
+  <li><strong>Proof:</strong> the eval scorecard (pass rate across runs, precision and recall on violations), and cost per run.</li>
+  <li><strong>Always on:</strong> drop in a new incident, and the next run triages only that one.</li>
+</ol>
+
+<h2 id="constraints">Gateway constraints (if building Option B)</h2>
+<table>
+  <tr><th>Constraint</th><th>Impact here</th></tr>
+  <tr><td>~50 requests/minute per user</td><td>5 issues + 21 compliance checks + tool calls fits in one run, but pace multi-run evals</td></tr>
+  <tr><td>Structured output not enforced</td><td>Parse the triage and compliance JSON defensively (first <code>{…}</code>)</td></tr>
+  <tr><td>Intermittent prompt caching</td><td>Cache the policy and runbooks, but measure actual reads</td></tr>
+  <tr><td>Response replay for identical requests</td><td>Unchanged items re-sent can come back instantly. Skipping them via state is better anyway.</td></tr>
+  <tr><td>Connection setup</td><td>Repo-root <code>.env</code> + the gateway client from the <code>*_solution</code> notebooks; full model IDs</td></tr>
+</table>
+
+<h2 id="risks">Risks and open questions</h2>
+<ul>
+  <li><strong>The official brief isn't here.</strong> Confirm the card list, scoring and Routines configuration, and adjust
+    the jobs and expected answers to match.</li>
+  <li><strong>The write-back format is undecided.</strong> Edit the issue JSON through a PR, or create real GitHub issues
+    on the fork? Agree this before building the tools.</li>
+  <li><strong>The repo has no licence</strong> (upstream has none), so reuse beyond the hackathon is unclear.</li>
+  <li><strong>The fork is public</strong>, so routine output is visible to anyone.</li>
+  <li><strong>The expected answers are an interpretation</strong>, especially the severity bands for 4498/4519 and the
+    compliance judgement calls. Agree them as a team before using them to score.</li>
+</ul>
+
+<footer>Always-On Ops Agent · exercise details &amp; implementation approach · 2026-10-23</footer>
+
+<script>
+  (function () {
+    const links = Array.from(document.querySelectorAll("nav.sidebar a[href^='#']"));
+    const byId = new Map(links.map(a => [a.getAttribute("href").slice(1), a]));
+    const targets = Array.from(byId.keys()).map(id => document.getElementById(id)).filter(Boolean);
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        links.forEach(a => a.classList.remove("active"));
+        const link = byId.get(e.target.id);
+        if (link) link.classList.add("active");
+      });
+    }, { rootMargin: "0px 0px -70% 0px" });
+    targets.forEach(t => observer.observe(t));
+  })();
+</script>
+</body>
+</html>
