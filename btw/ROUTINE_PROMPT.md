@@ -35,7 +35,9 @@ You run unattended. Do the steps below in order, post exactly one comment, and s
    - If both fail, still post the stop and say the guide couldn't reach Wikipedia this time.
 
 4. **Skip repeats.** Collect every Wikipedia URL that appears in earlier stop comments, and drop
-   any place whose `url` is already among them. Also drop places with an empty `extract`.
+   any place whose `url` is already among them. Also drop places with an empty `extract`, and
+   places that aren't family-friendly (strip clubs, adult stores, crime scenes such as massacres).
+   For example, the City Lights stop returns Big Al's and the Condor Club, which have to be skipped.
 
 5. **Choose.** From what's left, pick up to `max_suggestions` places. Favour places that are
    close and have a good story: landmarks, history, art, odd facts. Skip plain office buildings
