@@ -1,0 +1,47 @@
+{
+  "generated_at": "2026-11-13T16:00:00Z",
+  "city": "San Francisco",
+  "radius_m": 500,
+  "stops": [
+    {
+      "seq": 6, "label": "Columbus Ave, North Beach", "lat": 37.7983, "lon": -122.4076, "time": "3:30 PM",
+      "notification": {
+        "title": "By the way, you're in North Beach",
+        "body": "Columbus Avenue cuts diagonally through the old Italian quarter, and Washington Square is just up the road."
+      },
+      "places": [
+        { "title": "North Beach, San Francisco", "url": "https://en.wikipedia.org/wiki/North_Beach,_San_Francisco", "lat": 37.7985, "lon": -122.4078, "distance_m": 25, "direction": "NW", "snippet": "Look up: you're in San Francisco's Little Italy. Columbus Avenue was cut through the neighbourhood and still lines up cafes, bakeries and bookshops." },
+        { "title": "Columbus Avenue", "url": "https://en.wikipedia.org/wiki/Columbus_Avenue_(San_Francisco)", "lat": 37.7981, "lon": -122.4073, "distance_m": 30, "direction": "SE", "snippet": "This diagonal street runs from the Financial District to Fisherman's Wharf, cutting across the city's regular grid." }
+      ],
+      "skipped": []
+    },
+    {
+      "seq": 7, "label": "City Lights Bookstore", "lat": 37.7976, "lon": -122.4066, "time": "3:55 PM",
+      "notification": {
+        "title": "By the way, you're standing at City Lights",
+        "body": "Lawrence Ferlinghetti co-founded this bookstore-publisher in 1953. And the alley next to it is named after Jack Kerouac."
+      },
+      "places": [
+        { "title": "City Lights Bookstore", "url": "https://en.wikipedia.org/wiki/City_Lights_Bookstore", "lat": 37.79757, "lon": -122.40651, "distance_m": 4, "direction": "here", "snippet": "Look up: you're standing at the bookstore poet Lawrence Ferlinghetti co-founded in 1953. It's still a bookshop and a publisher, focused on world literature, the arts and progressive politics." },
+        { "title": "Jack Kerouac Alley", "url": "https://en.wikipedia.org/wiki/Jack_Kerouac_Alley", "lat": 37.79768, "lon": -122.40649, "distance_m": 14, "direction": "here", "snippet": "The alley beside the shop is named after the Beat writer who used to hang out at the pub and bookstore next to it. It links Chinatown's Grant Avenue with North Beach." },
+        { "title": "Vesuvio Cafe", "url": "https://en.wikipedia.org/wiki/Vesuvio_Cafe", "lat": 37.79745, "lon": -122.40645, "distance_m": 18, "direction": "SE", "snippet": "Just across the alley is a historic bar, in a building Italian architect Italo Zanolini designed and built in 1913." }
+      ],
+      "skipped": [
+        { "title": "Big Al's", "reason": "not family-friendly" },
+        { "title": "Condor Club", "reason": "not family-friendly" }
+      ]
+    },
+    {
+      "seq": 8, "label": "Portsmouth Square", "lat": 37.7955, "lon": -122.4060, "time": "4:20 PM",
+      "notification": {
+        "title": "By the way, you're at Portsmouth Square",
+        "body": "This plaza is where San Francisco began as a town, and today it's Chinatown's living room."
+      },
+      "places": [
+        { "title": "Portsmouth Square", "url": "https://en.wikipedia.org/wiki/Portsmouth_Square_(San_Francisco)", "lat": 37.7956, "lon": -122.4061, "distance_m": 12, "direction": "here", "snippet": "Hard to believe, but this small plaza was the center of the village of Yerba Buena before it became San Francisco." },
+        { "title": "Chinatown, San Francisco", "url": "https://en.wikipedia.org/wiki/Chinatown,_San_Francisco", "lat": 37.7950, "lon": -122.4065, "distance_m": 60, "direction": "SW", "snippet": "Look around: this is the oldest Chinatown in North America and one of the largest outside Asia." }
+      ],
+      "skipped": [ { "title": "Hilton San Francisco Financial District", "reason": "already suggested" } ]
+    }
+  ]
+}

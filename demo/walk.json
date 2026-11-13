@@ -1,0 +1,593 @@
+{
+  "generated_at": "2026-11-13T16:00:00Z",
+  "city": "San Francisco",
+  "radius_m": 500,
+  "stops": [
+    {
+      "seq": 0,
+      "label": "Ferry Building",
+      "lat": 37.7955,
+      "lon": -122.3937,
+      "time": "1:00 PM",
+      "notification": {
+        "title": "By the way, that clock tower is 245 feet tall",
+        "body": "The Ferry Building's four clock dials are each 22 feet wide. Nearby, a 22-foot Dubuffet sculpture stands in Embarcadero Plaza."
+      },
+      "places": [
+        {
+          "title": "San Francisco Ferry Building",
+          "url": "https://en.wikipedia.org/wiki/San_Francisco_Ferry_Building",
+          "lat": 37.7955,
+          "lon": -122.3937,
+          "distance_m": 0,
+          "direction": "here",
+          "snippet": "Look up: the clock tower on top of this building stands 245 feet tall. Each of its four clock dials is 22 feet across, so you can read the time from Market Street."
+        },
+        {
+          "title": "Statue of Mahatma Gandhi (San Francisco)",
+          "url": "https://en.wikipedia.org/wiki/Statue_of_Mahatma_Gandhi_%28San_Francisco%29",
+          "lat": 37.79533,
+          "lon": -122.39239,
+          "distance_m": 117,
+          "direction": "E",
+          "snippet": "Just southeast of the Ferry Building, an 8-foot bronze of Mahatma Gandhi stands on a block with a plaque. It was sculpted in 1988 by Zlatko Paunov and Steven Lowe."
+        },
+        {
+          "title": "La Chiffonnière",
+          "url": "https://en.wikipedia.org/wiki/La_Chiffonni%C3%A8re",
+          "lat": 37.79472222222222,
+          "lon": -122.39519444444446,
+          "distance_m": 157,
+          "direction": "SW",
+          "snippet": "Over in Embarcadero Plaza is a 22-foot stainless steel sculpture by French artist Jean Dubuffet. Its name means 'Rag Woman', It was completed in 1978 and was displayed in Manhattan in 1979."
+        }
+      ],
+      "skipped": [
+        {
+          "title": "Preparedness Day bombing",
+          "reason": "not family-friendly"
+        }
+      ]
+    },
+    {
+      "seq": 1,
+      "label": "Embarcadero at Pier 7",
+      "lat": 37.799,
+      "lon": -122.3972,
+      "time": "1:25 PM",
+      "notification": {
+        "title": "By the way, a science museum sits just north of you",
+        "body": "The Exploratorium, founded in 1969, started Pi Day in 1988. These piers are among the largest surviving on the Embarcadero."
+      },
+      "places": [
+        {
+          "title": "Exploratorium",
+          "url": "https://en.wikipedia.org/wiki/Exploratorium",
+          "lat": 37.8014,
+          "lon": -122.3976,
+          "distance_m": 269,
+          "direction": "N",
+          "snippet": "Hard to believe, but Pi Day started right here in San Francisco: the Exploratorium founded it in 1988. Physicist Frank Oppenheimer opened the science and arts museum in 1969, and it moved to Piers 15 and 17 in 2013."
+        },
+        {
+          "title": "Central Embarcadero Piers Historic District",
+          "url": "https://en.wikipedia.org/wiki/Central_Embarcadero_Piers_Historic_District",
+          "lat": 37.79944444444444,
+          "lon": -122.39500000000001,
+          "distance_m": 200,
+          "direction": "E",
+          "snippet": "You're beside one of the largest surviving pier complexes on the Embarcadero. Piers 1, 1½, 3 and 5 were added to the National Register of Historic Places in 2002."
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "seq": 2,
+      "label": "Levi's Plaza",
+      "lat": 37.803,
+      "lon": -122.401,
+      "time": "1:50 PM",
+      "notification": {
+        "title": "By the way, a buried ship lies under Levi's Plaza",
+        "body": "Builders found a sailing ship's remains here in 1978, thought to be the Palmyra or the William Grey."
+      },
+      "places": [
+        {
+          "title": "Frederick Griffing's (ship)",
+          "url": "https://en.wikipedia.org/wiki/Frederick_Griffing%27s_%28ship%29",
+          "lat": 37.803,
+          "lon": -122.4021,
+          "distance_m": 97,
+          "direction": "W",
+          "snippet": "Mind-blowing fact: a sailing ship is buried beneath the plaza around you. Workers found its remains in 1978 while building the plaza, and it's believed to be either the Palmyra or the William Grey."
+        },
+        {
+          "title": "Levi Strauss & Co.",
+          "url": "https://en.wikipedia.org/wiki/Levi_Strauss_%26_Co.",
+          "lat": 37.80277777777778,
+          "lon": -122.40277777777779,
+          "distance_m": 158,
+          "direction": "W",
+          "snippet": "The jeans company headquartered here goes back to May 1853, when German-Jewish immigrant Levi Strauss came to San Francisco. He opened a West Coast branch of his brothers' New York dry goods business."
+        },
+        {
+          "title": "Belt Railroad Engine House and Sandhouse",
+          "url": "https://en.wikipedia.org/wiki/Belt_Railroad_Engine_House_and_Sandhouse",
+          "lat": 37.80472222222222,
+          "lon": -122.40333333333334,
+          "distance_m": 281,
+          "direction": "NW",
+          "snippet": "A bit of railway history sits nearby: an engine house built in 1913 and a sandhouse built in 1914. They served the San Francisco Belt Railroad and joined the National Register of Historic Places in 1986."
+        }
+      ],
+      "skipped": [
+        {
+          "title": "Tin Angel (San Francisco)",
+          "reason": "not family-friendly"
+        }
+      ]
+    },
+    {
+      "seq": 3,
+      "label": "Filbert Street Steps",
+      "lat": 37.8016,
+      "lon": -122.404,
+      "time": "2:15 PM",
+      "notification": {
+        "title": "By the way, you're near a castle-shaped landmark",
+        "body": "Julius' Castle on Telegraph Hill is San Francisco Landmark No. 121. Richard Neutra designed a house close by."
+      },
+      "places": [
+        {
+          "title": "Malloch Building",
+          "url": "https://en.wikipedia.org/wiki/Malloch_Building",
+          "lat": 37.801865,
+          "lon": -122.404426,
+          "distance_m": 48,
+          "direction": "NW",
+          "snippet": "Check out the 'Ocean-Liner House' just northwest of you. This Streamline Moderne apartment building went up in 1937 and is considered one of the best examples of its type in the city."
+        },
+        {
+          "title": "Sidney Kahn House",
+          "url": "https://en.wikipedia.org/wiki/Sidney_Kahn_House",
+          "lat": 37.80098,
+          "lon": -122.40344,
+          "distance_m": 85,
+          "direction": "SE",
+          "snippet": "A famous modernist designed the house just southeast of you: architect Richard Neutra, in 1939. It's his best-known house in San Francisco, with a living room and bar on the top of its four floors."
+        },
+        {
+          "title": "Julius' Castle",
+          "url": "https://en.wikipedia.org/wiki/Julius%27_Castle",
+          "lat": 37.80305555555555,
+          "lon": -122.405,
+          "distance_m": 184,
+          "direction": "NW",
+          "snippet": "Look for the castle-shaped building at 302 Greenwich Street. It was a visual landmark and a restaurant for many years, and has been San Francisco Landmark Number 121 since 1980."
+        }
+      ],
+      "skipped": [
+        {
+          "title": "Levi Strauss & Co.",
+          "reason": "already suggested"
+        },
+        {
+          "title": "Frederick Griffing's (ship)",
+          "reason": "already suggested"
+        }
+      ]
+    },
+    {
+      "seq": 4,
+      "label": "Coit Tower",
+      "lat": 37.8024,
+      "lon": -122.4058,
+      "time": "2:40 PM",
+      "notification": {
+        "title": "By the way, Coit Tower came from one woman's bequest",
+        "body": "Lillie Hitchcock Coit's bequest paid for the 210-foot tower, built 1932-33. It joined the National Register in 2008."
+      },
+      "places": [
+        {
+          "title": "Coit Tower",
+          "url": "https://en.wikipedia.org/wiki/Coit_Tower",
+          "lat": 37.802499999999995,
+          "lon": -122.40583333333333,
+          "distance_m": 11,
+          "direction": "here",
+          "snippet": "You're at the foot of a 210-foot tower paid for by a bequest. Lillie Hitchcock Coit left money to beautify San Francisco, and it was built in 1932 and 1933. It joined the National Register of Historic Places in 2008."
+        },
+        {
+          "title": "Pioneer Park (San Francisco)",
+          "url": "https://en.wikipedia.org/wiki/Pioneer_Park_%28San_Francisco%29",
+          "lat": 37.802499999999995,
+          "lon": -122.40611111111112,
+          "distance_m": 30,
+          "direction": "W",
+          "snippet": "This 4.82-acre park crowns the top of Telegraph Hill. It was established in 1876 to celebrate the US Centennial, and before that it was the site of the Marine Telegraph Station."
+        },
+        {
+          "title": "Liguria Bakery",
+          "url": "https://en.wikipedia.org/wiki/Liguria_Bakery",
+          "lat": 37.8014,
+          "lon": -122.4093,
+          "distance_m": 327,
+          "direction": "W",
+          "snippet": "For a snack idea down the hill: Liguria Bakery in North Beach sells only focaccia. You'll find it at 1700 Stockton Street, across from Washington Square Park."
+        }
+      ],
+      "skipped": [
+        {
+          "title": "Julius' Castle",
+          "reason": "already suggested"
+        },
+        {
+          "title": "Levi Strauss & Co.",
+          "reason": "already suggested"
+        },
+        {
+          "title": "Statue of Christopher Columbus (San Francisco)",
+          "reason": "thin extract"
+        }
+      ]
+    },
+    {
+      "seq": 5,
+      "label": "Washington Square",
+      "lat": 37.8008,
+      "lon": -122.4098,
+      "time": "3:05 PM",
+      "notification": {
+        "title": "By the way, this is one of San Francisco's first parks",
+        "body": "Washington Square dates to 1847. Across the way, a restaurant puts garlic in every dish, even the ice cream."
+      },
+      "places": [
+        {
+          "title": "Washington Square (San Francisco)",
+          "url": "https://en.wikipedia.org/wiki/Washington_Square_%28San_Francisco%29",
+          "lat": 37.800868,
+          "lon": -122.410001,
+          "distance_m": 19,
+          "direction": "NW",
+          "snippet": "You're standing in one of the city's first parks. This 2.8-acre square in North Beach was established in 1847 and is ringed by sidewalk cafes and restaurants."
+        },
+        {
+          "title": "Statue of Benjamin Franklin (San Francisco)",
+          "url": "https://en.wikipedia.org/wiki/Statue_of_Benjamin_Franklin_%28San_Francisco%29",
+          "lat": 37.80082,
+          "lon": -122.41,
+          "distance_m": 18,
+          "direction": "W",
+          "snippet": "Look for the Benjamin Franklin statue right beside you in the park. It's also known as the Benjamin Franklin Memorial and the Cogswell Historical Monument."
+        },
+        {
+          "title": "The Stinking Rose",
+          "url": "https://en.wikipedia.org/wiki/The_Stinking_Rose",
+          "lat": 37.7997,
+          "lon": -122.4095,
+          "distance_m": 125,
+          "direction": "S",
+          "snippet": "Here's a fun one for the family: this restaurant puts garlic in all its dishes, including garlic ice cream. The first location opened in San Francisco in 1991."
+        }
+      ],
+      "skipped": [
+        {
+          "title": "Liguria Bakery",
+          "reason": "already suggested"
+        },
+        {
+          "title": "Rose Pistola",
+          "reason": "closed restaurant"
+        }
+      ]
+    },
+    {
+      "seq": 6,
+      "label": "Columbus Ave, North Beach",
+      "lat": 37.7983,
+      "lon": -122.4076,
+      "time": "3:30 PM",
+      "notification": {
+        "title": "By the way, an espresso first happened just ahead",
+        "body": "Caffe Trieste opened in 1956 as the West Coast's first espresso-based coffeehouse. Molinari's deli dates to 1896."
+      },
+      "places": [
+        {
+          "title": "Molinari's",
+          "url": "https://en.wikipedia.org/wiki/Molinari%27s",
+          "lat": 37.798523,
+          "lon": -122.407856,
+          "distance_m": 33,
+          "direction": "NW",
+          "snippet": "Tasty history is right beside you: Molinari Delicatessen was established in 1896, making it one of the oldest delis in the US. Its own-brand salami has won a gold medal in Italy."
+        },
+        {
+          "title": "Caffe Trieste",
+          "url": "https://en.wikipedia.org/wiki/Caffe_Trieste",
+          "lat": 37.79872,
+          "lon": -122.40727,
+          "distance_m": 55,
+          "direction": "NE",
+          "snippet": "Caffè Trieste opened in 1956 as the first espresso-based coffeehouse on the West Coast. It's been a local hub for poets, writers and beat culture."
+        },
+        {
+          "title": "Saint Francis of Assisi Church (San Francisco)",
+          "url": "https://en.wikipedia.org/wiki/Saint_Francis_of_Assisi_Church_%28San_Francisco%29",
+          "lat": 37.7988,
+          "lon": -122.4077,
+          "distance_m": 56,
+          "direction": "N",
+          "snippet": "Look north for a historic Norman Gothic Catholic church. It's one of the early churches in California outside of the Spanish missions."
+        }
+      ],
+      "skipped": [
+        {
+          "title": "Condor Club",
+          "reason": "not family-friendly"
+        },
+        {
+          "title": "Big Al's",
+          "reason": "not family-friendly"
+        },
+        {
+          "title": "The Saloon",
+          "reason": "bar"
+        }
+      ]
+    },
+    {
+      "seq": 7,
+      "label": "City Lights Bookstore",
+      "lat": 37.7976,
+      "lon": -122.4066,
+      "time": "3:55 PM",
+      "notification": {
+        "title": "By the way, you're standing at City Lights",
+        "body": "Lawrence Ferlinghetti co-founded this bookstore-publisher in 1953. The alley beside it is named after Jack Kerouac."
+      },
+      "places": [
+        {
+          "title": "City Lights Bookstore",
+          "url": "https://en.wikipedia.org/wiki/City_Lights_Bookstore",
+          "lat": 37.797628,
+          "lon": -122.406575,
+          "distance_m": 4,
+          "direction": "here",
+          "snippet": "Look up: you're standing at the bookstore poet Lawrence Ferlinghetti co-founded in 1953. It's still an independent bookstore and publisher, focused on world literature, the arts and progressive politics."
+        },
+        {
+          "title": "Jack Kerouac Alley",
+          "url": "https://en.wikipedia.org/wiki/Jack_Kerouac_Alley",
+          "lat": 37.7975,
+          "lon": -122.4067,
+          "distance_m": 14,
+          "direction": "here",
+          "snippet": "Right next door is an alley named after Beat Generation writer Jack Kerouac, who used to frequent the pub and bookstore beside it. Cross Columbus Ave and it becomes William Saroyan Alley."
+        },
+        {
+          "title": "Beat Museum",
+          "url": "https://en.wikipedia.org/wiki/Beat_Museum",
+          "lat": 37.7981,
+          "lon": -122.4062,
+          "distance_m": 66,
+          "direction": "NE",
+          "snippet": "A few steps northeast, a museum is devoted to the memory and works of the Beat Generation. The Beats were post-WWII artists who challenged the norms of the 1950s, and they remain influential today."
+        }
+      ],
+      "skipped": [
+        {
+          "title": "Big Al's",
+          "reason": "not family-friendly"
+        },
+        {
+          "title": "Condor Club",
+          "reason": "not family-friendly"
+        },
+        {
+          "title": "Vesuvio Cafe",
+          "reason": "bar"
+        },
+        {
+          "title": "Vercel",
+          "reason": "not a local place"
+        }
+      ]
+    },
+    {
+      "seq": 8,
+      "label": "Portsmouth Square",
+      "lat": 37.7955,
+      "lon": -122.406,
+      "time": "4:20 PM",
+      "notification": {
+        "title": "By the way, you're in San Francisco's first park",
+        "body": "Portsmouth Square was once La Plaza and is older than Union Square. A Robert Louis Stevenson memorial stands close by."
+      },
+      "places": [
+        {
+          "title": "Portsmouth Square",
+          "url": "https://en.wikipedia.org/wiki/Portsmouth_Square",
+          "lat": 37.7947,
+          "lon": -122.4053,
+          "distance_m": 108,
+          "direction": "SE",
+          "snippet": "Hard to believe, but this plaza is the first park in San Francisco, older than both Washington Square and Union Square. It began as Plaza de Yerba Buena and was renamed after the USS Portsmouth, the ship that captured the city."
+        },
+        {
+          "title": "Robert Louis Stevenson Memorial",
+          "url": "https://en.wikipedia.org/wiki/Robert_Louis_Stevenson_Memorial",
+          "lat": 37.79512,
+          "lon": -122.40574,
+          "distance_m": 48,
+          "direction": "SE",
+          "snippet": "A memorial to author Robert Louis Stevenson stands in the square. The project began after his death in 1894, when architect Willis Polk, artist Bruce Porter and sculptor Douglas Tilden approached the city."
+        },
+        {
+          "title": "Great Star Theater",
+          "url": "https://en.wikipedia.org/wiki/Great_Star_Theater",
+          "lat": 37.796388888888885,
+          "lon": -122.40583333333333,
+          "distance_m": 100,
+          "direction": "N",
+          "snippet": "Just north, the Great Star Theater is the last Chinese theater in any Chinatown in the United States. This 410-seat theater at 636 Jackson Street was built in 1925 for Chinese opera."
+        }
+      ],
+      "skipped": [
+        {
+          "title": "Golden Dragon massacre",
+          "reason": "not family-friendly"
+        },
+        {
+          "title": "Barbary Coast, San Francisco",
+          "reason": "not family-friendly"
+        }
+      ]
+    },
+    {
+      "seq": 9,
+      "label": "Grant Ave, Chinatown",
+      "lat": 37.7941,
+      "lon": -122.4078,
+      "time": "4:45 PM",
+      "notification": {
+        "title": "By the way, this is North America's oldest Chinatown",
+        "body": "Chinatown dates to the early 1850s. Tin How Temple, nearby, is the oldest extant Taoist temple in SF's Chinatown."
+      },
+      "places": [
+        {
+          "title": "Tin How Temple",
+          "url": "https://en.wikipedia.org/wiki/Tin_How_Temple",
+          "lat": 37.79457,
+          "lon": -122.4071,
+          "distance_m": 81,
+          "direction": "NE",
+          "snippet": "Look northeast for the oldest extant Taoist temple in San Francisco's Chinatown. It's dedicated to Mazu, the Chinese sea goddess, known as Tin How (Empress of Heavens) in Cantonese."
+        },
+        {
+          "title": "Chinatown, San Francisco",
+          "url": "https://en.wikipedia.org/wiki/Chinatown%2C_San_Francisco",
+          "lat": 37.79416666666666,
+          "lon": -122.40694444444445,
+          "distance_m": 76,
+          "direction": "E",
+          "snippet": "You're walking through the oldest Chinatown in North America, and one of the largest Chinese enclaves outside Asia. It's been important to ethnic Chinese immigrants in North America since the early 1850s."
+        },
+        {
+          "title": "Presbyterian Church in Chinatown",
+          "url": "https://en.wikipedia.org/wiki/Presbyterian_Church_in_Chinatown",
+          "lat": 37.7940899,
+          "lon": -122.4082898,
+          "distance_m": 43,
+          "direction": "W",
+          "snippet": "A short way west is the oldest Chinese American church in North America. The Presbyterian Church in Chinatown was established in San Francisco in 1853."
+        }
+      ],
+      "skipped": [
+        {
+          "title": "Showgirl Magic Museum",
+          "reason": "nightclub theme"
+        },
+        {
+          "title": "Sam Wo",
+          "reason": "thin interest"
+        }
+      ]
+    },
+    {
+      "seq": 10,
+      "label": "Dragon Gate",
+      "lat": 37.7908,
+      "lon": -122.4058,
+      "time": "5:10 PM",
+      "notification": {
+        "title": "By the way, the Dragon Gate is right beside you",
+        "body": "Taiwan gave the Dragon Gate to San Francisco in 1969. It's one of Chinatown's most photographed spots."
+      },
+      "places": [
+        {
+          "title": "Dragon Gate (San Francisco)",
+          "url": "https://en.wikipedia.org/wiki/Dragon_Gate_%28San_Francisco%29",
+          "lat": 37.7907,
+          "lon": -122.4056,
+          "distance_m": 21,
+          "direction": "SE",
+          "snippet": "You're next to the gate marking the southern entrance to Chinatown. It was built in 1969 as a gift from the Republic of China (Taiwan) in the style of a traditional pailou, and it's one of the most photographed spots in Chinatown."
+        },
+        {
+          "title": "Hotel des Arts",
+          "url": "https://en.wikipedia.org/wiki/Hotel_des_Arts",
+          "lat": 37.79055,
+          "lon": -122.40494,
+          "distance_m": 81,
+          "direction": "E",
+          "snippet": "Nearby is a boutique hotel with art in its rooms. When it opened in 2005, 16 of its 51 rooms were painted by local artists, and now 38 are, using things like vinyl records and plastic bags."
+        },
+        {
+          "title": "Notre-Dame-des-Victoires, San Francisco",
+          "url": "https://en.wikipedia.org/wiki/Notre-Dame-des-Victoires%2C_San_Francisco",
+          "lat": 37.7907,
+          "lon": -122.4065,
+          "distance_m": 63,
+          "direction": "W",
+          "snippet": "Just west is a church founded in 1856 for French Catholic immigrants of the gold rush. Its architectural model is the Basilique Notre-Dame de Fourvière in Lyon, France."
+        }
+      ],
+      "skipped": [
+        {
+          "title": "Bay Area Medical Academy",
+          "reason": "not a point of interest"
+        },
+        {
+          "title": "Liberty International (organization)",
+          "reason": "not local"
+        }
+      ]
+    },
+    {
+      "seq": 11,
+      "label": "Union Square",
+      "lat": 37.788,
+      "lon": -122.4075,
+      "time": "5:35 PM",
+      "notification": {
+        "title": "By the way, Union Square got its name from the Civil War",
+        "body": "Rallies here supported the Union army, earning a California Historical Landmark nod. A Dewey monument stands at the center."
+      },
+      "places": [
+        {
+          "title": "Union Square, San Francisco",
+          "url": "https://en.wikipedia.org/wiki/Union_Square%2C_San_Francisco",
+          "lat": 37.788056,
+          "lon": -122.4075,
+          "distance_m": 6,
+          "direction": "here",
+          "snippet": "You've made it to Union Square. It got its name because it was once used for rallies supporting the Union army during the American Civil War, which earned it California Historical Landmark status."
+        },
+        {
+          "title": "Dewey Monument",
+          "url": "https://en.wikipedia.org/wiki/Dewey_Monument",
+          "lat": 37.78795,
+          "lon": -122.40755,
+          "distance_m": 7,
+          "direction": "here",
+          "snippet": "In the middle of the square stands a memorial statue by Robert Ingersoll Aitken. It's dedicated to Admiral George Dewey and commemorates his victory in the Battle of Manila Bay."
+        },
+        {
+          "title": "Street Artists Program of San Francisco",
+          "url": "https://en.wikipedia.org/wiki/Street_Artists_Program_of_San_Francisco",
+          "lat": 37.78805555555555,
+          "lon": -122.4075,
+          "distance_m": 6,
+          "direction": "here",
+          "snippet": "Look around for independent artists selling their work. About 400 street artists are licensed by the SF Arts Commission, and they can only sell work they predominantly created or significantly altered."
+        }
+      ],
+      "skipped": [
+        {
+          "title": "Attempted assassination of Gerald Ford in San Francisco",
+          "reason": "not family-friendly"
+        }
+      ]
+    }
+  ]
+}

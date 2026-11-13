@@ -1,0 +1,1686 @@
+{
+  "city": "San Francisco",
+  "radius_m": 500,
+  "stops": [
+    {
+      "seq": 0,
+      "lat": 37.7955,
+      "lon": -122.3937,
+      "label": "Ferry Building",
+      "candidates": [
+        {
+          "title": "San Francisco Ferry Building",
+          "pageid": 1774164,
+          "lat": 37.7955,
+          "lon": -122.3937,
+          "distance_m": 0,
+          "bearing": 0,
+          "direction": "here",
+          "extract": "The San Francisco Ferry Building is a terminal for ferries that travel across San Francisco Bay, a food hall and an office building. It is located on The Embarcadero in San Francisco, California, and is served by Golden Gate Ferry and San Francisco Bay Ferry routes.\nOn top of the building is a 245-foot-tall (75 m) clock tower with four clock dials, each 22 feet (6.7 m) in diameter, which can be seen from Market Street, a main thoroughfare of the city.",
+          "url": "https://en.wikipedia.org/wiki/San_Francisco_Ferry_Building"
+        },
+        {
+          "title": "R-Evolution (Cochrane)",
+          "pageid": 57167724,
+          "lat": 37.7947420923447,
+          "lon": -122.39450216195253,
+          "distance_m": 110,
+          "bearing": 220,
+          "direction": "SW",
+          "extract": "R-Evolution is the third and final sculpture in Marco Cochrane's series, The Bliss Project. The sculpture was created for and debuted at Burning Man in 2015. The work was displayed at Embarcadero Plaza in San Francisco from April 2025 to October 2026.",
+          "url": "https://en.wikipedia.org/wiki/R-Evolution_%28Cochrane%29"
+        },
+        {
+          "title": "Statue of Mahatma Gandhi (San Francisco)",
+          "pageid": 40075757,
+          "lat": 37.79533,
+          "lon": -122.39239,
+          "distance_m": 117,
+          "bearing": 99,
+          "direction": "E",
+          "extract": "Mohandas K. Gandhi is a 1988 bronze sculpture of Mahatma Gandhi sculpted by Zlatko Paunov and Steven Lowe. It is located in the plaza to the southeast of the San Francisco Ferry Building along the Embarcadero in San Francisco, California, United States.  The 8-foot (2.4 m) tall sculpture is mounted on a block which bears a plaque, raised on two steps.",
+          "url": "https://en.wikipedia.org/wiki/Statue_of_Mahatma_Gandhi_%28San_Francisco%29"
+        },
+        {
+          "title": "Embarcadero Plaza",
+          "pageid": 13038570,
+          "lat": 37.7949,
+          "lon": -122.3948,
+          "distance_m": 117,
+          "bearing": 235,
+          "direction": "SW",
+          "extract": "Embarcadero Plaza, previously known as Justin Herman Plaza from its opening in 1972 until 2017, is a 4.1-acre (1.7 ha) plaza near the intersection of Market Street and The Embarcadero in San Francisco's Financial District, in the U.S. state of California. It was completed in 1972 and is owned and operated by the San Francisco Recreation & Parks Department. The plaza is composed of two halves: Embarcadero Plaza North and Embarcadero Plaza South.",
+          "url": "https://en.wikipedia.org/wiki/Embarcadero_Plaza"
+        },
+        {
+          "title": "Abraham Lincoln Brigade Monument",
+          "pageid": 80772944,
+          "lat": 37.79551342820834,
+          "lon": -122.39515003159,
+          "distance_m": 127,
+          "bearing": 271,
+          "direction": "W",
+          "extract": "The Abraham Lincoln Brigade Monument is a steel and onyx art installation in Embarcadero Plaza in San Francisco's Financial District, in the U.S. state of California. The monument was designed by Ann Chamberlain and Walter J. Hood with US$400,000 in funding from the Abraham Lincoln Brigade Archives to honor the Lincoln Battalion and XV International Brigade, formed to fight for the Spanish Republic during the Spanish Civil War. It was dedicated on March 30, 2008, and is part of the San Francisco Arts Commission collection.",
+          "url": "https://en.wikipedia.org/wiki/Abraham_Lincoln_Brigade_Monument"
+        },
+        {
+          "title": "Vaillancourt Fountain",
+          "pageid": 39095498,
+          "lat": 37.7954,
+          "lon": -122.3953,
+          "distance_m": 141,
+          "bearing": 265,
+          "direction": "W",
+          "extract": "Vaillancourt Fountain, sometimes called Québec libre!, is a large fountain currently undergoing disassembly and removal at the Embarcadero Plaza in San Francisco. It was designed by the Québécois artist Armand Vaillancourt in collaboration with the plaza's landscape architect, Lawrence Halprin, and completed in 1971. \nThe fountain is constructed out of precast concrete square tubes.",
+          "url": "https://en.wikipedia.org/wiki/Vaillancourt_Fountain"
+        },
+        {
+          "title": "Don Chee Way and Steuart station",
+          "pageid": 18439166,
+          "lat": 37.794108333333334,
+          "lon": -122.39382777777779,
+          "distance_m": 155,
+          "bearing": 184,
+          "direction": "S",
+          "extract": "Don Chee Way and Steuart station is a light rail station in San Francisco, California, United States, serving the San Francisco Municipal Railway's F Market & Wharves heritage railway line. It is located on Don Chee Way, a streetcar right-of-way, between Steuart Street and The Embarcadero and serves as the station for the San Francisco Railway Museum.\nThe station opened on March 4, 2000 with the streetcar's extension to Fisherman's Wharf.",
+          "url": "https://en.wikipedia.org/wiki/Don_Chee_Way_and_Steuart_station"
+        },
+        {
+          "title": "La Chiffonnière",
+          "pageid": 58659968,
+          "lat": 37.79472222222222,
+          "lon": -122.39519444444446,
+          "distance_m": 157,
+          "bearing": 237,
+          "direction": "SW",
+          "extract": "La Chiffonnière (French for Rag Woman) is a stainless steel sculpture by French artist Jean Dubuffet, installed in Embarcadero Plaza in the Financial District of San Francisco, California. The 22-foot (6.7 m) tall, 4,500-pound (2,000 kg) artwork was conceived in 1972 and completed in 1978. It was displayed in Manhattan's Doris C. Freedman Plaza from March 20 to December 12, 1979.",
+          "url": "https://en.wikipedia.org/wiki/La_Chiffonni%C3%A8re"
+        },
+        {
+          "title": "One Market",
+          "pageid": 75553742,
+          "lat": 37.79430555555555,
+          "lon": -122.39472222222223,
+          "distance_m": 160,
+          "bearing": 214,
+          "direction": "SW",
+          "extract": "One Market was a restaurant in San Francisco, California, United States. It closed permanently on June 11, 2025.",
+          "url": "https://en.wikipedia.org/wiki/One_Market"
+        },
+        {
+          "title": "Preparedness Day bombing",
+          "pageid": 2455630,
+          "lat": 37.794167,
+          "lon": -122.394444,
+          "distance_m": 162,
+          "bearing": 204,
+          "direction": "SW",
+          "extract": "The Preparedness Day bombing was a bombing in San Francisco, California, United States, on July 22, 1916, of a parade organised by local supporters of the Preparedness Movement which advocated American entry into World War I. During the parade a suitcase bomb was detonated, killing 10 and wounding 40 in the worst terrorist attack in San Francisco's history.\nTwo labor leaders, Thomas Mooney and Warren Billings, were convicted in separate trials. Mooney was sentenced to death, later commuted to life in prison, and Billings received a life sentence.",
+          "url": "https://en.wikipedia.org/wiki/Preparedness_Day_bombing"
+        },
+        {
+          "title": "San Francisco Railway Museum",
+          "pageid": 9742285,
+          "lat": 37.793791,
+          "lon": -122.393683,
+          "distance_m": 190,
+          "bearing": 180,
+          "direction": "S",
+          "extract": "The San Francisco Railway Museum is a local railway museum located in the South of Market area of San Francisco.\nThis small museum features exhibits on the antique streetcars of the F Market & Wharves and national landmark cable cars that continue to run along the city's major arteries. The museum is located at the Don Chee Way and Steuart Station, across the street from the Ferry Building.",
+          "url": "https://en.wikipedia.org/wiki/San_Francisco_Railway_Museum"
+        },
+        {
+          "title": "Southern Pacific Building",
+          "pageid": 26019701,
+          "lat": 37.79396,
+          "lon": -122.39496,
+          "distance_m": 204,
+          "bearing": 213,
+          "direction": "SW",
+          "extract": "The Southern Pacific Building is one of three office buildings comprising One Market Plaza along the Embarcadero in San Francisco, California. The historic E-shaped 11-story, 65-metre (213 ft) building, also known as \"The Landmark\", was started in 1916 and completed in 1917.",
+          "url": "https://en.wikipedia.org/wiki/Southern_Pacific_Building"
+        }
+      ]
+    },
+    {
+      "seq": 1,
+      "lat": 37.799,
+      "lon": -122.3972,
+      "label": "Embarcadero at Pier 7",
+      "candidates": [
+        {
+          "title": "The Embarcadero and Broadway station",
+          "pageid": 18439259,
+          "lat": 37.79921,
+          "lon": -122.39766,
+          "distance_m": 47,
+          "bearing": 300,
+          "direction": "NW",
+          "extract": "The Embarcadero and Broadway station is a streetcar station in San Francisco, California, serving the San Francisco Municipal Railway's F Market & Wharves historic streetcar line. It is located on The Embarcadero at Broadway. The station opened on March 4, 2000, with the streetcar's extension to Fisherman's Wharf.",
+          "url": "https://en.wikipedia.org/wiki/The_Embarcadero_and_Broadway_station"
+        },
+        {
+          "title": "Ferryboat Santa Rosa",
+          "pageid": 15673456,
+          "lat": 37.79833333333333,
+          "lon": -122.39527777777778,
+          "distance_m": 184,
+          "bearing": 114,
+          "direction": "SE",
+          "extract": "Santa Rosa was a Steel Electric-class ferry built in Alameda, California, for Northwestern Pacific Railroad. She started out serving Southern Pacific Railways on their Golden Gate Ferries line on San Francisco Bay.\nShe was purchased by the Puget Sound Navigation Company in 1940, and moved to Puget Sound.",
+          "url": "https://en.wikipedia.org/wiki/Ferryboat_Santa_Rosa"
+        },
+        {
+          "title": "Central Embarcadero Piers Historic District",
+          "pageid": 10558510,
+          "lat": 37.79944444444444,
+          "lon": -122.39500000000001,
+          "distance_m": 200,
+          "bearing": 76,
+          "direction": "E",
+          "extract": "The Central Embarcadero Piers Historic District is a Registered Historic District in the city of San Francisco, California, United States. It consists of Piers 1, 1½, 3 and 5, which form one of the largest surviving pier complexes along San Francisco's Embarcadero waterfront road. It was added to the National Register of Historic Places in 2002.",
+          "url": "https://en.wikipedia.org/wiki/Central_Embarcadero_Piers_Historic_District"
+        },
+        {
+          "title": "Sydney Walton Square",
+          "pageid": 35801895,
+          "lat": 37.79751,
+          "lon": -122.39902,
+          "distance_m": 230,
+          "bearing": 224,
+          "direction": "SW",
+          "extract": "Sydney Walton Square is a hybrid public and private park located just west of the Embarcadero in San Francisco, California, United States. The park is named after San Francisco's Sydney Grant Walton, a banker and former vice chairman of the San Francisco Redevelopment Agency.",
+          "url": "https://en.wikipedia.org/wiki/Sydney_Walton_Square"
+        },
+        {
+          "title": "The Embarcadero and Washington station",
+          "pageid": 18439247,
+          "lat": 37.797069,
+          "lon": -122.395711,
+          "distance_m": 251,
+          "bearing": 149,
+          "direction": "SE",
+          "extract": "The Embarcadero and Washington station is a streetcar station in San Francisco, California, serving the San Francisco Municipal Railway's F Market & Wharves historic streetcar line. It is located on The Embarcadero at Washington Street. The station opened on March 4, 2000, with the streetcar's extension to Fisherman's Wharf.",
+          "url": "https://en.wikipedia.org/wiki/The_Embarcadero_and_Washington_station"
+        },
+        {
+          "title": "Exploratorium",
+          "pageid": 22990622,
+          "lat": 37.8014,
+          "lon": -122.3976,
+          "distance_m": 269,
+          "bearing": 352,
+          "direction": "N",
+          "extract": "The Exploratorium is a museum of science, technology, and arts in San Francisco, California. Founded by physicist and educator Frank Oppenheimer in 1969, the museum was originally in the Palace of Fine Arts where it founded Pi Day in 1988. The museum relocated in 2013 to Piers 15 and 17 on San Francisco's waterfront.",
+          "url": "https://en.wikipedia.org/wiki/Exploratorium"
+        },
+        {
+          "title": "WonderCon",
+          "pageid": 4130082,
+          "lat": 37.8,
+          "lon": -122.4,
+          "distance_m": 270,
+          "bearing": 294,
+          "direction": "NW",
+          "extract": "WonderCon is an annual comic book, science fiction, and film convention. It was originally held in the San Francisco Bay Area (1987–2011), before moving to Anaheim, California under the name WonderCon Anaheim (2012–2015, 2017–present). Due to construction at the Anaheim Convention Center, the convention was held in Los Angeles in 2016 under the name WonderCon Los Angeles.",
+          "url": "https://en.wikipedia.org/wiki/WonderCon"
+        },
+        {
+          "title": "Port of San Francisco",
+          "pageid": 3952482,
+          "lat": 37.797136,
+          "lon": -122.394884,
+          "distance_m": 290,
+          "bearing": 136,
+          "direction": "SE",
+          "extract": "The Port of San Francisco is a semi-independent organization that oversees the port facilities at San Francisco, California, United States. It is run by a five-member commission, appointed by the mayor subject to confirmation by a majority of the San Francisco Board of Supervisors. The Port is responsible for managing the larger waterfront area that extends from the anchorage of the Golden Gate Bridge, along the Marina district, all the way around the north and east shores of the city of San Francisco including Fisherman's Wharf and the Embarcadero, and southward to the city line just beyond Candlestick Point.",
+          "url": "https://en.wikipedia.org/wiki/Port_of_San_Francisco"
+        },
+        {
+          "title": "The Embarcadero and Green station",
+          "pageid": 18439280,
+          "lat": 37.80122,
+          "lon": -122.39934,
+          "distance_m": 310,
+          "bearing": 323,
+          "direction": "NW",
+          "extract": "The Embarcadero and Green station (also signed as Exploratorium) is a streetcar station in San Francisco, California, serving the San Francisco Municipal Railway's F Market & Wharves historic streetcar line. It is located on The Embarcadero at Green and Davis Streets, adjacent to the Exploratorium. The station opened on March 4, 2000, with the streetcar's extension to Fisherman's Wharf.",
+          "url": "https://en.wikipedia.org/wiki/The_Embarcadero_and_Green_station"
+        },
+        {
+          "title": "The Old Ship Saloon",
+          "pageid": 65824012,
+          "lat": 37.7984,
+          "lon": -122.4007,
+          "distance_m": 315,
+          "bearing": 258,
+          "direction": "W",
+          "extract": "The Old Ship Saloon, formerly the Old Ship Alehouse, is a historic bar dating back to 1851 and the California gold rush when it operated out of the side of a ship run aground until the wreckage was buried and the current structure was built on top of it. It is located at 298 Pacific Avenue in the Jackson Square neighborhood of San Francisco.  The Old Ship Saloon is listed as a stop along the Barbary Coast Trail.",
+          "url": "https://en.wikipedia.org/wiki/The_Old_Ship_Saloon"
+        },
+        {
+          "title": "Ripple Labs",
+          "pageid": 77128411,
+          "lat": 37.79741666666666,
+          "lon": -122.40044444444445,
+          "distance_m": 335,
+          "bearing": 238,
+          "direction": "SW",
+          "extract": "Ripple Labs, Inc., known as Ripple, is an American technology company which offers enterprise blockchain products on the XRP Ledger and other networks. The company was founded in 2012 and is based in San Francisco, California. It was established as NewCoin in September 2012, renamed OpenCoin the following month, and adopted the name Ripple Labs in 2013.",
+          "url": "https://en.wikipedia.org/wiki/Ripple_Labs"
+        },
+        {
+          "title": "Sue Bierman Park",
+          "pageid": 45621902,
+          "lat": 37.795939,
+          "lon": -122.396592,
+          "distance_m": 345,
+          "bearing": 171,
+          "direction": "S",
+          "extract": "Sue Bierman Park, previously known as Ferry Park, is a 4.5-acre (1.8 ha) park in San Francisco, California in the Financial District, in the U.S. state of California. The park is named after Sue Bierman, a San Francisco civic activist and San Francisco Supervisor. It was completed in 1975 and is owned and operated by the San Francisco Recreation & Parks Department.",
+          "url": "https://en.wikipedia.org/wiki/Sue_Bierman_Park"
+        }
+      ]
+    },
+    {
+      "seq": 2,
+      "lat": 37.803,
+      "lon": -122.401,
+      "label": "Levi's Plaza",
+      "candidates": [
+        {
+          "title": "The Embarcadero and Greenwich station",
+          "pageid": 18439290,
+          "lat": 37.80317,
+          "lon": -122.40108,
+          "distance_m": 20,
+          "bearing": 340,
+          "direction": "N",
+          "extract": "The Embarcadero and Greenwich station is a streetcar station in San Francisco, California, serving the San Francisco Municipal Railway's F Market & Wharves historic streetcar line. It is located on The Embarcadero at Greenwich Street. The station opened on March 4, 2000, with the streetcar's extension to Fisherman's Wharf.",
+          "url": "https://en.wikipedia.org/wiki/The_Embarcadero_and_Greenwich_station"
+        },
+        {
+          "title": "Tin Angel (San Francisco)",
+          "pageid": 73557804,
+          "lat": 37.803175,
+          "lon": -122.401589,
+          "distance_m": 55,
+          "bearing": 291,
+          "direction": "W",
+          "extract": "The Tin Angel was a lesbian nightclub, live music venue, and restaurant in operation from 1953 to 1961, on the Embarcadero at 981 Embarcadero (near Pier 23) in San Francisco, California The venue and its founder were credited as \"spearheading the 'Jazz on the Waterfront' movement\" in the 1950s. In 1958, the club ownership changed and it was renamed On-The-Levee, before its closure in July 1961.",
+          "url": "https://en.wikipedia.org/wiki/Tin_Angel_%28San_Francisco%29"
+        },
+        {
+          "title": "Levi's Plaza",
+          "pageid": 15672819,
+          "lat": 37.802499999999995,
+          "lon": -122.40138888888889,
+          "distance_m": 65,
+          "bearing": 212,
+          "direction": "SW",
+          "extract": "Levi Strauss Plaza, also known as Levi Plaza or Levi's Plaza, is an office complex located in North Waterfront district of San Francisco, west of The Embarcadero. It houses the headquarters of Levi Strauss & Co. As of 1998 the company Blue Jeans Equity West is the landlord of the complex.",
+          "url": "https://en.wikipedia.org/wiki/Levi%27s_Plaza"
+        },
+        {
+          "title": "Frederick Griffing's (ship)",
+          "pageid": 40483119,
+          "lat": 37.803,
+          "lon": -122.4021,
+          "distance_m": 97,
+          "bearing": 270,
+          "direction": "W",
+          "extract": "Frederick Griffing's ship refers to the remains of a sailing vessel buried beneath the current Levi's Plaza in San Francisco, where Frederick Griffing's wharf previously existed. When the plaza was constructed in 1978, the archaeological site was discovered. The ship is believed to be either the Palmyra or the William Grey.",
+          "url": "https://en.wikipedia.org/wiki/Frederick_Griffing%27s_%28ship%29"
+        },
+        {
+          "title": "Levi Strauss & Co.",
+          "pageid": 503153,
+          "lat": 37.80277777777778,
+          "lon": -122.40277777777779,
+          "distance_m": 158,
+          "bearing": 261,
+          "direction": "W",
+          "extract": "Levi Strauss & Co. is an American clothing company known worldwide for its Levi's brand of denim jeans. It was founded in May 1853 when German-Jewish immigrant Levi Strauss moved from New York City, New York, to San Francisco, California, to open a West Coast branch of his brothers' New York dry goods business.",
+          "url": "https://en.wikipedia.org/wiki/Levi_Strauss_%26_Co."
+        },
+        {
+          "title": "Armour & Co. Building",
+          "pageid": 54941810,
+          "lat": 37.80138888888889,
+          "lon": -122.4,
+          "distance_m": 200,
+          "bearing": 154,
+          "direction": "SE",
+          "extract": "The Armour & Co. Building is a historic building in San Francisco, California, United States, built for Armour and Company in 1907. It was listed on the U.S. National Register of Historic Places on December 22, 2009.",
+          "url": "https://en.wikipedia.org/wiki/Armour_%26_Co._Building"
+        },
+        {
+          "title": "The Embarcadero and Green station",
+          "pageid": 18439280,
+          "lat": 37.80122,
+          "lon": -122.39934,
+          "distance_m": 246,
+          "bearing": 144,
+          "direction": "SE",
+          "extract": "The Embarcadero and Green station (also signed as Exploratorium) is a streetcar station in San Francisco, California, serving the San Francisco Municipal Railway's F Market & Wharves historic streetcar line. It is located on The Embarcadero at Green and Davis Streets, adjacent to the Exploratorium. The station opened on March 4, 2000, with the streetcar's extension to Fisherman's Wharf.",
+          "url": "https://en.wikipedia.org/wiki/The_Embarcadero_and_Green_station"
+        },
+        {
+          "title": "Teatro ZinZanni",
+          "pageid": 5755608,
+          "lat": 37.80495,
+          "lon": -122.40253,
+          "distance_m": 255,
+          "bearing": 328,
+          "direction": "NW",
+          "extract": "Teatro ZinZanni is a circus dinner theater that began in the neighborhood of Lower Queen Anne in Seattle, Washington. It has since expanded its operations to San Francisco and Chicago.",
+          "url": "https://en.wikipedia.org/wiki/Teatro_ZinZanni"
+        },
+        {
+          "title": "House at 1254–1256 Montgomery Street",
+          "pageid": 43975491,
+          "lat": 37.801111111111105,
+          "lon": -122.40277777777779,
+          "distance_m": 262,
+          "bearing": 217,
+          "direction": "SW",
+          "extract": "The house at 1254–1256 Montgomery Street is a historic house located in the Telegraph Hill neighborhood of San Francisco. Construction commenced in the early 1860s [partial first floor] and sits on a secondary summit of the hill, which was also the site of a windmill that burned in 1861. The house's Italianate architecture design features large windows on the front corner, double-hung sash windows decorated with pilasters and cornices, and a bracketed cornice along the roofline.",
+          "url": "https://en.wikipedia.org/wiki/House_at_1254%E2%80%931256_Montgomery_Street"
+        },
+        {
+          "title": "Belt Railroad Engine House and Sandhouse",
+          "pageid": 58669248,
+          "lat": 37.80472222222222,
+          "lon": -122.40333333333334,
+          "distance_m": 281,
+          "bearing": 313,
+          "direction": "NW",
+          "extract": "The Belt Railroad Engine House and Sandhouse, also known as Beltline Railroad Roundhouse and Sandhouse, in San Francisco, California, was listed on the National Register of Historic Places in 1986.\nIt served the San Francisco Belt Railroad.  The property includes an engine house/roundhouse known as the Engine House and later as the roundhouse, which was built in 1913, and an auxiliary building known as the sandhouse, which was built in 1914.",
+          "url": "https://en.wikipedia.org/wiki/Belt_Railroad_Engine_House_and_Sandhouse"
+        },
+        {
+          "title": "The Embarcadero and Sansome station",
+          "pageid": 18439312,
+          "lat": 37.805122,
+          "lon": -122.4032,
+          "distance_m": 305,
+          "bearing": 321,
+          "direction": "NW",
+          "extract": "The Embarcadero and Sansome station is a streetcar station in San Francisco, California, serving the San Francisco Municipal Railway's F Market & Wharves historic streetcar line. It is located on The Embarcadero at Chestnut and Sansome Streets. The station opened on March 4, 2000, with the streetcar's extension to Fisherman's Wharf.",
+          "url": "https://en.wikipedia.org/wiki/The_Embarcadero_and_Sansome_station"
+        },
+        {
+          "title": "Linden Lab",
+          "pageid": 1551150,
+          "lat": 37.800266666666666,
+          "lon": -122.40156944444445,
+          "distance_m": 308,
+          "bearing": 189,
+          "direction": "S",
+          "extract": "Linden Research, Inc., doing business as Linden Lab, is an American technology company that is best known as the developer of Second Life.\nThe company's head office is in San Francisco, California, with additional offices in Boston, Massachusetts; Seattle, Washington; Davis, California; and Virginia. In addition, the company employs remote workers that communicate and collaborate on projects using Second Life technology.",
+          "url": "https://en.wikipedia.org/wiki/Linden_Lab"
+        }
+      ]
+    },
+    {
+      "seq": 3,
+      "lat": 37.8016,
+      "lon": -122.404,
+      "label": "Filbert Street Steps",
+      "candidates": [
+        {
+          "title": "Malloch Building",
+          "pageid": 34439666,
+          "lat": 37.801865,
+          "lon": -122.404426,
+          "distance_m": 48,
+          "bearing": 308,
+          "direction": "NW",
+          "extract": "The Malloch Building is a private residential apartment building on Telegraph Hill in San Francisco designed in the Streamline Moderne style and built in 1937. The building, one of the best examples of its type in San Francisco, is also known as Malloch Apartments, Malloch Apartment Building, and simply by its address: 1360 Montgomery Street. Some have called it the \"Ocean-Liner House\", though other Moderne buildings have also been known by that nickname.",
+          "url": "https://en.wikipedia.org/wiki/Malloch_Building"
+        },
+        {
+          "title": "Sidney Kahn House",
+          "pageid": 60391066,
+          "lat": 37.80098,
+          "lon": -122.40344,
+          "distance_m": 85,
+          "bearing": 144,
+          "direction": "SE",
+          "extract": "The Sidney Kahn House is a four-story residential building in Telegraph Hill, San Francisco, California designed by architect Richard Neutra in 1939. The building is Neutra's most famous house in San Francisco.\nThe building's top floor is designed as a living room and bar while its middle two floors hold bedrooms.",
+          "url": "https://en.wikipedia.org/wiki/Sidney_Kahn_House"
+        },
+        {
+          "title": "House at 1254–1256 Montgomery Street",
+          "pageid": 43975491,
+          "lat": 37.801111111111105,
+          "lon": -122.40277777777779,
+          "distance_m": 120,
+          "bearing": 117,
+          "direction": "SE",
+          "extract": "The house at 1254–1256 Montgomery Street is a historic house located in the Telegraph Hill neighborhood of San Francisco. Construction commenced in the early 1860s [partial first floor] and sits on a secondary summit of the hill, which was also the site of a windmill that burned in 1861. The house's Italianate architecture design features large windows on the front corner, double-hung sash windows decorated with pilasters and cornices, and a bracketed cornice along the roofline.",
+          "url": "https://en.wikipedia.org/wiki/House_at_1254%E2%80%931256_Montgomery_Street"
+        },
+        {
+          "title": "Levi Strauss & Co.",
+          "pageid": 503153,
+          "lat": 37.80277777777778,
+          "lon": -122.40277777777779,
+          "distance_m": 169,
+          "bearing": 39,
+          "direction": "NE",
+          "extract": "Levi Strauss & Co. is an American clothing company known worldwide for its Levi's brand of denim jeans. It was founded in May 1853 when German-Jewish immigrant Levi Strauss moved from New York City, New York, to San Francisco, California, to open a West Coast branch of his brothers' New York dry goods business.",
+          "url": "https://en.wikipedia.org/wiki/Levi_Strauss_%26_Co."
+        },
+        {
+          "title": "Julius' Castle",
+          "pageid": 54594457,
+          "lat": 37.80305555555555,
+          "lon": -122.405,
+          "distance_m": 184,
+          "bearing": 332,
+          "direction": "NW",
+          "extract": "Julius' Castle is a castle-shaped building that sits at 302 Greenwich Street on Telegraph Hill in San Francisco. It served as a visual landmark and as a restaurant for many years, originally opening between 1924 and 1928. Since 1980, the building has been listed as a San Francisco Landmark Number 121.",
+          "url": "https://en.wikipedia.org/wiki/Julius%27_Castle"
+        },
+        {
+          "title": "Telegraph Hill, San Francisco",
+          "pageid": 4376504,
+          "lat": 37.802409,
+          "lon": -122.40587,
+          "distance_m": 187,
+          "bearing": 299,
+          "direction": "NW",
+          "extract": "Telegraph Hill (elev. 285 ft (87 m)) is a hill and surrounding neighborhood in San Francisco, California. It is one of San Francisco's 44 hills, and one of its original \"Seven Hills\".",
+          "url": "https://en.wikipedia.org/wiki/Telegraph_Hill%2C_San_Francisco"
+        },
+        {
+          "title": "Coit Tower",
+          "pageid": 391011,
+          "lat": 37.802499999999995,
+          "lon": -122.40583333333333,
+          "distance_m": 190,
+          "bearing": 302,
+          "direction": "NW",
+          "extract": "Coit Tower ( KOYT; also known as Coit Memorial Tower) is a 210-foot (64 m) tower in the Telegraph Hill neighborhood of San Francisco, California, overlooking the city and San Francisco Bay. The tower, in the city's Pioneer Park, was built between 1932 and 1933 using Lillie Hitchcock Coit's bequest to beautify the city of San Francisco. It was added to the National Register of Historic Places on January 29, 2008.",
+          "url": "https://en.wikipedia.org/wiki/Coit_Tower"
+        },
+        {
+          "title": "Pioneer Park (San Francisco)",
+          "pageid": 21567742,
+          "lat": 37.802499999999995,
+          "lon": -122.40611111111112,
+          "distance_m": 211,
+          "bearing": 298,
+          "direction": "NW",
+          "extract": "Pioneer Park is a 4.82-acre (1.95 ha) public park crowning the top of Telegraph Hill in San Francisco, California. It was established in 1876 in celebration of the United States Centennial. Prior to establishment of the park, it was the site of the Marine Telegraph Station.",
+          "url": "https://en.wikipedia.org/wiki/Pioneer_Park_%28San_Francisco%29"
+        },
+        {
+          "title": "Statue of Christopher Columbus (San Francisco)",
+          "pageid": 64261022,
+          "lat": 37.80277777777778,
+          "lon": -122.40611111111112,
+          "distance_m": 227,
+          "bearing": 305,
+          "direction": "NW",
+          "extract": "A statue of Christopher Columbus was installed in Pioneer Park, San Francisco, California.",
+          "url": "https://en.wikipedia.org/wiki/Statue_of_Christopher_Columbus_%28San_Francisco%29"
+        },
+        {
+          "title": "Frederick Griffing's (ship)",
+          "pageid": 40483119,
+          "lat": 37.803,
+          "lon": -122.4021,
+          "distance_m": 228,
+          "bearing": 47,
+          "direction": "NE",
+          "extract": "Frederick Griffing's ship refers to the remains of a sailing vessel buried beneath the current Levi's Plaza in San Francisco, where Frederick Griffing's wharf previously existed. When the plaza was constructed in 1978, the archaeological site was discovered. The ship is believed to be either the Palmyra or the William Grey.",
+          "url": "https://en.wikipedia.org/wiki/Frederick_Griffing%27s_%28ship%29"
+        },
+        {
+          "title": "Levi's Plaza",
+          "pageid": 15672819,
+          "lat": 37.802499999999995,
+          "lon": -122.40138888888889,
+          "distance_m": 250,
+          "bearing": 66,
+          "direction": "NE",
+          "extract": "Levi Strauss Plaza, also known as Levi Plaza or Levi's Plaza, is an office complex located in North Waterfront district of San Francisco, west of The Embarcadero. It houses the headquarters of Levi Strauss & Co. As of 1998 the company Blue Jeans Equity West is the landlord of the complex.",
+          "url": "https://en.wikipedia.org/wiki/Levi%27s_Plaza"
+        },
+        {
+          "title": "Linden Lab",
+          "pageid": 1551150,
+          "lat": 37.800266666666666,
+          "lon": -122.40156944444445,
+          "distance_m": 260,
+          "bearing": 125,
+          "direction": "SE",
+          "extract": "Linden Research, Inc., doing business as Linden Lab, is an American technology company that is best known as the developer of Second Life.\nThe company's head office is in San Francisco, California, with additional offices in Boston, Massachusetts; Seattle, Washington; Davis, California; and Virginia. In addition, the company employs remote workers that communicate and collaborate on projects using Second Life technology.",
+          "url": "https://en.wikipedia.org/wiki/Linden_Lab"
+        }
+      ]
+    },
+    {
+      "seq": 4,
+      "lat": 37.8024,
+      "lon": -122.4058,
+      "label": "Coit Tower",
+      "candidates": [
+        {
+          "title": "Telegraph Hill, San Francisco",
+          "pageid": 4376504,
+          "lat": 37.802409,
+          "lon": -122.40587,
+          "distance_m": 6,
+          "bearing": 279,
+          "direction": "here",
+          "extract": "Telegraph Hill (elev. 285 ft (87 m)) is a hill and surrounding neighborhood in San Francisco, California. It is one of San Francisco's 44 hills, and one of its original \"Seven Hills\".",
+          "url": "https://en.wikipedia.org/wiki/Telegraph_Hill%2C_San_Francisco"
+        },
+        {
+          "title": "Coit Tower",
+          "pageid": 391011,
+          "lat": 37.802499999999995,
+          "lon": -122.40583333333333,
+          "distance_m": 11,
+          "bearing": 345,
+          "direction": "here",
+          "extract": "Coit Tower ( KOYT; also known as Coit Memorial Tower) is a 210-foot (64 m) tower in the Telegraph Hill neighborhood of San Francisco, California, overlooking the city and San Francisco Bay. The tower, in the city's Pioneer Park, was built between 1932 and 1933 using Lillie Hitchcock Coit's bequest to beautify the city of San Francisco. It was added to the National Register of Historic Places on January 29, 2008.",
+          "url": "https://en.wikipedia.org/wiki/Coit_Tower"
+        },
+        {
+          "title": "Pioneer Park (San Francisco)",
+          "pageid": 21567742,
+          "lat": 37.802499999999995,
+          "lon": -122.40611111111112,
+          "distance_m": 30,
+          "bearing": 292,
+          "direction": "W",
+          "extract": "Pioneer Park is a 4.82-acre (1.95 ha) public park crowning the top of Telegraph Hill in San Francisco, California. It was established in 1876 in celebration of the United States Centennial. Prior to establishment of the park, it was the site of the Marine Telegraph Station.",
+          "url": "https://en.wikipedia.org/wiki/Pioneer_Park_%28San_Francisco%29"
+        },
+        {
+          "title": "Statue of Christopher Columbus (San Francisco)",
+          "pageid": 64261022,
+          "lat": 37.80277777777778,
+          "lon": -122.40611111111112,
+          "distance_m": 50,
+          "bearing": 327,
+          "direction": "NW",
+          "extract": "A statue of Christopher Columbus was installed in Pioneer Park, San Francisco, California.",
+          "url": "https://en.wikipedia.org/wiki/Statue_of_Christopher_Columbus_%28San_Francisco%29"
+        },
+        {
+          "title": "Julius' Castle",
+          "pageid": 54594457,
+          "lat": 37.80305555555555,
+          "lon": -122.405,
+          "distance_m": 101,
+          "bearing": 44,
+          "direction": "NE",
+          "extract": "Julius' Castle is a castle-shaped building that sits at 302 Greenwich Street on Telegraph Hill in San Francisco. It served as a visual landmark and as a restaurant for many years, originally opening between 1924 and 1928. Since 1980, the building has been listed as a San Francisco Landmark Number 121.",
+          "url": "https://en.wikipedia.org/wiki/Julius%27_Castle"
+        },
+        {
+          "title": "Malloch Building",
+          "pageid": 34439666,
+          "lat": 37.801865,
+          "lon": -122.404426,
+          "distance_m": 135,
+          "bearing": 116,
+          "direction": "SE",
+          "extract": "The Malloch Building is a private residential apartment building on Telegraph Hill in San Francisco designed in the Streamline Moderne style and built in 1937. The building, one of the best examples of its type in San Francisco, is also known as Malloch Apartments, Malloch Apartment Building, and simply by its address: 1360 Montgomery Street. Some have called it the \"Ocean-Liner House\", though other Moderne buildings have also been known by that nickname.",
+          "url": "https://en.wikipedia.org/wiki/Malloch_Building"
+        },
+        {
+          "title": "Sidney Kahn House",
+          "pageid": 60391066,
+          "lat": 37.80098,
+          "lon": -122.40344,
+          "distance_m": 261,
+          "bearing": 127,
+          "direction": "SE",
+          "extract": "The Sidney Kahn House is a four-story residential building in Telegraph Hill, San Francisco, California designed by architect Richard Neutra in 1939. The building is Neutra's most famous house in San Francisco.\nThe building's top floor is designed as a living room and bar while its middle two floors hold bedrooms.",
+          "url": "https://en.wikipedia.org/wiki/Sidney_Kahn_House"
+        },
+        {
+          "title": "Levi Strauss & Co.",
+          "pageid": 503153,
+          "lat": 37.80277777777778,
+          "lon": -122.40277777777779,
+          "distance_m": 269,
+          "bearing": 81,
+          "direction": "E",
+          "extract": "Levi Strauss & Co. is an American clothing company known worldwide for its Levi's brand of denim jeans. It was founded in May 1853 when German-Jewish immigrant Levi Strauss moved from New York City, New York, to San Francisco, California, to open a West Coast branch of his brothers' New York dry goods business.",
+          "url": "https://en.wikipedia.org/wiki/Levi_Strauss_%26_Co."
+        },
+        {
+          "title": "Paper Doll Club",
+          "pageid": 73549850,
+          "lat": 37.800753,
+          "lon": -122.408143,
+          "distance_m": 276,
+          "bearing": 228,
+          "direction": "SW",
+          "extract": "The Paper Doll Club, also known as Paper Doll, was an LGBTQ bar and supper club in operation from 1949 to 1961, and located at the corner of Cadell Place and Union Street (now 524 Union Street) in the North Beach neighborhood in San Francisco, California. It is believed to be one of the earliest lesbian bars in the city.\nThe former building has been a designated San Francisco landmark since 2019.",
+          "url": "https://en.wikipedia.org/wiki/Paper_Doll_Club"
+        },
+        {
+          "title": "Old Spaghetti Factory Cafe",
+          "pageid": 80213860,
+          "lat": 37.7999,
+          "lon": -122.4071,
+          "distance_m": 301,
+          "bearing": 202,
+          "direction": "S",
+          "extract": "The Old Spaghetti Factory Cafe, officially known as the Old Spaghetti Factory and Excelsior Coffee House at the time of opening, is a historic commercial building, first built for industrial purposes in 1908, located in North Beach, San Francisco, California, United States. It was converted from a spaghetti factory to a nightclub, coffee house, and restaurant by Frederick Walter Kuh in 1956 after it was heavily damaged in a fire several years earlier. It was listed as San Francisco Designated Landmark number 127 on June 7, 1981.",
+          "url": "https://en.wikipedia.org/wiki/Old_Spaghetti_Factory_Cafe"
+        },
+        {
+          "title": "House at 1254–1256 Montgomery Street",
+          "pageid": 43975491,
+          "lat": 37.801111111111105,
+          "lon": -122.40277777777779,
+          "distance_m": 302,
+          "bearing": 118,
+          "direction": "SE",
+          "extract": "The house at 1254–1256 Montgomery Street is a historic house located in the Telegraph Hill neighborhood of San Francisco. Construction commenced in the early 1860s [partial first floor] and sits on a secondary summit of the hill, which was also the site of a windmill that burned in 1861. The house's Italianate architecture design features large windows on the front corner, double-hung sash windows decorated with pilasters and cornices, and a bracketed cornice along the roofline.",
+          "url": "https://en.wikipedia.org/wiki/House_at_1254%E2%80%931256_Montgomery_Street"
+        },
+        {
+          "title": "Liguria Bakery",
+          "pageid": 40927935,
+          "lat": 37.8014,
+          "lon": -122.4093,
+          "distance_m": 327,
+          "bearing": 250,
+          "direction": "W",
+          "extract": "Liguria Bakery is a bakery in the North Beach neighborhood of San Francisco, California, United States that sells only focaccia. It is located on 1700 Stockton Street, at the corner of Filbert Street and across from Washington Square Park in North Beach.",
+          "url": "https://en.wikipedia.org/wiki/Liguria_Bakery"
+        }
+      ]
+    },
+    {
+      "seq": 5,
+      "lat": 37.8008,
+      "lon": -122.4098,
+      "label": "Washington Square",
+      "candidates": [
+        {
+          "title": "Statue of Benjamin Franklin (San Francisco)",
+          "pageid": 49529332,
+          "lat": 37.80082,
+          "lon": -122.41,
+          "distance_m": 18,
+          "bearing": 277,
+          "direction": "W",
+          "extract": "Benjamin Franklin – also known as the Benjamin Franklin Memorial, Benjamin Franklin Statue and Cogswell Historical Monument – is an outdoor sculpture in Washington Square, San Francisco, California.",
+          "url": "https://en.wikipedia.org/wiki/Statue_of_Benjamin_Franklin_%28San_Francisco%29"
+        },
+        {
+          "title": "Washington Square (San Francisco)",
+          "pageid": 1562896,
+          "lat": 37.800868,
+          "lon": -122.410001,
+          "distance_m": 19,
+          "bearing": 293,
+          "direction": "NW",
+          "extract": "Washington Square is an 2.8-acre (1.1 ha) park in the North Beach district of San Francisco. It was established in 1847 and is one of the city's first parks. The park is bordered by sidewalk cafes and restaurants such as Mama's (restaurant), Tony’s Pizza Napoletana, and Park Tavern restaurants and the Liguria Bakery, as well as Sts.",
+          "url": "https://en.wikipedia.org/wiki/Washington_Square_%28San_Francisco%29"
+        },
+        {
+          "title": "North Beach, San Francisco",
+          "pageid": 98542,
+          "lat": 37.800288888888886,
+          "lon": -122.41018333333334,
+          "distance_m": 66,
+          "bearing": 211,
+          "direction": "SW",
+          "extract": "North Beach is a neighborhood in the northeast of San Francisco adjacent to Chinatown, the Financial District, and Russian Hill. The neighborhood is San Francisco's \"Little Italy\" and has historically been home to a large Italian American population, largely from Northern Italy. It still has many Italian restaurants and a sizeable Italian community, though many other ethnic groups currently live in the neighborhood.",
+          "url": "https://en.wikipedia.org/wiki/North_Beach%2C_San_Francisco"
+        },
+        {
+          "title": "Liguria Bakery",
+          "pageid": 40927935,
+          "lat": 37.8014,
+          "lon": -122.4093,
+          "distance_m": 80,
+          "bearing": 33,
+          "direction": "NE",
+          "extract": "Liguria Bakery is a bakery in the North Beach neighborhood of San Francisco, California, United States that sells only focaccia. It is located on 1700 Stockton Street, at the corner of Filbert Street and across from Washington Square Park in North Beach.",
+          "url": "https://en.wikipedia.org/wiki/Liguria_Bakery"
+        },
+        {
+          "title": "Rose Pistola",
+          "pageid": 71009420,
+          "lat": 37.8001,
+          "lon": -122.4095,
+          "distance_m": 82,
+          "bearing": 161,
+          "direction": "S",
+          "extract": "Rose Pistola was an Italian restaurant in the North Beach neighborhood in San Francisco. Specializing in cuisine from the Ligurian region of Italy, it opened in 1996, by Reed Hearon, a Texas-born chef, and received the James Beard Foundation Award for Best New Restaurant the following year.",
+          "url": "https://en.wikipedia.org/wiki/Rose_Pistola"
+        },
+        {
+          "title": "Tony's Pizza Napoletana",
+          "pageid": 47846906,
+          "lat": 37.80033,
+          "lon": -122.40902,
+          "distance_m": 86,
+          "bearing": 127,
+          "direction": "SE",
+          "extract": "Tony's Pizza Napoletana is a pizzeria located in San Francisco, California on Stockton Street which serves Neapolitan styled pizza, among many other styles. In 2015, it was considered the 5th highest rated pizzeria in the United States by TripAdvisor.\nTony's has three different types of oven used for various forms of pizza.",
+          "url": "https://en.wikipedia.org/wiki/Tony%27s_Pizza_Napoletana"
+        },
+        {
+          "title": "Mama's (restaurant)",
+          "pageid": 37042441,
+          "lat": 37.80158333333333,
+          "lon": -122.40963888888889,
+          "distance_m": 88,
+          "bearing": 9,
+          "direction": "N",
+          "extract": "Mama's on Washington Square is a family-owned restaurant located in San Francisco's North Beach neighborhood. The restaurant sits on the corner of Stockton Street and Filbert Street, across from Washington Square Park. Founded in 1964, Mama's serves breakfast, brunch, and lunch as well as its own baked goods and gift baskets.",
+          "url": "https://en.wikipedia.org/wiki/Mama%27s_%28restaurant%29"
+        },
+        {
+          "title": "Saints Peter and Paul Church, San Francisco",
+          "pageid": 6821404,
+          "lat": 37.801602777777774,
+          "lon": -122.41019722222222,
+          "distance_m": 96,
+          "bearing": 339,
+          "direction": "N",
+          "extract": "Saints Peter and Paul Church (Italian: Ss. Pietro e Paolo, Chinese: 聖伯多禄圣保禄教堂)  is a Catholic church in San Francisco's North Beach neighborhood. Located at 666 Filbert Street, it is directly across from Washington Square and is administered by the Salesians of Don Bosco.",
+          "url": "https://en.wikipedia.org/wiki/Saints_Peter_and_Paul_Church%2C_San_Francisco"
+        },
+        {
+          "title": "Pagoda Palace",
+          "pageid": 39839896,
+          "lat": 37.800803,
+          "lon": -122.410994,
+          "distance_m": 105,
+          "bearing": 270,
+          "direction": "W",
+          "extract": "Pagoda Palace was a movie theater in San Francisco's North Beach neighborhood on Columbus Avenue opposite Washington Square. It operated as a vaudeville theater and movie house before being torn down in 2013.",
+          "url": "https://en.wikipedia.org/wiki/Pagoda_Palace"
+        },
+        {
+          "title": "Washington Square Bar and Grill",
+          "pageid": 15150100,
+          "lat": 37.80045,
+          "lon": -122.41096111111112,
+          "distance_m": 109,
+          "bearing": 249,
+          "direction": "W",
+          "extract": "The Washington Square Bar & Grill was a landmark restaurant adjoining Washington Square in San Francisco's North Beach neighborhood (Powell at Union streets). Known widely as the Washbag, so named by columnist Herb Caen as a play on words, it was a favorite gathering place for writers, politicians, musicians, and social elite.",
+          "url": "https://en.wikipedia.org/wiki/Washington_Square_Bar_and_Grill"
+        },
+        {
+          "title": "The Stinking Rose",
+          "pageid": 38503549,
+          "lat": 37.7997,
+          "lon": -122.4095,
+          "distance_m": 125,
+          "bearing": 168,
+          "direction": "S",
+          "extract": "The Stinking Rose is a Californian restaurant known for including garlic in all its dishes, including its garlic ice cream. The first location opened in  San Francisco in 1991, followed by a second location in Beverly Hills in 1996.  The Beverly Hills restaurant announced its permanent closure in October 2021.",
+          "url": "https://en.wikipedia.org/wiki/The_Stinking_Rose"
+        },
+        {
+          "title": "Hilda and Jesse",
+          "pageid": 80308439,
+          "lat": 37.8001,
+          "lon": -122.4111,
+          "distance_m": 138,
+          "bearing": 236,
+          "direction": "SW",
+          "extract": "Hilda and Jesse is a Michelin-starred, queer-owned restaurant in the North Beach neighborhood of San Francisco, California, United States. Previously a pop-up, the restaurant opened in November 2021.",
+          "url": "https://en.wikipedia.org/wiki/Hilda_and_Jesse"
+        }
+      ]
+    },
+    {
+      "seq": 6,
+      "lat": 37.7983,
+      "lon": -122.4076,
+      "label": "Columbus Ave, North Beach",
+      "candidates": [
+        {
+          "title": "Molinari's",
+          "pageid": 38548308,
+          "lat": 37.798523,
+          "lon": -122.407856,
+          "distance_m": 33,
+          "bearing": 318,
+          "direction": "NW",
+          "extract": "Molinari Delicatessen is a delicatessen in San Francisco, California's North Beach, established in 1896, making it one of the oldest delis in the United States. They make their own brand of salami, as P.G. Molinari and Sons, Inc, which is sold nationwide, and which won a gold medal award in Italy.",
+          "url": "https://en.wikipedia.org/wiki/Molinari%27s"
+        },
+        {
+          "title": "The Saloon",
+          "pageid": 9999180,
+          "lat": 37.79857,
+          "lon": -122.40708,
+          "distance_m": 55,
+          "bearing": 57,
+          "direction": "NE",
+          "extract": "The Saloon, located at 1232 Grant Avenue in North Beach, is one of the oldest operational taverns in San Francisco.",
+          "url": "https://en.wikipedia.org/wiki/The_Saloon"
+        },
+        {
+          "title": "Caffe Trieste",
+          "pageid": 7283483,
+          "lat": 37.79872,
+          "lon": -122.40727,
+          "distance_m": 55,
+          "bearing": 32,
+          "direction": "NE",
+          "extract": "Caffè Trieste is an internationally known coffeehouse, retail store, and former franchise in San Francisco. The original cafe, opened in 1956, was the first espresso-based coffeehouse on the West Coast of the United States. Caffe Trieste is considered a San Francisco institution and a local hub for poets, writers, and beat culture.",
+          "url": "https://en.wikipedia.org/wiki/Caffe_Trieste"
+        },
+        {
+          "title": "Saint Francis of Assisi Church (San Francisco)",
+          "pageid": 77181042,
+          "lat": 37.7988,
+          "lon": -122.4077,
+          "distance_m": 56,
+          "bearing": 351,
+          "direction": "N",
+          "extract": "Saint Francis of Assisi Church is a historic Norman Gothic Catholic church building in the North Beach neighborhood of San Francisco, California, United States. Its an early church in California, outside of the Spanish missions. It is also known as the St.",
+          "url": "https://en.wikipedia.org/wiki/Saint_Francis_of_Assisi_Church_%28San_Francisco%29"
+        },
+        {
+          "title": "Condor Club",
+          "pageid": 12533161,
+          "lat": 37.79805555555556,
+          "lon": -122.40666666666667,
+          "distance_m": 86,
+          "bearing": 108,
+          "direction": "E",
+          "extract": "The Condor Club nightclub is a striptease bar or topless bar in the North Beach section of San Francisco, California The club became famous in 1964 as the first fully topless nightclub in the United States, featuring the dancer Carol Doda wearing a monokini.",
+          "url": "https://en.wikipedia.org/wiki/Condor_Club"
+        },
+        {
+          "title": "Big Al's",
+          "pageid": 16405725,
+          "lat": 37.798,
+          "lon": -122.4066,
+          "distance_m": 94,
+          "bearing": 111,
+          "direction": "E",
+          "extract": "Big Al's was one of the first topless bars in San Francisco and the United States since the mid-1960s. It was the first full nudity bar in San Francisco.\nIt is next to the Condor Club, where the strip-club phenomenon began, and as of 1991, it claimed to be one of the largest porn stores in San Francisco.",
+          "url": "https://en.wikipedia.org/wiki/Big_Al%27s"
+        },
+        {
+          "title": "City Lights Bookstore",
+          "pageid": 241911,
+          "lat": 37.797628,
+          "lon": -122.406575,
+          "distance_m": 117,
+          "bearing": 130,
+          "direction": "SE",
+          "extract": "City Lights is an independent bookstore-publisher combination in San Francisco, California, that specializes in world literature, the arts, and progressive politics. It also houses the nonprofit City Lights Foundation, which publishes selected titles related to San Francisco culture. It was founded in 1953 by poet Lawrence Ferlinghetti and Peter D. Martin (who left two years later).",
+          "url": "https://en.wikipedia.org/wiki/City_Lights_Bookstore"
+        },
+        {
+          "title": "Jack Kerouac Alley",
+          "pageid": 14224571,
+          "lat": 37.7975,
+          "lon": -122.4067,
+          "distance_m": 119,
+          "bearing": 138,
+          "direction": "SE",
+          "extract": "Jack Kerouac Alley, formerly Adler Alley or Adler Place, is a one-way alleyway in San Francisco, California, that connects Grant Avenue in Chinatown, and Columbus Avenue in North Beach. The alley is named after Jack Kerouac, a Beat Generation writer who used to frequent the pub and bookstore adjacent to the alley. The alley continues across Columbus Ave, but the name changes to William Saroyan Alley there, named after another famous resident writer of San Francisco, who won the Pulitzer Prize as well as an Academy Award.",
+          "url": "https://en.wikipedia.org/wiki/Jack_Kerouac_Alley"
+        },
+        {
+          "title": "Beat Museum",
+          "pageid": 55073946,
+          "lat": 37.7981,
+          "lon": -122.4062,
+          "distance_m": 125,
+          "bearing": 100,
+          "direction": "E",
+          "extract": "The Beat Museum is located in San Francisco, California and is dedicated to preserving the memory and works of the Beat Generation.\nThe Beat Generation was a group of post-WWII artists who challenged the social norms of the 1950s, encouraged experimentation with drugs and sexuality, practiced various types of Eastern religion, and desired to grow as humans. Also known as 'The Beats', they became famous in the 1950s and remain influential today.",
+          "url": "https://en.wikipedia.org/wiki/Beat_Museum"
+        },
+        {
+          "title": "Miss Smith's Tea Room",
+          "pageid": 73570522,
+          "lat": 37.799471,
+          "lon": -122.407496,
+          "distance_m": 131,
+          "bearing": 4,
+          "direction": "N",
+          "extract": "Miss Smith's Tea Room was a gay and lesbian bar in operation from 1954 to 1960 in the North Beach neighborhood at 1353 Grant Avenue in San Francisco, California, U.S.. It was a lesbian pickup spot, known for its Wednesday poetry nights and was a hangout for Beat poets. It is considered a pioneering gay bar, and had historically faced legal issues in order to maintain operations.",
+          "url": "https://en.wikipedia.org/wiki/Miss_Smith%27s_Tea_Room"
+        },
+        {
+          "title": "Vesuvio Cafe",
+          "pageid": 13887519,
+          "lat": 37.797535,
+          "lon": -122.406407,
+          "distance_m": 135,
+          "bearing": 129,
+          "direction": "SE",
+          "extract": "Vesuvio Cafe is a historic bar in San Francisco, California, United States. Located at 255 Columbus Avenue, across an alley from City Lights Bookstore, the building was designed and built in 1913 by Italian architect Italo Zanolini, and remodeled in 1918.",
+          "url": "https://en.wikipedia.org/wiki/Vesuvio_Cafe"
+        },
+        {
+          "title": "Buon Gusto Sausage Factory",
+          "pageid": 77645255,
+          "lat": 37.799530555555556,
+          "lon": -122.40804722222222,
+          "distance_m": 142,
+          "bearing": 344,
+          "direction": "N",
+          "extract": "Buon Gusto Sausage Factory is a historic building completed in 1948 located in the North Beach neighborhood of San Francisco, California. It was designed in an International Style by master architect Martin J. Rist. It was listed for sale in 2017 for potential redevelopment, but it was later added to the National Register of Historic Places and development plans had stalled by 2020.",
+          "url": "https://en.wikipedia.org/wiki/Buon_Gusto_Sausage_Factory"
+        }
+      ]
+    },
+    {
+      "seq": 7,
+      "lat": 37.7976,
+      "lon": -122.4066,
+      "label": "City Lights Bookstore",
+      "candidates": [
+        {
+          "title": "City Lights Bookstore",
+          "pageid": 241911,
+          "lat": 37.797628,
+          "lon": -122.406575,
+          "distance_m": 4,
+          "bearing": 35,
+          "direction": "here",
+          "extract": "City Lights is an independent bookstore-publisher combination in San Francisco, California, that specializes in world literature, the arts, and progressive politics. It also houses the nonprofit City Lights Foundation, which publishes selected titles related to San Francisco culture. It was founded in 1953 by poet Lawrence Ferlinghetti and Peter D. Martin (who left two years later).",
+          "url": "https://en.wikipedia.org/wiki/City_Lights_Bookstore"
+        },
+        {
+          "title": "Jack Kerouac Alley",
+          "pageid": 14224571,
+          "lat": 37.7975,
+          "lon": -122.4067,
+          "distance_m": 14,
+          "bearing": 218,
+          "direction": "here",
+          "extract": "Jack Kerouac Alley, formerly Adler Alley or Adler Place, is a one-way alleyway in San Francisco, California, that connects Grant Avenue in Chinatown, and Columbus Avenue in North Beach. The alley is named after Jack Kerouac, a Beat Generation writer who used to frequent the pub and bookstore adjacent to the alley. The alley continues across Columbus Ave, but the name changes to William Saroyan Alley there, named after another famous resident writer of San Francisco, who won the Pulitzer Prize as well as an Academy Award.",
+          "url": "https://en.wikipedia.org/wiki/Jack_Kerouac_Alley"
+        },
+        {
+          "title": "Vesuvio Cafe",
+          "pageid": 13887519,
+          "lat": 37.797535,
+          "lon": -122.406407,
+          "distance_m": 18,
+          "bearing": 113,
+          "direction": "SE",
+          "extract": "Vesuvio Cafe is a historic bar in San Francisco, California, United States. Located at 255 Columbus Avenue, across an alley from City Lights Bookstore, the building was designed and built in 1913 by Italian architect Italo Zanolini, and remodeled in 1918.",
+          "url": "https://en.wikipedia.org/wiki/Vesuvio_Cafe"
+        },
+        {
+          "title": "Big Al's",
+          "pageid": 16405725,
+          "lat": 37.798,
+          "lon": -122.4066,
+          "distance_m": 44,
+          "bearing": 0,
+          "direction": "N",
+          "extract": "Big Al's was one of the first topless bars in San Francisco and the United States since the mid-1960s. It was the first full nudity bar in San Francisco.\nIt is next to the Condor Club, where the strip-club phenomenon began, and as of 1991, it claimed to be one of the largest porn stores in San Francisco.",
+          "url": "https://en.wikipedia.org/wiki/Big_Al%27s"
+        },
+        {
+          "title": "Condor Club",
+          "pageid": 12533161,
+          "lat": 37.79805555555556,
+          "lon": -122.40666666666667,
+          "distance_m": 51,
+          "bearing": 353,
+          "direction": "N",
+          "extract": "The Condor Club nightclub is a striptease bar or topless bar in the North Beach section of San Francisco, California The club became famous in 1964 as the first fully topless nightclub in the United States, featuring the dancer Carol Doda wearing a monokini.",
+          "url": "https://en.wikipedia.org/wiki/Condor_Club"
+        },
+        {
+          "title": "Specs' Twelve Adler Museum Cafe",
+          "pageid": 62380284,
+          "lat": 37.79766,
+          "lon": -122.40599,
+          "distance_m": 54,
+          "bearing": 83,
+          "direction": "E",
+          "extract": "Specs' Twelve Adler Museum Cafe (also known as \"Specs\") is a historic bar, located in the North Beach district of San Francisco. The bar is known to be \"home to a menagerie of misfits, from strippers and poets to longshoremen and merchant marines.\" Notable patrons have included Thelonious Monk, Jack Hirschman, Warren Hinckle, and Herb Caen.",
+          "url": "https://en.wikipedia.org/wiki/Specs%27_Twelve_Adler_Museum_Cafe"
+        },
+        {
+          "title": "Beat Museum",
+          "pageid": 55073946,
+          "lat": 37.7981,
+          "lon": -122.4062,
+          "distance_m": 66,
+          "bearing": 32,
+          "direction": "NE",
+          "extract": "The Beat Museum is located in San Francisco, California and is dedicated to preserving the memory and works of the Beat Generation.\nThe Beat Generation was a group of post-WWII artists who challenged the social norms of the 1950s, encouraged experimentation with drugs and sexuality, practiced various types of Eastern religion, and desired to grow as humans. Also known as 'The Beats', they became famous in the 1950s and remain influential today.",
+          "url": "https://en.wikipedia.org/wiki/Beat_Museum"
+        },
+        {
+          "title": "Ping Yuen",
+          "pageid": 63686995,
+          "lat": 37.7968,
+          "lon": -122.4062,
+          "distance_m": 96,
+          "bearing": 158,
+          "direction": "S",
+          "extract": "Ping Yuen and North Ping Yuen (sometimes collectively called The Pings) form a four-building public housing complex in the north end of Chinatown, San Francisco along Pacific Avenue. In total, there are 434 apartments. The three Pings on the south side of Pacific (West, Central, and East Ping Yuen) were dedicated in 1951, and the North Ping Yuen building followed a decade later in 1961.",
+          "url": "https://en.wikipedia.org/wiki/Ping_Yuen"
+        },
+        {
+          "title": "Finocchio's Club",
+          "pageid": 40536039,
+          "lat": 37.798419,
+          "lon": -122.405827,
+          "distance_m": 114,
+          "bearing": 37,
+          "direction": "NE",
+          "extract": "Finocchio's' Club was a former nightclub and bar in operation from 1936 to 1999 in North Beach, San Francisco, California. The club started as a speakeasy, \"the 201 Club\", in 1929, owned by Joe and Eve Finicchio. It was located at 406 Stockton Street, in San Francisco.",
+          "url": "https://en.wikipedia.org/wiki/Finocchio%27s_Club"
+        },
+        {
+          "title": "Comstock Saloon",
+          "pageid": 38503422,
+          "lat": 37.79696,
+          "lon": -122.40559,
+          "distance_m": 114,
+          "bearing": 129,
+          "direction": "SE",
+          "extract": "Comstock Saloon is a historic saloon in San Francisco, California, located in San Francisco's North Beach. The building, since 1907, housed several different bars and owners. The predecessor being the San Francisco Brewing Company (1985–2012), which is the oldest microbrewery in San Francisco.",
+          "url": "https://en.wikipedia.org/wiki/Comstock_Saloon"
+        },
+        {
+          "title": "Vercel",
+          "pageid": 71890151,
+          "lat": 37.7977,
+          "lon": -122.4053,
+          "distance_m": 115,
+          "bearing": 84,
+          "direction": "E",
+          "extract": "Vercel Inc. is an American cloud application company. The company created and maintains the Next.js web development framework.",
+          "url": "https://en.wikipedia.org/wiki/Vercel"
+        },
+        {
+          "title": "The Saloon",
+          "pageid": 9999180,
+          "lat": 37.79857,
+          "lon": -122.40708,
+          "distance_m": 116,
+          "bearing": 339,
+          "direction": "N",
+          "extract": "The Saloon, located at 1232 Grant Avenue in North Beach, is one of the oldest operational taverns in San Francisco.",
+          "url": "https://en.wikipedia.org/wiki/The_Saloon"
+        }
+      ]
+    },
+    {
+      "seq": 8,
+      "lat": 37.7955,
+      "lon": -122.406,
+      "label": "Portsmouth Square",
+      "candidates": [
+        {
+          "title": "Robert Louis Stevenson Memorial",
+          "pageid": 55317131,
+          "lat": 37.79512,
+          "lon": -122.40574,
+          "distance_m": 48,
+          "bearing": 152,
+          "direction": "SE",
+          "extract": "The Robert Louis Stevenson Memorial is an outdoor memorial commemorating Robert Louis Stevenson, in Portsmouth Square, San Francisco, California.\nThe project was initiated following the author's death in 1894. Willis Polk, architect, Bruce Porter, artist, and Douglas Tilden, sculptor first approached the San Francisco Board of Supervisors with plans.",
+          "url": "https://en.wikipedia.org/wiki/Robert_Louis_Stevenson_Memorial"
+        },
+        {
+          "title": "Sam Wo",
+          "pageid": 35575840,
+          "lat": 37.795034,
+          "lon": -122.406729,
+          "distance_m": 82,
+          "bearing": 231,
+          "direction": "SW",
+          "extract": "Sam Wo (traditional Chinese: 三和粥粉麵; simplified Chinese: 三和粥粉面; Jyutping: Saam1wo4 zuk1 fan2min6; pinyin: Sānhé zhōu fěnmiàn, literally \"Three Harmonies Porridge and Noodles\") is a Chinese restaurant located in San Francisco, California. The restaurant's first location on 813 Washington Street was famous for being a venerable mainstay in the local Chinatown area, having been in the same location since 1912. Sam Wo gained notoriety in the 1960s for being the employer of Edsel Ford Fung, who was known locally as the \"world's rudest waiter\".",
+          "url": "https://en.wikipedia.org/wiki/Sam_Wo"
+        },
+        {
+          "title": "Golden Dragon massacre",
+          "pageid": 2276024,
+          "lat": 37.79527777777778,
+          "lon": -122.40694444444445,
+          "distance_m": 87,
+          "bearing": 253,
+          "direction": "W",
+          "extract": "A gang-related mass shooting took place on September 4, 1977, inside the Golden Dragon restaurant at 822 Washington Street in Chinatown, San Francisco, California, United States. The shooting was planned and committed by members of the Joe Boys, a Chinese-American youth gang, who were attempting to kill leaders of the Wah Ching, a rival Chinatown gang. The attack left five people dead and 11 others injured, none of whom were gang members.",
+          "url": "https://en.wikipedia.org/wiki/Golden_Dragon_massacre"
+        },
+        {
+          "title": "Great Star Theater",
+          "pageid": 75011665,
+          "lat": 37.796388888888885,
+          "lon": -122.40583333333333,
+          "distance_m": 100,
+          "bearing": 8,
+          "direction": "N",
+          "extract": "The Great Star Theater, formerly known as Great China Theater, is a 410-seat theater located at 636 Jackson Street in San Francisco's Chinatown. It was built in 1925 for the Chinese opera and is the last Chinese theater in any Chinatown in the United States.",
+          "url": "https://en.wikipedia.org/wiki/Great_Star_Theater"
+        },
+        {
+          "title": "Portsmouth Square",
+          "pageid": 4088257,
+          "lat": 37.7947,
+          "lon": -122.4053,
+          "distance_m": 108,
+          "bearing": 145,
+          "direction": "SE",
+          "extract": "Portsmouth Square (traditional Chinese: 花園角; simplified Chinese: 花园角; pinyin: Huāyuán jiǎo; Jyutping: Faa1jyun4 Gok3), formerly known as Portsmouth Plaza, and originally known as Plaza de Yerba Buena, or simply La Plaza, is a one-block plaza (1.5-acre (0.61 ha)) in Chinatown, San Francisco, California, United States. Portsmouth Square is the first park in San Francisco, predating both Washington Square (1847) and Union Square (1850).\nEstablished in the early 19th century, during the period of Mexican California, the plaza was renamed following the U.S. Conquest of California in honor of the USS Portsmouth, the American ship which captured the city.",
+          "url": "https://en.wikipedia.org/wiki/Portsmouth_Square"
+        },
+        {
+          "title": "Ross Alley",
+          "pageid": 38828195,
+          "lat": 37.79527777777778,
+          "lon": -122.40722222222223,
+          "distance_m": 110,
+          "bearing": 257,
+          "direction": "W",
+          "extract": "Ross Alley is a north–south alley in San Francisco's Chinatown. Ross Alley lies between and is parallel to Stockton and Grant, running one city block between Jackson and Washington.",
+          "url": "https://en.wikipedia.org/wiki/Ross_Alley"
+        },
+        {
+          "title": "Hungry I",
+          "pageid": 2511164,
+          "lat": 37.796242,
+          "lon": -122.405133,
+          "distance_m": 112,
+          "bearing": 43,
+          "direction": "NE",
+          "extract": "The Hungry I (stylized as hungry i) was a nightclub in San Francisco, California, originally located in the North Beach neighborhood. It played a major role in the history of stand-up comedy in the United States. It was launched by Eric \"Big Daddy\" Nord, who sold it to Enrico Banducci in 1951.",
+          "url": "https://en.wikipedia.org/wiki/Hungry_I"
+        },
+        {
+          "title": "Ma-Tsu Temple (San Francisco)",
+          "pageid": 44114237,
+          "lat": 37.7965,
+          "lon": -122.4064,
+          "distance_m": 117,
+          "bearing": 342,
+          "direction": "N",
+          "extract": "The Ma-Tsu Temple is a Taoist temple in San Francisco's Chinatown. Founded in 1986, it is dedicated to Matsu and has foundational ties to the Chaotian Temple in Beigang, Yunlin, Taiwan.\nIts founding has been described as reflective of both a change in Chinese American demographics following the Immigration and Nationality Act of 1965 and the rise of a transnational Taiwanese-American community economically enabled by the Taiwan Miracle of the 1980s.",
+          "url": "https://en.wikipedia.org/wiki/Ma-Tsu_Temple_%28San_Francisco%29"
+        },
+        {
+          "title": "Goddess of Democracy (San Francisco)",
+          "pageid": 55321226,
+          "lat": 37.794653,
+          "lon": -122.405201,
+          "distance_m": 117,
+          "bearing": 143,
+          "direction": "SE",
+          "extract": "Goddess of Democracy is a replica of the original Goddess of Democracy statue created during the Tiananmen Square protests of 1989, installed in San Francisco's Chinatown, in the U.S. state of California. The sculpture stands in Portsmouth Square.",
+          "url": "https://en.wikipedia.org/wiki/Goddess_of_Democracy_%28San_Francisco%29"
+        },
+        {
+          "title": "Barbary Coast, San Francisco",
+          "pageid": 2677803,
+          "lat": 37.79656,
+          "lon": -122.40593,
+          "distance_m": 118,
+          "bearing": 3,
+          "direction": "N",
+          "extract": "The Barbary Coast was a red-light district during the second half of the 19th and early 20th centuries in San Francisco that featured dance halls, concert saloons, bars, jazz clubs, variety shows, and brothels. Its nine block area was centered on a three block stretch of Pacific Street, now Pacific Avenue, between Montgomery and Stockton Streets. Pacific Street was the first street to cut through the hills of San Francisco, starting near Portsmouth Square and continuing east to the first shipping docks at Buena Vista Cove.",
+          "url": "https://en.wikipedia.org/wiki/Barbary_Coast%2C_San_Francisco"
+        },
+        {
+          "title": "International Hotel (San Francisco)",
+          "pageid": 2550586,
+          "lat": 37.7961,
+          "lon": -122.4048,
+          "distance_m": 125,
+          "bearing": 58,
+          "direction": "NE",
+          "extract": "The International Hotel, often referred to locally as the I-Hotel, was a low-income single-room-occupancy residential hotel in San Francisco, California's Manilatown. It was home to many Asian Americans, specifically a large Filipino American population. Around 1954, the I-Hotel also famously housed in its basement Enrico Banducci's original \"hungry i\" nightclub.",
+          "url": "https://en.wikipedia.org/wiki/International_Hotel_%28San_Francisco%29"
+        },
+        {
+          "title": "Portsmouth Square pedestrian bridge",
+          "pageid": 72455583,
+          "lat": 37.794999999999995,
+          "lon": -122.40472222222223,
+          "distance_m": 125,
+          "bearing": 116,
+          "direction": "SE",
+          "extract": "The Portsmouth Square pedestrian bridge (also called the Dr. Rolland and Kathryn Lowe Community Bridge) was a prominent architectural landmark in Chinatown, San Francisco, that spanned over Kearny Street from Portsmouth Square to the second floor and third floor of the Hilton San Francisco Financial District hotel, which houses the Chinese Culture Center of San Francisco. It was demolished in August 2026 as part of the Portsmouth Square renovation project.",
+          "url": "https://en.wikipedia.org/wiki/Portsmouth_Square_pedestrian_bridge"
+        }
+      ]
+    },
+    {
+      "seq": 9,
+      "lat": 37.7941,
+      "lon": -122.4078,
+      "label": "Grant Ave, Chinatown",
+      "candidates": [
+        {
+          "title": "Kong Chow Temple",
+          "pageid": 34187422,
+          "lat": 37.793824,
+          "lon": -122.408071,
+          "distance_m": 39,
+          "bearing": 218,
+          "direction": "SW",
+          "extract": "Kong Chow Temple (traditional Chinese: 岡州古廟; simplified Chinese: 冈州古庙; pinyin: Gāngzhōu Gǔmiào; Jyutping: gong1 zau1 gu2 miu6) is a temple dedicated to Guan Di, located in the Chinatown neighborhood of San Francisco, California, in the United States.",
+          "url": "https://en.wikipedia.org/wiki/Kong_Chow_Temple"
+        },
+        {
+          "title": "Presbyterian Church in Chinatown",
+          "pageid": 63865146,
+          "lat": 37.7940899,
+          "lon": -122.4082898,
+          "distance_m": 43,
+          "bearing": 269,
+          "direction": "W",
+          "extract": "Presbyterian Church in Chinatown (PCC), established in San Francisco in 1853, is the oldest Chinese American or Asian American church in North America.",
+          "url": "https://en.wikipedia.org/wiki/Presbyterian_Church_in_Chinatown"
+        },
+        {
+          "title": "Chinatown, San Francisco",
+          "pageid": 445363,
+          "lat": 37.79416666666666,
+          "lon": -122.40694444444445,
+          "distance_m": 76,
+          "bearing": 84,
+          "direction": "E",
+          "extract": "The Chinatown, centered on Grant Avenue and Stockton Street in San Francisco, California, is the oldest Chinatown in North America and is one of the largest Chinese enclaves outside Asia. It is also the oldest and largest of the four notable Chinese enclaves within San Francisco. Since its establishment in the early 1850s, it has been important and influential in the history and culture of ethnic Chinese immigrants in North America.",
+          "url": "https://en.wikipedia.org/wiki/Chinatown%2C_San_Francisco"
+        },
+        {
+          "title": "Tin How Temple",
+          "pageid": 44112530,
+          "lat": 37.79457,
+          "lon": -122.4071,
+          "distance_m": 81,
+          "bearing": 50,
+          "direction": "NE",
+          "extract": "The Tin How Temple (also spelled Tianhou Temple, simplified Chinese: 天后古庙; traditional Chinese: 天后古廟; pinyin: Tiānhòu gǔ miào) is the oldest extant Taoist temple in San Francisco's Chinatown, and one of the oldest still-operating Chinese temples in the United States. It is dedicated to the Chinese sea goddess Mazu, who is known as Tin How (天后, Empress of Heavens) in Cantonese.",
+          "url": "https://en.wikipedia.org/wiki/Tin_How_Temple"
+        },
+        {
+          "title": "Chinatown station (Muni Metro)",
+          "pageid": 42019094,
+          "lat": 37.794806,
+          "lon": -122.408082,
+          "distance_m": 82,
+          "bearing": 342,
+          "direction": "N",
+          "extract": "Chinatown station (officially Chinatown–Rose Pak station) is an underground Muni Metro light rail station, located under Stockton Street at Washington Street in the Chinatown neighborhood of San Francisco, California. It opened on November 19, 2022, as part of the Central Subway project. The station's official name honors Rose Pak, a political activist in the Chinatown community who helped secure support and funding for the station and the extension of the T Third Street line.",
+          "url": "https://en.wikipedia.org/wiki/Chinatown_station_%28Muni_Metro%29"
+        },
+        {
+          "title": "Chinese Historical Society of America",
+          "pageid": 18337063,
+          "lat": 37.79388888888889,
+          "lon": -122.4088888888889,
+          "distance_m": 99,
+          "bearing": 256,
+          "direction": "W",
+          "extract": "The Chinese Historical Society of America (simplified Chinese: 美国华人历史学会; traditional Chinese: 美國華人歷史學會; pinyin: Měiguó Huárén Lìshǐ Xuéhuì; Jyutping: Mei5gwok3 Waa4jan4 Lik6si2 Hok6wui6; abbreviated CHSA) is the oldest and largest archive and history center documenting the Chinese American experience in the United States. It is based in the Chinatown neighborhood of San Francisco, California.",
+          "url": "https://en.wikipedia.org/wiki/Chinese_Historical_Society_of_America"
+        },
+        {
+          "title": "Donaldina Cameron House",
+          "pageid": 72404776,
+          "lat": 37.793262,
+          "lon": -122.408418,
+          "distance_m": 108,
+          "bearing": 210,
+          "direction": "SW",
+          "extract": "The Donaldina Cameron House, formerly known as the Occidental Board Presbyterian Mission House and Chinese Presbyterian Mission House, is a historic building built in 1908, and located in Chinatown in San Francisco, California. The initial use of the building was as an early 20th-century safe house for Chinese girls and women. Donaldina Cameron, the namesake for the building had served as the house director.",
+          "url": "https://en.wikipedia.org/wiki/Donaldina_Cameron_House"
+        },
+        {
+          "title": "Gordon J. Lau Elementary School",
+          "pageid": 55152694,
+          "lat": 37.794588,
+          "lon": -122.40887,
+          "distance_m": 109,
+          "bearing": 300,
+          "direction": "NW",
+          "extract": "Gordon J. Lau Elementary School (simplified Chinese: 刘贵明小学; traditional Chinese: 劉貴明小學), founded as the Chinese School and was once named  Oriental Public School, was a public school located in Chinatown, San Francisco, California. It was initially set up in 1859 as a segregated school for schoolchildren of Chinese (and later Japanese and Korean) descent, part of the growing anti-Chinese sentiment in the United States that arose in the late 1800s. The school has been renamed a number of times, most recently in 1998 to its current name in honor of the city's first Chinese-American supervisor.",
+          "url": "https://en.wikipedia.org/wiki/Gordon_J._Lau_Elementary_School"
+        },
+        {
+          "title": "First Chinese Baptist Church of San Francisco",
+          "pageid": 79537342,
+          "lat": 37.79347,
+          "lon": -122.40684,
+          "distance_m": 110,
+          "bearing": 130,
+          "direction": "SE",
+          "extract": "The First Chinese Baptist Church is a historic American Baptist church located in the Chinatown region of San Francisco. Founded in 1880 to serve recently immigrated Chinese-Americans, the church had a tumultuous early history due to two schisms, Sinophobia, and the destruction of the original building. In the modern era, the church serves both long-term residents and new generations of immigrants.",
+          "url": "https://en.wikipedia.org/wiki/First_Chinese_Baptist_Church_of_San_Francisco"
+        },
+        {
+          "title": "Showgirl Magic Museum",
+          "pageid": 69553964,
+          "lat": 37.79342777777778,
+          "lon": -122.40660000000001,
+          "distance_m": 129,
+          "bearing": 125,
+          "direction": "SE",
+          "extract": "The Showgirl Magic Museum is a history and culture museum in the Chinatown neighborhood of San Francisco, California in the United States. The museum showcases on the 20th-century nightclub scene in Chinatown.",
+          "url": "https://en.wikipedia.org/wiki/Showgirl_Magic_Museum"
+        },
+        {
+          "title": "Women's Missionary Society of the Pacific Coast",
+          "pageid": 12105303,
+          "lat": 37.794999999999995,
+          "lon": -122.4088888888889,
+          "distance_m": 138,
+          "bearing": 316,
+          "direction": "NW",
+          "extract": "The Women's Missionary Society of the Pacific Coast of the Methodist Episcopal Church was founded on October 29, 1870 by Methodist Rev. Otis T. Gibson, with eleven women he recruited in August 1870, for the purpose of working among the slave girls in Chinatown, San Francisco, California. By the end of 1870, Rev.",
+          "url": "https://en.wikipedia.org/wiki/Women%27s_Missionary_Society_of_the_Pacific_Coast"
+        },
+        {
+          "title": "Sam Wo",
+          "pageid": 35575840,
+          "lat": 37.795034,
+          "lon": -122.406729,
+          "distance_m": 140,
+          "bearing": 42,
+          "direction": "NE",
+          "extract": "Sam Wo (traditional Chinese: 三和粥粉麵; simplified Chinese: 三和粥粉面; Jyutping: Saam1wo4 zuk1 fan2min6; pinyin: Sānhé zhōu fěnmiàn, literally \"Three Harmonies Porridge and Noodles\") is a Chinese restaurant located in San Francisco, California. The restaurant's first location on 813 Washington Street was famous for being a venerable mainstay in the local Chinatown area, having been in the same location since 1912. Sam Wo gained notoriety in the 1960s for being the employer of Edsel Ford Fung, who was known locally as the \"world's rudest waiter\".",
+          "url": "https://en.wikipedia.org/wiki/Sam_Wo"
+        }
+      ]
+    },
+    {
+      "seq": 10,
+      "lat": 37.7908,
+      "lon": -122.4058,
+      "label": "Dragon Gate",
+      "candidates": [
+        {
+          "title": "Bay Area Medical Academy",
+          "pageid": 44359647,
+          "lat": 37.7908,
+          "lon": -122.406,
+          "distance_m": 18,
+          "bearing": 270,
+          "direction": "W",
+          "extract": "Bay Area Medical Academy (BAMA) is a private for-profit college with two campuses in California providing medical assisting with phlebotomy and EKG training. The school's campuses are in San Francisco and San Jose.",
+          "url": "https://en.wikipedia.org/wiki/Bay_Area_Medical_Academy"
+        },
+        {
+          "title": "Dragon Gate (San Francisco)",
+          "pageid": 55320957,
+          "lat": 37.7907,
+          "lon": -122.4056,
+          "distance_m": 21,
+          "bearing": 122,
+          "direction": "SE",
+          "extract": "The Dragon Gate (\"Chinatown Gate\" on some maps) is a south-facing gate at the intersection of Bush Street and Grant Avenue, marking a southern entrance to San Francisco's Chinatown, in the U.S. state of California. Built in 1969 as a gift from the Republic of China (Taiwan) in the style of a traditional Chinese pailou, it became one of the most photographed locations in Chinatown, along with the older Sing Fat and Sing Chong buildings (at Grant and California).",
+          "url": "https://en.wikipedia.org/wiki/Dragon_Gate_%28San_Francisco%29"
+        },
+        {
+          "title": "Notre-Dame-des-Victoires, San Francisco",
+          "pageid": 26443661,
+          "lat": 37.7907,
+          "lon": -122.4065,
+          "distance_m": 63,
+          "bearing": 260,
+          "direction": "W",
+          "extract": "Église Notre Dame Des Victoires is a Catholic church in San Francisco, California.  The church was founded in 1856 to serve the French Catholic immigrants during the California gold rush. The architectural model for the church is the Basilique Notre-Dame de Fourvière in Lyon, France.",
+          "url": "https://en.wikipedia.org/wiki/Notre-Dame-des-Victoires%2C_San_Francisco"
+        },
+        {
+          "title": "San Francisco Fire Department Engine Co. Number 2",
+          "pageid": 58784760,
+          "lat": 37.79083333333333,
+          "lon": -122.405,
+          "distance_m": 70,
+          "bearing": 87,
+          "direction": "E",
+          "extract": "San Francisco Fire Department Engine Co. Number 2, at 460 Bush Street in San Francisco, California, United States, was built in 1908.  It was listed on the National Register of Historic Places in 2002.",
+          "url": "https://en.wikipedia.org/wiki/San_Francisco_Fire_Department_Engine_Co._Number_2"
+        },
+        {
+          "title": "Hotel des Arts",
+          "pageid": 14446404,
+          "lat": 37.79055,
+          "lon": -122.40494,
+          "distance_m": 81,
+          "bearing": 110,
+          "direction": "E",
+          "extract": "Hotel des Arts is a boutique hotel in San Francisco, California.  When it opened in 2005, 16 of its 51 rooms were painted by local artists–today 38 rooms are. Materials used include wall-mounted vinyl records, plastic bags, graffiti, fabrics, three-dimensional art work, and even installations.",
+          "url": "https://en.wikipedia.org/wiki/Hotel_des_Arts"
+        },
+        {
+          "title": "Antioch University (San Francisco)",
+          "pageid": 18044795,
+          "lat": 37.79138888888889,
+          "lon": -122.4063888888889,
+          "distance_m": 83,
+          "bearing": 322,
+          "direction": "NW",
+          "extract": "Antioch College/West (later part of Antioch University West, San Francisco; or AUW), was a college and later university active from 1971 until 1989 and located in San Francisco, California, U.S..",
+          "url": "https://en.wikipedia.org/wiki/Antioch_University_%28San_Francisco%29"
+        },
+        {
+          "title": "California Theatre (San Francisco)",
+          "pageid": 29044203,
+          "lat": 37.79091666666667,
+          "lon": -122.40483333333334,
+          "distance_m": 86,
+          "bearing": 81,
+          "direction": "E",
+          "extract": "The California Theatre was located at 414 (now 440) Bush Street, San Francisco. It was built in 1869 by William Ralston, at that time the treasurer of the Bank of California. S. C. Bugbee & Son were the architects and the theatre cost $250,000 to build.",
+          "url": "https://en.wikipedia.org/wiki/California_Theatre_%28San_Francisco%29"
+        },
+        {
+          "title": "Book Club of California",
+          "pageid": 50751968,
+          "lat": 37.7899,
+          "lon": -122.4059,
+          "distance_m": 100,
+          "bearing": 185,
+          "direction": "S",
+          "extract": "The Book Club of California is a non-profit membership organization of bibliophiles based in San Francisco, operating continuously since 1912. Its mission is to support the history and art of the book, including fine printing related to the history and literature of California and the western states of America through research, publishing, public programs, and exhibitions. It is one of the few book collectors' clubs in the United States with a clubhouse.",
+          "url": "https://en.wikipedia.org/wiki/Book_Club_of_California"
+        },
+        {
+          "title": "Statue of Sun Yat-sen (San Francisco)",
+          "pageid": 55321141,
+          "lat": 37.79203,
+          "lon": -122.4055,
+          "distance_m": 139,
+          "bearing": 11,
+          "direction": "N",
+          "extract": "Sun Yat-sen is an outdoor sculpture depicting the Chinese physician, writer, and philosopher of the same name by Beniamino Bufano, installed in San Francisco's Saint Mary's Square, in 1937,  in the U.S. state of California.",
+          "url": "https://en.wikipedia.org/wiki/Statue_of_Sun_Yat-sen_%28San_Francisco%29"
+        },
+        {
+          "title": "The White House (department store)",
+          "pageid": 68336801,
+          "lat": 37.7896,
+          "lon": -122.4053,
+          "distance_m": 140,
+          "bearing": 162,
+          "direction": "S",
+          "extract": "The White House was the first department store in San Francisco; it opened in 1854 and closed in 1965. It was originally named Davidson & Lane, then J.W. Davidson & Company, and finally, in 1870, when it moved to a large new building, took the name \"The White House\".\n\nIn 1885, Lane retired, and Raphael Weill (1837-1920) continued with his brother, Henry Weill, Eugene Gallvis and Albert Roullier as partners.",
+          "url": "https://en.wikipedia.org/wiki/The_White_House_%28department_store%29"
+        },
+        {
+          "title": "Saint Mary's Square (San Francisco)",
+          "pageid": 55321062,
+          "lat": 37.791999,
+          "lon": -122.40524,
+          "distance_m": 142,
+          "bearing": 20,
+          "direction": "N",
+          "extract": "Saint Mary's Square is a park and urban square across California Street from Old St. Mary's Cathedral in San Francisco's Chinatown, in the U.S. state of California.",
+          "url": "https://en.wikipedia.org/wiki/Saint_Mary%27s_Square_%28San_Francisco%29"
+        },
+        {
+          "title": "Liberty International (organization)",
+          "pageid": 18383647,
+          "lat": 37.7903,
+          "lon": -122.4041,
+          "distance_m": 159,
+          "bearing": 110,
+          "direction": "E",
+          "extract": "'Liberty International (LI) (the public name of the International Society for Individual Liberty, Inc., or ISIL) is a non-profit, libertarian, educational, and networking organization based in Dallas, Texas, dedicated to promoting individual liberty, free markets, civil society, and personal freedom worldwide. \nMary Ruwart chairs the organization, and Jacek Spendel serves as president. Board Members include Ken Schoolland, James Lark, Per Bylund, Lobo Tigre, José Luis Cordeiro Mateo, David Walter, and Antonio Saravia.",
+          "url": "https://en.wikipedia.org/wiki/Liberty_International_%28organization%29"
+        }
+      ]
+    },
+    {
+      "seq": 11,
+      "lat": 37.788,
+      "lon": -122.4075,
+      "label": "Union Square",
+      "candidates": [
+        {
+          "title": "Street Artists Program of San Francisco",
+          "pageid": 41873308,
+          "lat": 37.78805555555555,
+          "lon": -122.4075,
+          "distance_m": 6,
+          "bearing": 0,
+          "direction": "here",
+          "extract": "The Street Artists Program of San Francisco is a municipal arts program in which independent street artists and craftspeople sell their art and craft items in designated public spaces in the city of San Francisco, California. The artists are licensed by the San Francisco Arts Commission and are only allowed to sell work that has been \"predominantly created or significantly altered in form\" by the street artist. The Arts Commission currently licenses approximately 400 street artists, whose licensing fees cover all program costs.",
+          "url": "https://en.wikipedia.org/wiki/Street_Artists_Program_of_San_Francisco"
+        },
+        {
+          "title": "Union Square, San Francisco",
+          "pageid": 1429857,
+          "lat": 37.788056,
+          "lon": -122.4075,
+          "distance_m": 6,
+          "bearing": 0,
+          "direction": "here",
+          "extract": "Union Square is a 2.6-acre (1.1-hectare) public plaza bordered by Geary, Powell, Post, and Stockton Streets in downtown San Francisco, California. \"Union Square\" also refers to the central shopping, hotel, and theater district surrounding the plaza for several blocks. The area got its name because it was once used for Thomas Starr King rallies and support for the Union army during the American Civil War, earning its designation as a California Historical Landmark.",
+          "url": "https://en.wikipedia.org/wiki/Union_Square%2C_San_Francisco"
+        },
+        {
+          "title": "Dewey Monument",
+          "pageid": 38548042,
+          "lat": 37.78795,
+          "lon": -122.40755,
+          "distance_m": 7,
+          "bearing": 218,
+          "direction": "here",
+          "extract": "The Dewey Monument is a memorial statue by Robert Ingersoll Aitken in San Francisco, California, located at the center of Union Square.  Union Square is bounded by Geary, Powell, Post and Stockton streets.  The monument is dedicated to Admiral George Dewey and commemorates his victory in the Battle of Manila Bay during the Spanish–American War.",
+          "url": "https://en.wikipedia.org/wiki/Dewey_Monument"
+        },
+        {
+          "title": "Union Square/Market Street station",
+          "pageid": 47938397,
+          "lat": 37.787682,
+          "lon": -122.407036,
+          "distance_m": 54,
+          "bearing": 131,
+          "direction": "SE",
+          "extract": "Union Square/Market Street station is an underground Muni Metro light rail station located under Stockton Street between Geary Street and Market Street in San Francisco, California. It is adjacent to the southeast corner of Union Square. The station opened on November 19, 2022, as part of the Central Subway project.",
+          "url": "https://en.wikipedia.org/wiki/Union_Square/Market_Street_station"
+        },
+        {
+          "title": "Tiffany Building (San Francisco)",
+          "pageid": 34054316,
+          "lat": 37.78859,
+          "lon": -122.40768,
+          "distance_m": 67,
+          "bearing": 346,
+          "direction": "N",
+          "extract": "The Tiffany Building is an eleven-story, 100,000-square-foot (9,300 m2) building at Union Square in San Francisco.; the bottom two floors contain a Tiffany & Co. store, while the upper floors contain offices. It is also known as 350 Post Street and the Qantas Building.",
+          "url": "https://en.wikipedia.org/wiki/Tiffany_Building_%28San_Francisco%29"
+        },
+        {
+          "title": "Westin St. Francis",
+          "pageid": 11692241,
+          "lat": 37.7877,
+          "lon": -122.4084,
+          "distance_m": 86,
+          "bearing": 247,
+          "direction": "SW",
+          "extract": "The Westin St. Francis, formerly known as St. Francis Hotel, is a hotel located on Powell and Geary Streets in San Francisco, adjacent to the whole western edge of Union Square.",
+          "url": "https://en.wikipedia.org/wiki/Westin_St._Francis"
+        },
+        {
+          "title": "Macy's Union Square",
+          "pageid": 75460323,
+          "lat": 37.78702,
+          "lon": -122.40738,
+          "distance_m": 109,
+          "bearing": 174,
+          "direction": "S",
+          "extract": "Macy's Union Square is a department store building bounded by O'Farrell, Powell, Geary, and Stockton Streets in San Francisco, California, United States. The present-day building consists of several buildings that were built separately and later connected, the earliest of which was designed by Lewis P. Hobart for the O'Connor, Moffat, Kean Co. store in 1929.",
+          "url": "https://en.wikipedia.org/wiki/Macy%27s_Union_Square"
+        },
+        {
+          "title": "Attempted assassination of Gerald Ford in San Francisco",
+          "pageid": 44069756,
+          "lat": 37.7883,
+          "lon": -122.4087,
+          "distance_m": 111,
+          "bearing": 288,
+          "direction": "W",
+          "extract": "In San Francisco on September 22, 1975, Sara Jane Moore attempted to assassinate the 38th president of the United States, Gerald Ford, after he had made an address to the World Affairs Council. Moore tried to shoot President Ford with a .38 Special revolver.  Her single shot missed, and a bystander prevented another shot by grabbing her shooting arm.",
+          "url": "https://en.wikipedia.org/wiki/Attempted_assassination_of_Gerald_Ford_in_San_Francisco"
+        },
+        {
+          "title": "City of Paris Dry Goods Co.",
+          "pageid": 17153363,
+          "lat": 37.787432,
+          "lon": -122.406464,
+          "distance_m": 111,
+          "bearing": 125,
+          "direction": "SE",
+          "extract": "The City of Paris Dry Goods Company (later City of Paris) was one of San Francisco's important department stores from 1850 to 1972, located diagonally opposite Union Square. In the mid-20th century, it opened a few branches in other cities of the Bay Area. The main San Francisco store was demolished in 1980 after a lengthy preservation fight to build a new Neiman Marcus, but the store's original rotunda and glass dome were preserved and incorporated into the new design.",
+          "url": "https://en.wikipedia.org/wiki/City_of_Paris_Dry_Goods_Co."
+        },
+        {
+          "title": "San Francisco Fountain",
+          "pageid": 40382608,
+          "lat": 37.789,
+          "lon": -122.407,
+          "distance_m": 120,
+          "bearing": 22,
+          "direction": "N",
+          "extract": "San Francisco Fountain is a bronze sculpture and fountain completed in 1970 by Ruth Asawa, located outside the Grand Hyatt San Francisco in downtown San Francisco, California, United States.",
+          "url": "https://en.wikipedia.org/wiki/San_Francisco_Fountain"
+        },
+        {
+          "title": "San Francisco Playhouse",
+          "pageid": 40242132,
+          "lat": 37.7882,
+          "lon": -122.4089,
+          "distance_m": 125,
+          "bearing": 280,
+          "direction": "W",
+          "extract": "San Francisco Playhouse (formerly SF Playhouse) is a non-profit theater company in San Francisco, California, founded in 2003 by Bill English and Susi Damilano. The theater stages nine plays yearly, including Broadway plays, musicals, and world and regional premieres.\nSan Francisco Playhouse has been home to several world premieres, including Bauer by Lauren Gunderson, Ideation by Aaron Loeb, Grounded by George Brant, and Seared by Theresa Rebeck.",
+          "url": "https://en.wikipedia.org/wiki/San_Francisco_Playhouse"
+        },
+        {
+          "title": "Grand Hyatt San Francisco",
+          "pageid": 15547651,
+          "lat": 37.78911,
+          "lon": -122.40723,
+          "distance_m": 126,
+          "bearing": 11,
+          "direction": "N",
+          "extract": "The Grand Hyatt San Francisco is a skyscraper hotel located half a block north of Union Square in San Francisco, California. The 36-storey, 660 room 108 m (354 ft) tower was completed in 1972, as the Hyatt on Union Square and renamed the Grand Hyatt San Francisco in 1990.\nThe hotel had 402 employees before the COVID-19 pandemic, dropping to  28 as of April 2021, mainly due to cancelled conventions in the city.",
+          "url": "https://en.wikipedia.org/wiki/Grand_Hyatt_San_Francisco"
+        }
+      ]
+    }
+  ]
+}

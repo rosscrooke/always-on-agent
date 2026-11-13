@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>by the way. | demo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="stage">
+  <!-- PHONE -->
+  <div id="phone">
+    <div id="island"></div>
+    <div id="screen">
+      <div id="date">Thursday, November 13</div>
+      <div id="clock"><span id="clock-time">1:00</span><span id="clock-ampm">PM</span></div>
+      <div id="stack"></div>
+    </div>
+  </div>
+
+  <!-- MAP CARD -->
+  <div id="mapcard">
+    <div id="map"></div>
+    <div class="ov logo-ov">
+      <div class="logo">by the way<span>.</span></div>
+      <div class="live-pill"><i></i>Live location</div>
+    </div>
+    <div class="ov trig-ov">
+      <div class="trig-h">
+        <svg width="14" height="16" viewBox="0 0 24 28"><path d="M12 1C6.5 1 2.5 5 2.5 10.3c0 6.8 9.5 16.7 9.5 16.7s9.5-9.9 9.5-16.7C21.5 5 17.5 1 12 1z" fill="#D97757"/><circle cx="12" cy="10.3" r="3.6" fill="#161B24"/></svg>
+        LOCATION THAT TRIGGERED IT
+      </div>
+      <div class="trig-c" id="coords">0, 0</div>
+      <div class="trig-m" id="trigmeta"></div>
+    </div>
+    <div class="ov inset-ov"><svg id="inset" width="210" height="130" viewBox="0 0 210 130"></svg></div>
+    <div class="ov next-ov"><span id="thinker"></span>Next check in 1 h · run by an always-on routine</div>
+  </div>
+
+  <svg id="connector" width="1440" height="810" viewBox="0 0 1440 810"><path id="conn-path" d="" /></svg>
+
+  <div id="badges"></div>
+  <div id="hint"></div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
