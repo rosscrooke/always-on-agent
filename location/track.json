@@ -1,0 +1,19 @@
+{
+  "name": "SF walk: Ferry Building to Union Square",
+  "city": "San Francisco",
+  "note": "Simulated GPS track. Each routine run advances one stop. Coordinates are public landmarks.",
+  "points": [
+    { "seq": 0,  "lat": 37.7955, "lon": -122.3937, "label": "Ferry Building" },
+    { "seq": 1,  "lat": 37.7990, "lon": -122.3972, "label": "Embarcadero at Pier 7" },
+    { "seq": 2,  "lat": 37.8030, "lon": -122.4010, "label": "Levi's Plaza" },
+    { "seq": 3,  "lat": 37.8016, "lon": -122.4040, "label": "Filbert Street Steps" },
+    { "seq": 4,  "lat": 37.8024, "lon": -122.4058, "label": "Coit Tower" },
+    { "seq": 5,  "lat": 37.8008, "lon": -122.4098, "label": "Washington Square" },
+    { "seq": 6,  "lat": 37.7983, "lon": -122.4076, "label": "Columbus Ave, North Beach" },
+    { "seq": 7,  "lat": 37.7976, "lon": -122.4066, "label": "City Lights Bookstore" },
+    { "seq": 8,  "lat": 37.7955, "lon": -122.4060, "label": "Portsmouth Square" },
+    { "seq": 9,  "lat": 37.7941, "lon": -122.4078, "label": "Grant Ave, Chinatown" },
+    { "seq": 10, "lat": 37.7908, "lon": -122.4058, "label": "Dragon Gate" },
+    { "seq": 11, "lat": 37.7880, "lon": -122.4075, "label": "Union Square" }
+  ]
+}

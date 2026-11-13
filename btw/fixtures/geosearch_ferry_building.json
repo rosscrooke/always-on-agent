@@ -1,0 +1,34 @@
+{
+    "batchcomplete": "",
+    "query": {
+        "geosearch": [
+            {
+                "pageid": 1774164,
+                "ns": 0,
+                "title": "San Francisco Ferry Building",
+                "lat": 37.7955,
+                "lon": -122.3937,
+                "dist": 0,
+                "primary": ""
+            },
+            {
+                "pageid": 57167724,
+                "ns": 0,
+                "title": "R-Evolution (Cochrane)",
+                "lat": 37.7947420923447,
+                "lon": -122.39450216195253,
+                "dist": 109.9,
+                "primary": ""
+            },
+            {
+                "pageid": 40075757,
+                "ns": 0,
+                "title": "Statue of Mahatma Gandhi (San Francisco)",
+                "lat": 37.79533,
+                "lon": -122.39239,
+                "dist": 116.6,
+                "primary": ""
+            }
+        ]
+    }
+}

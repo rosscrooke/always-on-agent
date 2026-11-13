@@ -1,0 +1,28 @@
+{
+    "batchcomplete": "",
+    "query": {
+        "pages": {
+            "1774164": {
+                "pageid": 1774164,
+                "ns": 0,
+                "title": "San Francisco Ferry Building",
+                "extract": "The San Francisco Ferry Building is a terminal for ferries that travel across San Francisco Bay, a food hall and an office building. It is located on The Embarcadero in San Francisco, California, and is served by Golden Gate Ferry and San Francisco Bay Ferry routes.\nOn top of the building is a 245-foot-tall (75 m) clock tower with four clock dials, each 22 feet (6.7 m) in diameter, which can be seen from Market Street, a main thoroughfare of the city."
+            },
+            "40075757": {
+                "pageid": 40075757,
+                "ns": 0,
+                "title": "Statue of Mahatma Gandhi (San Francisco)",
+                "extract": "Mohandas K. Gandhi is a 1988 bronze sculpture of Mahatma Gandhi sculpted by Zlatko Paunov and Steven Lowe. It is located in the plaza to the southeast of the San Francisco Ferry Building along the Embarcadero in San Francisco, California, United States.  The 8-foot (2.4 m) tall sculpture is mounted on a block which bears a plaque, raised on two steps."
+            },
+            "57167724": {
+                "pageid": 57167724,
+                "ns": 0,
+                "title": "R-Evolution (Cochrane)",
+                "extract": "R-Evolution is the third and final sculpture in Marco Cochrane's series, The Bliss Project. The sculpture was created for and debuted at Burning Man in 2015. The work was displayed at Embarcadero Plaza in San Francisco from April 2025 to October 2026."
+            }
+        }
+    },
+    "limits": {
+        "extracts": 20
+    }
+}
